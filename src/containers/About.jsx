@@ -4,7 +4,7 @@ import ComingSoon from '../components/comingSoon';
 class App extends Component {
   render() {
     return (
-      <ComingSoon />
+      <ComingSoon/>
     );
   }
 }

@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../images/SE_Logo_inverted_Trimmed.png';
+import ComingSoon from '../components/comingSoon';
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Coming soon.
-          </p>
-        </header>
-      </div>
+      <ComingSoon />
     );
   }
 }
 
-export default App;
+export default Home;
