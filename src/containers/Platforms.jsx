@@ -1,12 +1,4 @@
 import React, { Component } from 'react';
-import Platform from '../components/platform';
-function Platforms(props) {
-  const platforms = props.platforms;
-  const listItems = platforms.map((platform) => 
-    <Platform platform={platform} />
-  )
-  return(listItems);
-}
 
 const platformData = [
   {
