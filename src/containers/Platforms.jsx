@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Platform from '../components/platform';
 
 const platformData = [
   {
@@ -66,9 +67,18 @@ const platformData = [
   }
 ]
 
+function PlatformsList(props) {
+  const platforms = props.platforms;
+  const listItems = platforms.map((platform) => 
+    <Platform platform={platform} />
+  )
+  return(listItems);
+}
+
 class Platforms extends Component {
   render() {
     return (
+      <PlatformsList platforms={platformData}/>
     );
   }
 }
