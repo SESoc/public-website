@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../images/SE_Logo_inverted_Trimmed.png';
+import logo from '../assets/images/SE_Logo_inverted_Trimmed.png';
 
 class ComingSoon extends Component {
   render() {
