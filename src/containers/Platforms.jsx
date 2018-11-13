@@ -66,11 +66,11 @@ const platformData = [
   }
 ]
 
-class App extends Component {
+class Platforms extends Component {
   render() {
     return (
     );
   }
 }
 
-export default App;
+export default Platforms;
