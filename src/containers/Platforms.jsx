@@ -91,6 +91,20 @@ function PlatformSidebar(props) {
   )
 }
 
+function PlatformFooter(props) {
+  return(
+    <div class="footer">
+        <div class="pure-menu pure-menu-horizontal">
+            <ul>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+                <li class="pure-menu-item"><a href="https://github.com/SESoc" class="pure-menu-link">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+  )
+}
+
 class Platforms extends Component {
   render() {
     return (
@@ -103,8 +117,9 @@ class Platforms extends Component {
               <PlatformsList platforms={platformData}/>
             </div>
           </div>
-        </div>
 
+        <PlatformFooter/>
+        </div>
       </div>
     );
   }
