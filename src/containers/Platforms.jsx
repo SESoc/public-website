@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Platform from '../components/platform';
 
+// Styles
+import '../styles/pure/pure-min.css';
+import '../styles/pure/grids-responsive-min.css';
+import '../styles/container/platforms.css';
+
 const platformData = [
   {
     name: "Katherine Lu",
