@@ -96,6 +96,15 @@ class Platforms extends Component {
     return (
       <div id="layout" className="pure-g">
         <PlatformSidebar/>
+
+        <div className="content pure-u-1 pure-u-md-3-4">
+          <div>
+            <div className="posts">
+              <PlatformsList platforms={platformData}/>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
