@@ -32,7 +32,6 @@ const platformData = [
       "Women in SE events (initiated)",
       "Career oriented events (resume critiques, career panels, etc.)",
       "Academic oriented workshops (tech talks, guest lecturers)",
-      "Academic oriented workshops (tech talks, guest lecturers)",
       "More social/community-building events and opportunities for inter-class meetings"
     ],
     contacts: {
