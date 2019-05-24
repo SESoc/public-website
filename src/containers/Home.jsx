@@ -4,7 +4,9 @@ import ComingSoon from '../components/comingSoon';
 class Home extends Component {
   render() {
     return (
-      <ComingSoon />
+      <div>
+            <h2>Home</h2>
+          </div>
     );
   }
 }
