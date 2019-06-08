@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import Home from './containers/Home.jsx';
 import Platforms from './containers/Platforms.jsx';
 import Events from './containers/Events.jsx';
@@ -16,7 +16,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a href="#" className="navbar-brand">
+            <a href="/" className="navbar-brand">
               <img src={logo} width="30" className="d-inline-block align-top" alt=""></img>
               &nbsp; SE Soc
             </a>
