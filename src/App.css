@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  --eng-purple: #692D90;
+  --math-pink: #E6237D;
 }
 
 .App-logo {
@@ -29,4 +31,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Navbar styling */
+
+li > a{
+  margin-top: 0em;
+}
+
+.primary-nav{
+  float: right;
+  margin-left:auto;
+  margin-right:0;
+  text-align: right;
+}
+
+/* Site-wide colors */
+h1{
+  color: #34156a
+}
+
+p{
+  color: #000;
+}
+
+h2, h3 {
+  color:#735d9a;
+}
+
+body{
+  font-family: 'Source Code Pro', monospace;
 }
