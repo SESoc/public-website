@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import ComingSoon from '../components/comingSoon';
 
-class App extends Component {
+class Contact extends Component {
   render() {
     return (
-      <ComingSoon />
+      <div>
+        <div>
+          <a href="mailto:se-soc@uwaterloo.ca">se-soc@uwaterloo.ca</a>
+        </div>
+      </div>
     );
   }
 }
 
-export default App;
+export default Contact;

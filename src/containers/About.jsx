@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ComingSoon from '../components/comingSoon';
 
-class App extends Component {
+class About extends Component {
   render() {
     return (
       <ComingSoon/>
@@ -9,4 +9,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default About;
