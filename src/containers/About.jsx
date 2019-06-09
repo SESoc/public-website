@@ -9,7 +9,8 @@ import katherine from '../assets/images/katherine.jpg';
 import spencer from '../assets/images/spencer.jpg';
 import jenny from '../assets/images/jenny.jpg';
 import roxane from '../assets/images/roxane.jpg';
-import elisa from '../assets/images/elisa.jpg';
+import elisa from '../assets/images/spencer.jpg';
+import mayank from '../assets/images/spencer.jpg';
 import bilal from '../assets/images/bilal.jpg';
 
 
@@ -126,7 +127,7 @@ class About extends Component {
 
               </Card.Header>
               <Card.Body>
-                <Card.Img variant="top" src={ayush} className="exec-img"></Card.Img>
+                <Card.Img variant="top" src={mayank} className="exec-img"></Card.Img>
                 <Card.Text className="exec-about">text</Card.Text>
 
               </Card.Body>
