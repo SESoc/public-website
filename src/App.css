@@ -35,7 +35,7 @@
 
 /* Navbar styling */
 
-li > a{
+a {
   margin-top: 0em;
 }
 
@@ -44,6 +44,10 @@ li > a{
   margin-left:auto;
   margin-right:0;
   text-align: right;
+}
+
+.nav-link.active{
+  color:#000;
 }
 
 /* Site-wide colors */
@@ -61,4 +65,14 @@ h2, h3 {
 
 body{
   font-family: 'Source Code Pro', monospace;
+}
+
+.center {
+  text-align:center;
+}
+
+.calendar {
+  border:0;
+  width:100%;
+  height:600px;
 }

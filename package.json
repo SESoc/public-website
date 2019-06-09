@@ -5,9 +5,9 @@
   "dependencies": {
     "ajv": "^6.10.0",
     "bootstrap": "^4.3.1",
-    "react": "^16.6.0",
+    "react": "next",
     "react-bootstrap": "^1.0.0-beta.9",
-    "react-dom": "^16.6.0",
+    "react-dom": "next",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.0.5"
   },
