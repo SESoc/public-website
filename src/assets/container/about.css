@@ -1,0 +1,21 @@
+.exec-img, .about{
+    display: inline;
+}
+
+.BSoc, .old {
+    padding-top:50px
+}
+.ASoc {
+    padding-top:20px;
+}
+
+img.exec-img {
+    max-width: 50%;
+    display:block;
+}
+.card {
+    margin-left:25%;
+    width: 50%;
+    margin-top:15px;
+}
+
