@@ -9,13 +9,12 @@
     padding-top:20px;
 }
 
-img.exec-img {
-    max-width: 50%;
-    display:block;
+.exec-img {
+    max-width: 75%;    
 }
 .card {
-    margin-left:25%;
-    width: 50%;
+    width: 35%;
+    margin-left:10%;
     margin-top:15px;
 }
 

@@ -20,45 +20,54 @@ class About extends Component {
         <h1>Meet the Exec Teams</h1>
         <div className="ASoc">
           <h2>A-Soc Execs</h2>
-          <div className="team">
+          <div className="team row">
             <Card className="card prez">
               <Card.Header>
                 <h3 className="exec-name">Spencer Dobrik </h3>
+                <h4 className="class-year">SE 2020</h4>
                 <h4 className="exec-role">President</h4>
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={spencer} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2020</Card.Text>
+                <Card.Text className="exec-about">About Spencer</Card.Text>
               </Card.Body>
             </Card>
             <Card className="card vpcom" >
               <Card.Header>
                 <h3 className="exec-name">Yingning Gui </h3>
+                <h4 className="class-year">SE 2022</h4>
                 <h4 className="exec-role">VP Communications</h4>
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={yg} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2022</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             <Card className="card vpe" >
               <Card.Header>
                 <h3 className="exec-name">Katherine Lu </h3>
+                <h4 className="class-year">SE 2020</h4>
+
                 <h4 className="exec-role">VP Events</h4>
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={katherine} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2020</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             <Card className="card vpf">
               <Card.Header>
                 <h3 className="exec-name">Ayush Kapur </h3>
+                <h4 className="class-year">SE 2022</h4>
+
                 <h4 className="exec-role">VP Finance</h4>
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={ayush} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2022</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             
@@ -67,45 +76,59 @@ class About extends Component {
         </div>
         <div className="BSoc">
           <h2>B-Soc Execs</h2>
-          <div className="team">
+          <div className="team row">
           <Card className="card prez">
               <Card.Header>
                 <h3 className="exec-name">Roxane Fruytier </h3>
+                <h4 className="class-year">SE 2021</h4>
+
                 <h4 className="exec-role">President</h4>
+
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={roxane} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2021</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             <Card className="card vpcom">
               <Card.Header>
                 <h3 className="exec-name">Jenny Wills </h3>
+                <h4 className="class-year">SE 2021</h4>
+
                 <h4 className="exec-role">VP Communications</h4>
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={jenny} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2021</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             <Card className="card vpe">
               <Card.Header>
                 <h3 className="exec-name">Elisa Luan </h3>
+                <h4 className="class-year">SE 2023</h4>
+
                 <h4 className="exec-role">VP Events</h4>
+
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={elisa} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2023</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             <Card className="card vpf">
               <Card.Header>
                 <h3 className="exec-name">Mayank Kanoria </h3>
+                <h4 className="class-year">SE 2023</h4>
                 <h4 className="exec-role">VP Finance</h4>
+
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={ayush} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2023</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
           </div>
@@ -116,11 +139,15 @@ class About extends Component {
             <Card className="card">
               <Card.Header>
                 <h3 className="exec-name">Bilal Akhtar </h3>
-                <h4 className="exec-role">President Winter 2019, B-Soc</h4>
+                <h4 className="class-year">SE 2019</h4>
+
+                <h4 className="exec-role">B-Soc President Winter 2019</h4>
+
               </Card.Header>
               <Card.Body>
                 <Card.Img variant="top" src={bilal} className="exec-img"></Card.Img>
-                <Card.Text className="about ">SE 2019</Card.Text>
+                <Card.Text className="exec-about">text</Card.Text>
+
               </Card.Body>
             </Card>
             </div>
