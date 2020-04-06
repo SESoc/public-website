@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  --eng-purple: #692D90;
+  --math-pink: #E6237D;
 }
 
 .App-logo {
@@ -30,3 +32,49 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navbar styling */
+
+a {
+  margin-top: 0em;
+}
+
+.primary-nav{
+  float: right;
+  margin-left:auto;
+  margin-right:0;
+  text-align: right;
+}
+
+.nav-link.active{
+  color:#000;
+}
+
+/* Site-wide colors */
+h1{
+  color: #34156a
+}
+
+p{
+  color: #000;
+}
+
+h2, h3 {
+  color:#735d9a;
+}
+
+body{
+  /* font-family:"Comic Sans MS", cursive, sans-serif;  */
+  font-family: 'Source Code Pro', monospace;
+}
+
+.center {
+  text-align:center;
+}
+
+.calendar {
+  border:0;
+  width:100%;
+  height:600px;
+}
+

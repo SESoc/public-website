@@ -1,3 +1,9 @@
+Getting started on your own!!
+1. git clone the repo
+2. cd public-website
+3. npm install
+4. npm start (this creates a new local server running the website, and will open a new browser window)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

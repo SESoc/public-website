@@ -150,7 +150,7 @@ function PlatformSidebar(props) {
     <div className="sidebar pure-u-1 pure-u-md-1-4">
       <div className="header">
         <h1 className="brand-title">SESoc Candidate Platforms</h1>
-        <h1 className="brand-tagline">Winter 2019 Elections</h1>
+        <h1 className="brand-tagline">Fall 2018 Elections</h1>
       </div>
     </div>
   )
@@ -161,8 +161,7 @@ function PlatformFooter(props) {
     <div className="footer">
         <div className="pure-menu pure-menu-horizontal">
             <ul>
-                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Home</a></li>
-                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Twitter</a></li>
+                <li className="pure-menu-item"><a href="/" className="pure-menu-link">Home</a></li>
                 <li className="pure-menu-item"><a href="https://github.com/SESoc" className="pure-menu-link">GitHub</a></li>
             </ul>
         </div>
