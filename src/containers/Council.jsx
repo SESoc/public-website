@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ComingSoon from '../components/comingSoon';
 import '../assets/container/council.css'
 
 class Council extends Component {

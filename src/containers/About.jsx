@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ComingSoon from '../components/comingSoon';
 import '../assets/container/about.css'
 import Card from 'react-bootstrap/Card'
 // Images temporary ideally these will be hosted online, and we won't import from assets
@@ -18,6 +17,10 @@ class About extends Component {
   render() {
     return (
       <div className='center'>
+        <h3>We'd love to hear from you!</h3>
+        <div>
+          <a href="mailto:se-soc@uwaterloo.ca">se-soc@uwaterloo.ca</a>
+        </div>
         <h1>Meet the Exec Teams</h1>
         <div className="ASoc">
           <h2>A-Soc Execs</h2>

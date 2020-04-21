@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Platform from '../components/platform';
+import Platform from '../components/Platform';
 
 // Styles
 import '../assets/pure/pure-min.css';
@@ -142,7 +142,7 @@ function PlatformsList(props) {
   const listItems = platforms.map((platform) => 
     <Platform platform={platform} />
   )
-  return(listItems);
+  return (listItems);
 }
 
 function PlatformSidebar(props) {
