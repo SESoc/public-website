@@ -5,7 +5,8 @@ Last Edited: Tony Zhao 2020-04-22
 
 import React, { Component } from 'react';
 import { Container, Jumbotron, Row, Col } from 'react-bootstrap';
-import  EventList  from '../components/EventList/EventList';
+import EventList from '../components/EventList/EventList';
+import NewsList from '../components/NewsList';
 const Hero = () => (
   <Jumbotron>
     <Row>
@@ -28,31 +29,27 @@ const Hero = () => (
   </Jumbotron>
 );
 
-const News = (props) => {
-  //TODO: conditionally render color
-  return props.articles.map((article) => (
-    <li key={article.title}>
-      <h4>{article.title}</h4>
-      <p>{article.description}</p>
-    </li>
-  ));
-};
-
 const Content = () => (
   <Container>
     <Row>
       <Col>
-        <h1>news</h1>
-        <ul>
-          <News
-            articles={[
-              {
-                title: 'Upcoming Elections',
-                description: 'Checkout the candidate profiles',
-              },
-            ]}
-          />
-        </ul>
+        <NewsList
+          numEntries={3}
+          articles={[
+            {
+              title: 'Upcoming Elections',
+              description: 'Checkout the candidate profiles',
+            },
+            {
+              title: 'SESX S01E01',
+              description: 'Running a Startup as an SE Student',
+            },
+            {
+              title: 'Ibrahim: What I wish I knew in 1A',
+              description: 'Intro to the blog',
+            }
+          ]}
+        />
       </Col>
       <Col>
         <EventList />
