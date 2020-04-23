@@ -7,22 +7,24 @@ import React, { Component } from 'react';
 import { Container, Jumbotron, Row, Col } from 'react-bootstrap';
 
 const Hero = () => (
-  <Jumbotron fluid>
-    <Container>
-      <Row>
-        <Col>{/* <PhotoReel /> */}</Col>
-        <Col>
-          <h1>welcome</h1>
-          <p>
-            This is the official website of the UW Software Engineering Society.
-            A place where we [find a collection of english words that emulate
-            our desire to create events to support our program socially and
-            professionally]
-          </p>
-          <p>something about our latest move --></p>
-        </Col>
-      </Row>
-    </Container>
+  <Jumbotron>
+    <Row>
+      <Col>
+        {/* <PhotoReel />
+          TODO: Implement PhotoReel
+         */}
+      </Col>
+      <Col>
+        <h1>welcome</h1>
+        <p>
+          This is the official website of the UW Software Engineering Society. A
+          place where we [find a collection of english words that emulate our
+          desire to create events to support our program socially and
+          professionally]
+        </p>
+        <p>something about our latest move --></p>
+      </Col>
+    </Row>
   </Jumbotron>
 );
 
@@ -83,10 +85,10 @@ const Content = () => (
 class Home extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Hero />
         <Content />
-      </div>
+      </React.Fragment>
     );
   }
 }
