@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ComingSoon from '../components/ComingSoon';
+import './../App.scss'
 
-class Sponsors extends Component {
+class News extends Component {
   render() {
     return (
       <ComingSoon />
@@ -9,4 +10,4 @@ class Sponsors extends Component {
   }
 }
 
-export default Sponsors;
+export default News;
