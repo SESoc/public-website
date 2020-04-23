@@ -22,8 +22,8 @@ const eventsData = [
 function Event(props) {
   return (
     <div className="App">
-      <p>{props.event.date}</p>
-      <p> <span> {props.event.title}: </span> {props.event.body} </p>
+      <p>{props.event.date} <br />
+      <span> {props.event.title}: </span> {props.event.body} </p>
     </div>
   );
 }

@@ -3,29 +3,31 @@ Home page for SE Society
 Last Edited: Tony Zhao 2020-04-22
 */
 
-import React, { Component } from 'react';
-import { Container, Jumbotron, Row, Col } from 'react-bootstrap';
+import React, { Component, Fragment } from 'react';
+import { Button, Container, Jumbotron, Row, Col } from 'react-bootstrap';
 import EventList from '../components/EventList/EventList';
 import NewsList from '../components/NewsList';
 const Hero = () => (
   <Jumbotron>
-    <Row>
-      <Col>
-        {/* <PhotoReel />
+    <Container>
+      <Row>
+        <Col>
+          {/* <PhotoReel />
           TODO: Implement PhotoReel
          */}
-      </Col>
-      <Col>
-        <h1>welcome</h1>
-        <p>
-          This is the official website of the UW Software Engineering Society. A
-          place where we [find a collection of english words that emulate our
-          desire to create events to support our program socially and
-          professionally]
-        </p>
-        <a href="/events">something about our latest move --></a>
-      </Col>
-    </Row>
+        </Col>
+        <Col>
+          <h1>welcome</h1>
+          <p>
+            This is the official website of the UW Software Engineering Society.
+            A place where we [find a collection of english words that emulate
+            our desire to create events to support our program socially and
+            professionally]
+          </p>
+          <a href="/events">something about our latest move --></a>
+        </Col>
+      </Row>
+    </Container>
   </Jumbotron>
 );
 
@@ -47,12 +49,16 @@ const Content = () => (
             {
               title: 'Ibrahim: What I wish I knew in 1A',
               description: 'Intro to the blog',
-            }
+            },
           ]}
         />
+        <Button variant="secondary" href="/news">
+          See Archive
+        </Button>
       </Col>
       <Col>
         <EventList />
+        <Button variant="secondary" href="/events">See All</Button>
       </Col>
     </Row>
   </Container>
@@ -61,10 +67,10 @@ const Content = () => (
 class Home extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <Hero />
         <Content />
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
