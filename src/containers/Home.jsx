@@ -11,12 +11,12 @@ const Hero = () => (
   <Jumbotron>
     <Container>
       <Row>
-        <Col>
+        <Col sm>
           {/* <PhotoReel />
           TODO: Implement PhotoReel
          */}
         </Col>
-        <Col>
+        <Col sm>
           <h1>welcome</h1>
           <p>
             This is the official website of the UW Software Engineering Society.
@@ -34,7 +34,7 @@ const Hero = () => (
 const Content = () => (
   <Container>
     <Row>
-      <Col>
+      <Col sm>
         <NewsList
           numEntries={3}
           articles={[
@@ -56,7 +56,7 @@ const Content = () => (
           See Archive
         </Button>
       </Col>
-      <Col>
+      <Col sm>
         <EventList />
         <Button variant="secondary" href="/events">See All</Button>
       </Col>
