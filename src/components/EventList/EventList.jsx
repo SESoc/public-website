@@ -9,7 +9,7 @@ const eventsData = [
   },
   {
     date: "January 1, 2020",
-    title: "SE eSports Tourney",
+    title: "SE Esports Tourney",
     body: "Lockdown blues? Join us online to prove your skills, make new friends and play through the night."
   },
   {
@@ -22,11 +22,11 @@ const eventsData = [
 function Event(props) {
   return (
     <div className="App">
-        <p>{props.event.date}</p>
-        <p> <span> {props.event.title}: </span> {props.event.body} </p>
-      </div>
+      <p>{props.event.date}</p>
+      <p> <span> {props.event.title}: </span> {props.event.body} </p>
+    </div>
   );
-} 
+}
 
 function EventsList(props) {
   const events = props.events;
