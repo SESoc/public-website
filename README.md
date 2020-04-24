@@ -12,13 +12,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
+  - [npm run format](#npm-run-format)
+  - [npm run lint](#npm-run-lint)
 - [Supported Browsers](#supported-browsers)
 - [Supported Language Features](#supported-language-features)
 - [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
@@ -129,10 +130,6 @@ In most cases bumping the `react-scripts` version in `package.json` and running 
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
 
-## Sending Feedback
-
-We are always open to [your feedback](https://github.com/facebook/create-react-app/issues).
-
 ## Folder Structure
 
 After creation, your project should look like this:
@@ -208,6 +205,15 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `npm run format`
+
+Fully lints and formats .js, .jsx and package.json. Runs prettier-eslint, eslint and prettier-package-json. 
+
+**Please run this and fix any errors before sending your PR out to review.**
+
+### `npm run lint`
+Runs eslint on .js and .jsx files.
 
 ## Supported Browsers
 
