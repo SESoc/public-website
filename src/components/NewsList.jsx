@@ -5,13 +5,18 @@ const NewsContent = (props) => {
   const numEntries = props.numEntries
     ? props.numEntries
     : props.articles.length;
-  return props.articles.splice(0, numEntries).map((article) => (
+  const colorStyle = (index) => ({
+    color: index % 2 == 0 ? "var(--color-accent-eng)" : "var(--color-accent-math)",
+  });
+  return props.articles.splice(0, numEntries).map((article, i) => (
     <tr>
       <th>
-        <p style={{marginBottom: 0}}> {article.title} </p>
-        <p>
-          <span> {article.description} </span>
-        </p>
+        <a href={article.link}>
+          <p style={{marginBottom: 0}}> {article.title} </p>
+          <p style={colorStyle(i)}>
+            {article.description}
+          </p>
+        </a>
       </th>
     </tr>
   ));
