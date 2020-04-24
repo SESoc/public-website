@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import Platform from '../components/Platform';
+import React, {Component} from "react";
+import Platform from "../components/Platform";
 
 // Styles
-import '../assets/pure/pure-min.css';
-import '../assets/pure/grids-responsive-min.css';
-import '../assets/container/platforms.css';
+import "../assets/pure/pure-min.css";
+import "../assets/pure/grids-responsive-min.css";
+import "../assets/container/platforms.css";
 
 // Images temporary ideally these will be hosted online, and we won't import from assets
-import ayush from '../assets/images/ayush.jpg';
-import yg from '../assets/images/yg.jpg';
-import katherine from '../assets/images/katherine.jpg';
-import spencer from '../assets/images/spencer.jpg';
+import ayush from "../assets/images/ayush.jpg";
+import yg from "../assets/images/yg.jpg";
+import katherine from "../assets/images/katherine.jpg";
+import spencer from "../assets/images/spencer.jpg";
 
 const platformData = [
   {
     name: "Katherine Lu",
-    candidacy: 'Vice President of Events',
+    candidacy: "Vice President of Events",
     platform: `Hey! I'm Katherine from SE2020. 😄
     Strengthening the SE community has been an important priority for me
     since I started university. Since 2015, I've personally organized events
@@ -32,35 +32,35 @@ const platformData = [
       "Women in SE events (initiated)",
       "Career oriented events (resume critiques, career panels, etc.)",
       "Academic oriented workshops (tech talks, guest lecturers)",
-      "More social/community-building events and opportunities for inter-class meetings"
+      "More social/community-building events and opportunities for inter-class meetings",
     ],
     contacts: {
-      facebook: 'https://facebook.com/',
-      email: 'katherine.lu@uwaterloo.ca'
+      facebook: "https://facebook.com/",
+      email: "katherine.lu@uwaterloo.ca",
     },
-    image: katherine
+    image: katherine,
   },
   {
     name: "Ayush Kapur",
-    candidacy: 'Vice-President Finance',
+    candidacy: "Vice-President Finance",
     platform: `Hi! My name’s Ayush, and I’m running for VP Finance. My main goal is to help
     get financing and work on setting up awesome SESoc events like Resume
     Critiques, Mixers, and Coffee Chats.`,
     quote: "",
-    points : [
+    points: [
       "Obtaining corporate sponsors to fund event costs (like food!)",
       "Reaching out to alum in major tech areas to solicit funding",
-      "And bringing the SE community closer together through events!"
+      "And bringing the SE community closer together through events!",
     ],
     contacts: {
-      facebook: '',
-      email: ''
+      facebook: "",
+      email: "",
     },
-    image: ayush
+    image: ayush,
   },
   {
     name: "Yingning Gui",
-    candidacy: 'Vice-President Communications',
+    candidacy: "Vice-President Communications",
     platform: `Hey guys!
 
     I’ve always noticed somewhat of a discrepancy between the plethora of
@@ -69,23 +69,24 @@ const platformData = [
     Looking forward to not only making our class more of a community, but our
     entire program!`,
     quote: "",
-    points : [
+    points: [
       "Promote events (concisely) to you via social media, our newly built website, and emails",
       "Create a feedback gathering system where we can take your input in developing our program and future opportunities",
-      "Host a bonfire! We can all bond over toasting smores in the summer heat of June 2019."
+      "Host a bonfire! We can all bond over toasting smores in the summer heat of June 2019.",
     ],
     contacts: {
-      facebook: '',
-      email: ''
+      facebook: "",
+      email: "",
     },
-    image: yg
+    image: yg,
   },
   {
     name: "Spencer Dobrik",
-    candidacy: 'President',
-    platform: `Hey everyone, you might not have had the chance to meet me yet; but I am the founder of SE Soc. Here are a list of things I've done over the past 8 months to get SE Soc set up.`,
+    candidacy: "President",
+    platform:
+      "Hey everyone, you might not have had the chance to meet me yet; but I am the founder of SE Soc. Here are a list of things I've done over the past 8 months to get SE Soc set up.",
     quote: "",
-    points : [
+    points: [
       "Get us some Sponsorship! We'll be working with the SE admin to put out some sponsorship packages as our FYDP and new lounge will need sponsors, along with SE Soc events. ",
       "----------------------------------------------------------------------",
       "Alumni outreach! There are a lot of aspects to this but these are the goals",
@@ -117,7 +118,7 @@ const platformData = [
       "Class profile",
       "Develop a method for how to do class profiles and decide how often we want to do them(ex. Every 3 years)",
       "Figure out questions to ask in 1a and 4b.",
-      "Show trends of the se class profile over the years."
+      "Show trends of the se class profile over the years.",
     ],
     achievements: [
       "Wrote our constitution.",
@@ -127,62 +128,68 @@ const platformData = [
       "Organized meetings for Fall 2018 as well as all exec meetings before that.",
       "Interfaced with alumni to get buy-in and advice from them, plus their support and help in finding resources for sponsorship.",
       "Developed plans for sponsorship, both the different things we will be able to sell as well as the recruiters and university relations reps we can reach out to.",
-      "Figured out how we will get our own bank account, as well as how we will get a budget from the SE program in the meantime."
+      "Figured out how we will get our own bank account, as well as how we will get a budget from the SE program in the meantime.",
     ],
     contacts: {
-      facebook: '',
-      email: ''
+      facebook: "",
+      email: "",
     },
-    image: spencer
-  }
-]
+    image: spencer,
+  },
+];
 
 function PlatformsList(props) {
   const platforms = props.platforms;
-  const listItems = platforms.map((platform) => 
-    <Platform platform={platform} />
-  )
-  return (listItems);
+  const listItems = platforms.map(platform => <Platform platform={platform} />);
+  return listItems;
 }
 
 function PlatformSidebar(props) {
-  return(
+  return (
     <div className="sidebar pure-u-1 pure-u-md-1-4">
       <div className="header">
         <h1 className="brand-title">SESoc Candidate Platforms</h1>
         <h1 className="brand-tagline">Fall 2018 Elections</h1>
       </div>
     </div>
-  )
+  );
 }
 
 function PlatformFooter(props) {
-  return(
+  return (
     <div className="footer">
-        <div className="pure-menu pure-menu-horizontal">
-            <ul>
-                <li className="pure-menu-item"><a href="/" className="pure-menu-link">Home</a></li>
-                <li className="pure-menu-item"><a href="https://github.com/SESoc" className="pure-menu-link">GitHub</a></li>
-            </ul>
-        </div>
+      <div className="pure-menu pure-menu-horizontal">
+        <ul>
+          <li className="pure-menu-item">
+            <a href="/" className="pure-menu-link">
+              Home
+            </a>
+          </li>
+          <li className="pure-menu-item">
+            <a href="https://github.com/SESoc" className="pure-menu-link">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  )
+  );
 }
 
 class Platforms extends Component {
   render() {
     return (
       <div id="layout" className="pure-g">
-        <PlatformSidebar/>
+        <PlatformSidebar />
 
         <div className="content pure-u-1 pure-u-md-3-4">
           <div>
             <div className="posts">
-              <PlatformsList platforms={platformData}/>
+              <PlatformsList platforms={platformData} />
             </div>
           </div>
 
-        <PlatformFooter/>
+          <PlatformFooter />
         </div>
       </div>
     );
