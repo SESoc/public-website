@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import './App.scss';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from './containers/Home.jsx';
-import Platforms from './containers/Platforms.jsx';
-import Events from './containers/Events.jsx';
-import About from './containers/About.jsx';
-import News from './containers/News.jsx';
-import Council from './containers/Council.jsx';
-import Sponsors from './containers/Sponsors.jsx';
-import logo from './assets/images/SE_Logo_inverted_Trimmed.png';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import React, {Component} from "react";
+import "./App.scss";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./containers/Home.jsx";
+import Platforms from "./containers/Platforms.jsx";
+import Events from "./containers/Events.jsx";
+import About from "./containers/About.jsx";
+import News from "./containers/News.jsx";
+import Council from "./containers/Council.jsx";
+import Sponsors from "./containers/Sponsors.jsx";
+import logo from "./assets/images/SE_Logo_inverted_Trimmed.png";
 
 class App extends Component {
   render() {
@@ -18,30 +16,76 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
           <a href="/" className="navbar-brand">
-            <img src={logo} width="30" className="d-inline-block align-top" alt=""></img>
+            <img
+              src={logo}
+              width="30"
+              className="d-inline-block align-top"
+              alt=""
+            ></img>
           </a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse primary-header" id="navbarSupportedContent">
+          <div
+            className="collapse navbar-collapse primary-header"
+            id="navbarSupportedContent"
+          >
             <div className="nav navbar-nav mr-auto">
-              <a activeClassName="active" className="nav-link nav-item" href="/">home</a>
-              <a activeClassName="active" className="nav-link nav-item" href="/events">events</a>
-              <a activeClassName="active" className="nav-link nav-item" href="/news">news</a>
-              <a activeClassName="active" className="nav-link nav-item" href="/council">council</a>
-              <a activeClassName="active" className="nav-link nav-item" href="/about" >about</a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href="/"
+              >
+                home
+              </a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href="/events"
+              >
+                events
+              </a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href="/news"
+              >
+                news
+              </a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href="/council"
+              >
+                council
+              </a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href="/about"
+              >
+                about
+              </a>
             </div>
           </div>
         </nav>
         <Router>
           <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/events' component={Events} />
-            <Route exact path='/news' component={News} />
-            <Route exact path='/council' component={Council} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/platforms' component={Platforms}/>
-            <Route exact path='/sponsors' component={Sponsors} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/events" component={Events} />
+            <Route exact path="/news" component={News} />
+            <Route exact path="/council" component={Council} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/platforms" component={Platforms} />
+            <Route exact path="/sponsors" component={Sponsors} />
           </Switch>
         </Router>
       </div>
