@@ -9,6 +9,25 @@ on:
     branches: [ CI-patch-1 ]
 
 jobs:
+  lint:
+    name: Lint
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run ci_format
+      env:
+        CI: true
   build:
     name: Build App
 
@@ -25,8 +44,25 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run ci_format
     - run: npm run build --if-present
+      env:
+        CI: true
+  test:
+    name: Run Tests
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
     - run: npm test
       env:
         CI: true
