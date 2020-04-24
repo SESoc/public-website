@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import logo from '../assets/images/SE_Logo_inverted_Trimmed.png';
+import React, {Component} from "react";
+import logo from "../assets/images/SE_Logo_inverted_Trimmed.png";
 
 class ComingSoon extends Component {
   render() {
@@ -7,9 +7,7 @@ class ComingSoon extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Coming soon.
-          </p>
+          <p>Coming soon.</p>
         </header>
       </div>
     );

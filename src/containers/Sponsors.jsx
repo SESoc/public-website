@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import ComingSoon from '../components/ComingSoon';
+import React, {Component} from "react";
+import ComingSoon from "../components/ComingSoon";
 
 class Sponsors extends Component {
   render() {
-    return (
-      <ComingSoon />
-    );
+    return <ComingSoon />;
   }
 }
 
