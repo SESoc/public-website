@@ -1,18 +1,18 @@
 import React from "react";
 
 const NewsContent = (props) => {
-  //TODO: conditionally render color
   const numEntries = props.numEntries
     ? props.numEntries
     : props.articles.length;
   const colorStyle = (index) => ({
     color: index % 2 == 0 ? "var(--color-accent-eng)" : "var(--color-accent-math)",
   });
+
   return props.articles.splice(0, numEntries).map((article, i) => (
     <tr>
       <th>
         <a href={article.link}>
-          <p style={{marginBottom: 0}}> {article.title} </p>
+          <p className="mb-0"> {article.title} </p>
           <p style={colorStyle(i)}>
             {article.description}
           </p>

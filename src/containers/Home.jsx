@@ -32,44 +32,36 @@ const Hero = () => (
   </Jumbotron>
 );
 
-const contentSectionStyle = {
-  marginBottom: "50px",
-};
 const Content = () => (
   <Container>
     <Row>
-      <Col sm>
-        <section style={contentSectionStyle}>
-          <NewsList
-            numEntries={3}
-            articles={[
-              {
-                title: "Upcoming Elections",
-                description: "Checkout the candidate profiles",
-              },
-              {
-                title: "SESX S01E01",
-                description: "Running a Startup as an SE Student",
-              },
-              {
-                title: "Ibrahim: What I wish I knew in 1A",
-                description: "Intro to the blog",
-              },
-            ]}
-          />
-          <Button variant="secondary" href="/news">
+      <Col sm className="mb-5">
+        <NewsList
+          numEntries={3}
+          articles={[
+            {
+              title: "Upcoming Elections",
+              description: "Checkout the candidate profiles",
+            },
+            {
+              title: "SESX S01E01",
+              description: "Running a Startup as an SE Student",
+            },
+            {
+              title: "Ibrahim: What I wish I knew in 1A",
+              description: "Intro to the blog",
+            },
+          ]}
+        />
+        <Button variant="secondary" href="/news">
           See Archive
-          </Button>
-        </section>
+        </Button>
       </Col>
-
-      <Col sm>
-        <section style={contentSectionStyle}>
-          <EventList />
-          <Button variant="secondary" href="/events">
+      <Col sm className="mb-5">
+        <EventList />
+        <Button variant="secondary" href="/events">
           See All
-          </Button>
-        </section>
+        </Button>
       </Col>
     </Row>
   </Container>

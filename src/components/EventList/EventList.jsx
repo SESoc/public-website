@@ -26,8 +26,8 @@ const eventsData = [
 
 function Event(props) {
   return (
-    <div className="App">
-      <p style={{marginBottom: 0}}>{props.event.date}</p>
+    <div>
+      <p className="mb-0">{props.event.date}</p>
       <p>
         <span style={props.colorStyle}> {props.event.title}: </span> {props.event.body}
       </p>
@@ -40,6 +40,7 @@ function EventsList(props) {
   const colorStyle = (index) => (
     {color: index % 2 == 1 ? "var(--color-accent-eng)" : "var(--color-accent-math)"}
   );
+
   const listItems = events.map((event, i) => (
     <tr>
       <th>
