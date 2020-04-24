@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const NewsContent = (props) => {
   const numEntries = props.numEntries
@@ -28,5 +29,14 @@ const NewsList = (props) => (
     <NewsContent {...props} />
   </div>
 );
+
+NewsList.propTypes = {
+  articles: PropTypes.arrayOf({
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+  numEntries: PropTypes.number,
+};
 
 export default NewsList;
