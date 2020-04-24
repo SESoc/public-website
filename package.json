@@ -5,8 +5,7 @@
     "scripts": {
         "build": "react-scripts build",
         "ci_format": "prettier-eslint --list-different $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && prettier-package-json --list-different --tab-width 4 ./package.json && eslint \"**/*.js\" \"**/*.jsx\" ",
-	"amsadfmasbuild": "react-scripts build",
-	"eject": "react-scripts eject",
+        "eject": "react-scripts eject",
         "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 4 ./package.json",
         "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
         "start": "react-scripts start",
