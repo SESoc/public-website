@@ -25,7 +25,7 @@ const Hero = () => (
             our desire to create events to support our program socially and
             professionally]
           </p>
-          <a href="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt</a>
+          <a href="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt;</a>
         </Col>
       </Row>
     </Container>
