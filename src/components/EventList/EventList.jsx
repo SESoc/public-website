@@ -27,10 +27,9 @@ const eventsData = [
 function Event(props) {
   return (
     <div className="App">
-      <p>{props.event.date}</p>
+      <p style={{marginBottom: 0}}>{props.event.date}</p>
       <p>
-        {" "}
-        <span> {props.event.title}: </span> {props.event.body}{" "}
+        <span style={props.colorStyle}> {props.event.title}: </span> {props.event.body}
       </p>
     </div>
   );
@@ -38,10 +37,13 @@ function Event(props) {
 
 function EventsList(props) {
   const events = props.events;
-  const listItems = events.map(event => (
+  const colorStyle = (index) => (
+    {color: index % 2 == 1 ? "var(--color-accent-eng)" : "var(--color-accent-math)"}
+  );
+  const listItems = events.map((event, i) => (
     <tr>
       <th>
-        <Event event={event} />
+        <Event event={event} colorStyle={colorStyle(i)} />
       </th>
     </tr>
   ));
@@ -67,6 +69,7 @@ Event.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
   },
+  colorStyle : PropTypes.object,
 };
 
 export default EventList;
