@@ -4,6 +4,7 @@
     "version": "0.1.0",
     "scripts": {
         "build": "react-scripts build",
+        "ci_format": "prettier-eslint --list-different $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json  --tab-width 4 ./package.json",
         "eject": "react-scripts eject",
         "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 4 ./package.json",
         "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
