@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import EventList from "../components/EventList/EventList";
+import EventList from "../components/EventList";
 import "./../App.scss";
 
 class Events extends Component {

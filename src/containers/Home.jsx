@@ -5,7 +5,7 @@ Last Edited: Tony Zhao 2020-04-22
 
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
-import EventList from "../components/EventList/EventList";
+import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 
 const Hero = () => (

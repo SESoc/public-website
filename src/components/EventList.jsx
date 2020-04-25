@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
 import React, {Component} from "react";
-import "./EventList.scss";
 import PropTypes from "prop-types";
 
 const eventsData = [
