@@ -5,6 +5,7 @@ Last Edited: Tony Zhao 2020-04-22
 
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 
@@ -25,7 +26,7 @@ const Hero = () => (
             our desire to create events to support our program socially and
             professionally]
           </p>
-          <a href="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt;</a>
+          <Link to="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt;</Link>
         </Col>
       </Row>
     </Container>
@@ -53,15 +54,19 @@ const Content = () => (
             },
           ]}
         />
-        <Button variant="secondary" href="/news">
-          See Archive
-        </Button>
+        <Link to='/news'>
+          <Button variant="secondary">
+            See Archive
+          </Button>
+        </Link>
       </Col>
       <Col sm className="mb-5">
         <EventList />
-        <Button variant="secondary" href="/events">
-          See All
-        </Button>
+        <Link to="/events">
+          <Button variant="secondary">
+            See All
+          </Button>
+        </Link>
       </Col>
     </Row>
   </Container>
