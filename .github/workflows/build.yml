@@ -4,9 +4,7 @@
 name: Lint + Build + Test
 on:
   push:
-    branches: [ CI-patch-1 ]
   pull_request:
-    branches: [ CI-patch-1 ]
 
 jobs:
   lint:
