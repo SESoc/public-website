@@ -9,7 +9,7 @@ const NewsContent = (props) => {
     color: index % 2 == 0 ? "var(--color-accent-eng)" : "var(--color-accent-math)",
   });
 
-  return props.articles.splice(0, numEntries).map((article, i) => (
+  return props.articles.slice(0, numEntries).map((article, i) => (
     <tr>
       <th>
         <a href={article.link}>
