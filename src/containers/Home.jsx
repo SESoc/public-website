@@ -1,8 +1,3 @@
-/*
-Home page for SE Society
-Last Edited: Tony Zhao 2020-04-22
-*/
-
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
