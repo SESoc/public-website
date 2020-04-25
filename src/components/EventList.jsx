@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import "./styles/EventList.css";
 
 const eventsData = [
   {
@@ -28,7 +29,7 @@ function Event(props) {
     <div>
       <p className="mb-0">{props.event.date}</p>
       <p>
-        <span style={props.colorStyle}> {props.event.title}: </span> {props.event.body}
+        <span className='accent'> {props.event.title}: </span> {props.event.body}
       </p>
     </div>
   );
@@ -36,14 +37,11 @@ function Event(props) {
 
 function EventsList(props) {
   const events = props.events;
-  const colorStyle = (index) => (
-    {color: index % 2 == 1 ? "var(--color-accent-eng)" : "var(--color-accent-math)"}
-  );
 
-  const listItems = events.map((event, i) => (
+  const listItems = events.map((event) => (
     <tr>
       <th>
-        <Event event={event} colorStyle={colorStyle(i)} />
+        <Event event={event} />
       </th>
     </tr>
   ));
@@ -53,7 +51,7 @@ function EventsList(props) {
 class EventList extends Component {
   render() {
     return (
-      <div>
+      <div className="event-list">
         <h1>upcoming events</h1>
         <div>
           <EventsList events={eventsData} />
@@ -69,7 +67,6 @@ Event.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
   },
-  colorStyle : PropTypes.object,
 };
 
 export default EventList;

@@ -1,20 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./styles/NewsList.css";
 
 const NewsContent = (props) => {
   const numEntries = props.numEntries
     ? props.numEntries
     : props.articles.length;
-  const colorStyle = (index) => ({
-    color: index % 2 == 0 ? "var(--color-accent-eng)" : "var(--color-accent-math)",
-  });
 
-  return props.articles.slice(0, numEntries).map((article, i) => (
+  return props.articles.slice(0, numEntries).map((article) => (
     <tr>
       <th>
         <a href={article.link}>
           <p className="mb-0"> {article.title} </p>
-          <p style={colorStyle(i)}>
+          <p className='accent'>
             {article.description}
           </p>
         </a>
@@ -24,7 +22,7 @@ const NewsContent = (props) => {
 };
 
 const NewsList = (props) => (
-  <div>
+  <div className = "news-list">
     <h1>news</h1>
     <NewsContent {...props} />
   </div>
