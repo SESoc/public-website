@@ -3,6 +3,7 @@ import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
+import {getEvents} from "../modules/gcal";
 
 const Hero = () => (
   <Jumbotron>
@@ -21,58 +22,71 @@ const Hero = () => (
             our desire to create events to support our program socially and
             professionally]
           </p>
-          <Link to="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt;</Link>
+          <Link to="/events" style={{color: "var(--color-accent-eng)"}}>
+            something about our latest move --&gt;
+          </Link>
         </Col>
       </Row>
     </Container>
   </Jumbotron>
 );
 
-const Content = () => (
-  <Container>
-    <Row>
-      <Col sm className="mb-5">
-        <NewsList
-          numEntries={3}
-          articles={[
-            {
-              title: "Upcoming Elections",
-              description: "Checkout the candidate profiles",
-            },
-            {
-              title: "SESX S01E01",
-              description: "Running a Startup as an SE Student",
-            },
-            {
-              title: "Ibrahim: What I wish I knew in 1A",
-              description: "Intro to the blog",
-            },
-          ]}
-        />
-        <Link to='/news'>
-          <Button variant="secondary">
-            See Archive
-          </Button>
-        </Link>
-      </Col>
-      <Col sm className="mb-5">
-        <EventList />
-        <Link to="/events">
-          <Button variant="secondary">
-            See All
-          </Button>
-        </Link>
-      </Col>
-    </Row>
-  </Container>
-);
+const Content = (props) => {
+  return (
+    <Container>
+      <Row>
+        <Col sm className="mb-5">
+          <NewsList
+            numEntries={3}
+            articles={[
+              {
+                title: "Upcoming Elections",
+                description: "Checkout the candidate profiles",
+              },
+              {
+                title: "SESX S01E01",
+                description: "Running a Startup as an SE Student",
+              },
+              {
+                title: "Ibrahim: What I wish I knew in 1A",
+                description: "Intro to the blog",
+              },
+            ]}
+          />
+          <Link to="/news">
+            <Button variant="secondary">See Archive</Button>
+          </Link>
+        </Col>
+        <Col sm className="mb-5">
+          <EventList events={props.events} />
+          <Link to="/events">
+            <Button variant="secondary">See All</Button>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      events: [],
+    };
+  }
+
+  componentDidMount() {
+    getEvents(events => {
+      this.setState({events});
+    });
+  }
+
   render() {
     return (
       <Fragment>
         <Hero />
-        <Content />
+        <Content events={this.state.events}/>
       </Fragment>
     );
   }
