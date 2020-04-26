@@ -1,0 +1,7 @@
+.news-list tr:nth-child(odd) .accent {
+    color: var(--color-accent-eng)
+}
+
+.news-list tr:nth-child(even) .accent {
+    color: var(--color-accent-math)
+}
