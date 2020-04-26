@@ -13,6 +13,7 @@ class Events extends Component {
         <div className="container-right">
           <div className="responsiveCal">
             <iframe
+              title="se-soc-event-calendar"
               className="calendar"
               src="https://calendar.google.com/calendar/embed?src=lb6ttb1ks37ql5r8isuasgcdo8%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0"
               frameBorder="0"

@@ -11,18 +11,21 @@ class Council extends Component {
             <div className="row">
               <div className="col-sm">
                 <iframe
+                  title="02-19-2019"
                   className="meeting-doc"
                   src="https://drive.google.com/file/d/1_e7VpiyhpUONBOlgQ_QT7i_wzgeBErCY/preview"
                 ></iframe>
               </div>
               <div className="col-sm">
                 <iframe
+                  title="01-22-2019"
                   className="meeting-doc"
                   src="https://drive.google.com/file/d/1ZiJP8xOyod29P2mDsC11fAujjTunWng1/preview"
                 ></iframe>
               </div>
               <div className="col-sm">
                 <iframe
+                  title="03-13-2019"
                   className="meeting-doc"
                   src="https://drive.google.com/file/d/1oLLUbm2XGR3n-_go00JJNI_MbnJqAPWz/preview"
                 ></iframe>
