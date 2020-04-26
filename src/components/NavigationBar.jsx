@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/SE_Logo_inverted_Trimmed.png";
 import {Container , Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
+import "./styles/NavigationBar.css";
 
 const NavigationBar = () => (
   <Navbar bg="light" expand="sm" collapseOnSelect >

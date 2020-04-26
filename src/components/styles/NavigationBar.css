@@ -1,0 +1,7 @@
+.navbar-nav a.nav-link.active:nth-child(odd) {
+    color: var(--color-accent-eng);
+}
+
+.navbar-nav a.nav-link.active:nth-child(even) {
+    color: var(--color-accent-math);
+}
