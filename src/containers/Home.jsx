@@ -32,42 +32,40 @@ const Hero = () => (
   </Jumbotron>
 );
 
-const Content = (props) => {
-  return (
-    <Container>
-      <Row>
-        <Col sm className="mb-5">
-          <NewsList
-            numEntries={3}
-            articles={[
-              {
-                title: "Upcoming Elections",
-                description: "Checkout the candidate profiles",
-              },
-              {
-                title: "SESX S01E01",
-                description: "Running a Startup as an SE Student",
-              },
-              {
-                title: "Ibrahim: What I wish I knew in 1A",
-                description: "Intro to the blog",
-              },
-            ]}
-          />
-          <Link to="/news">
-            <Button variant="secondary">See Archive</Button>
-          </Link>
-        </Col>
-        <Col sm className="mb-5">
-          <EventList events={props.events} />
-          <Link to="/events">
-            <Button variant="secondary">See All</Button>
-          </Link>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+const Content = props => (
+  <Container>
+    <Row>
+      <Col sm className="mb-5">
+        <NewsList
+          numEntries={3}
+          articles={[
+            {
+              title: "Upcoming Elections",
+              description: "Checkout the candidate profiles",
+            },
+            {
+              title: "SESX S01E01",
+              description: "Running a Startup as an SE Student",
+            },
+            {
+              title: "Ibrahim: What I wish I knew in 1A",
+              description: "Intro to the blog",
+            },
+          ]}
+        />
+        <Link to="/news">
+          <Button variant="secondary">See Archive</Button>
+        </Link>
+      </Col>
+      <Col sm className="mb-5">
+        <EventList events={props.events} />
+        <Link to="/events">
+          <Button variant="secondary">See All</Button>
+        </Link>
+      </Col>
+    </Row>
+  </Container>
+);
 
 class Home extends Component {
   constructor() {
@@ -87,7 +85,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
-        <Content events={this.state.events}/>
+        <Content events={this.state.events} />
       </Fragment>
     );
   }

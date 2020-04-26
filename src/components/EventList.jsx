@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Moment from "moment";
 import "./styles/EventList.css";
 
 const Event = props => (
   <div>
-    <p className="mb-0">{Moment(props.event.start).format("MMMM Do, YYYY")}</p>
+    <p className="mb-0">{props.event.dateLabel}</p>
     <p>
       <span className="accent"> {props.event.title}: </span>{" "}
       {props.event.description}
@@ -19,7 +18,7 @@ const EventsList = props => {
   const listItems = events.map(event => (
     <tr>
       <th>
-        <Event event={event}/>
+        <Event event={event} />
       </th>
     </tr>
   ));
