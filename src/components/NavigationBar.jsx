@@ -4,7 +4,7 @@ import {Container , Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
 
 const NavigationBar = () => (
-  <Navbar bg="light" expand="lg" collapseOnSelect >
+  <Navbar bg="light" expand="sm" collapseOnSelect >
     <Container>
       <Navbar.Brand as={Link} to="/">
         <img
@@ -14,7 +14,6 @@ const NavigationBar = () => (
           alt="SE Society"
         />
       </Navbar.Brand>
-
       <Navbar.Toggle
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -59,7 +58,7 @@ const NavigationBar = () => (
             as={NavLink}
             activeClassName="active"
             to="/about">
-          about
+            about
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
