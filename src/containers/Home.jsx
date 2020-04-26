@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";

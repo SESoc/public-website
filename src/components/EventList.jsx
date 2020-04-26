@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import Moment from "moment";
@@ -19,7 +19,7 @@ const EventsList = props => {
   const listItems = events.map(event => (
     <tr>
       <th>
-        <Event event={event} />
+        <Event event={event}/>
       </th>
     </tr>
   ));
