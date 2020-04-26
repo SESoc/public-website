@@ -58,7 +58,6 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
-            className="nav-link nav-item"
             to="/about">
           about
           </Nav.Link>

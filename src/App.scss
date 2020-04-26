@@ -53,8 +53,12 @@ a {
     text-align: right;
 }
 
-.nav-link.active {
-    color: #000;
+.navbar-nav a.active:nth-child(odd) {
+    color: var(--color-accent-eng)!important;
+}
+
+.navbar-nav a.active:nth-child(even) {
+    color: var(--color-accent-math)!important;
 }
 
 
