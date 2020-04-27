@@ -1,3 +1,23 @@
+$color-eng: #692D90;
+$color-eng-light: #b496c7;
+$color-eng-lightest: #e1d5e8;
 .container {
     margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+.add-cal {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.add-cal-btn {
+    float: right;
+    background-color: $color-eng;
+    border-width: 0px;
+    margin-bottom: 3px;
+}
+
+.add-cal-btn:hover {
+    background-color: $color-eng-light;
 }
