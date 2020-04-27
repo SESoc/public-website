@@ -1,0 +1,44 @@
+$color-eng: #692D90;
+$color-eng-lightest: #e1d5e8;
+$color-math: #E6237D;
+.cal-c {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.cal-tb-btn {
+    background-color: white;
+    color: white;
+}
+
+.cal-tb-nav {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cal-date {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    color: $color-eng;
+}
+
+.cal-tb-nav-bf {
+    background-color: white;
+    color: $color-eng;
+    border-width: 0px;
+}
+
+.cal-tb-nav-btn {
+    background-color: white;
+    color: $color-eng;
+    border-width: 0px;
+}
+
+.cal-tb-nav-btn:hover {
+    background-color: $color-eng-lightest;
+    color: $color-eng;
+    border-width: 0px;
+}
