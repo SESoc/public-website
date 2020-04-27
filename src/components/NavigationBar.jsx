@@ -1,11 +1,11 @@
 import React from "react";
 import logo from "../assets/images/SE_Logo_inverted_Trimmed.png";
-import {Container , Nav, Navbar} from "react-bootstrap";
+import {Container, Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
 import "./styles/NavigationBar.css";
 
 const NavigationBar = () => (
-  <Navbar bg="light" expand="sm" collapseOnSelect >
+  <Navbar bg="transparent" expand="sm" collapseOnSelect >
     <Container>
       <Navbar.Brand as={Link} to="/">
         <img
@@ -28,6 +28,7 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
+            className="mr-4"
             exact
             to="/">
           home
@@ -35,6 +36,7 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
+            className="mr-4"
             exact
             to="/events"
           >
@@ -43,6 +45,7 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
+            className="mr-4"
             exact
             to="/news">
           news
@@ -50,6 +53,7 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
+            className="mr-4"
             exact
             to="/council"
           >
@@ -58,6 +62,8 @@ const NavigationBar = () => (
           <Nav.Link
             as={NavLink}
             activeClassName="active"
+            className="mr-4"
+            exact
             to="/about">
             about
           </Nav.Link>

@@ -5,3 +5,7 @@
 .navbar-nav a.nav-link.active:nth-child(even) {
     color: var(--color-accent-math);
 }
+
+.navbar-nav.bg-transparent {
+    color: transparent;
+}
