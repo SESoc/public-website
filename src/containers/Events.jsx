@@ -33,7 +33,13 @@ class Events extends Component {
               <EventCalendar events={this.state.events} />
             </div>
             <div className="add-cal">
-              <Button variant="secondary" className="add-cal-btn" href="https://calendar.google.com/calendar/ical/9lt5o1quln7c4u5d4mhm223pa4%40group.calendar.google.com/public/basic.ics">Add Calendar</Button>
+              <Button
+                variant="secondary"
+                className="add-cal-btn"
+                href="https://calendar.google.com/calendar/ical/9lt5o1quln7c4u5d4mhm223pa4%40group.calendar.google.com/public/basic.ics"
+              >
+                Add Calendar
+              </Button>
             </div>
           </Col>
         </Row>
@@ -41,6 +47,5 @@ class Events extends Component {
     );
   }
 }
-
 
 export default Events;

@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import {Row, Col, Button} from "react-bootstrap";
 import {Calendar, momentLocalizer} from "react-big-calendar";
 import Moment from "moment";
@@ -20,48 +20,73 @@ class CalendarToolbar extends Toolbar {
       <div className="cal-c">
         <Row>
           <Col>
-            <Button variant="light" className="cal-tb-nav-btn" onClick={this.navigate.bind(null, "TODAY")}>Today</Button>
+            <Button
+              variant="light"
+              className="cal-tb-nav-btn"
+              onClick={this.navigate.bind(null, "TODAY")}
+            >
+              Today
+            </Button>
           </Col>
           <Col xs={6}>
             <div className="cal-tb-nav">
-              <Button variant="light" className="cal-tb-nav-btn" onClick={this.navigate.bind(null, "PREV")}>&larr;</Button>
+              <Button
+                variant="light"
+                className="cal-tb-nav-btn"
+                onClick={this.navigate.bind(null, "PREV")}
+              >
+                &larr;
+              </Button>
               <div className="cal-date">{label}</div>
-              <Button variant="light" className="cal-tb-nav-btn" onClick={this.navigate.bind(null, "NEXT")}>&rarr;</Button>
+              <Button
+                variant="light"
+                className="cal-tb-nav-btn"
+                onClick={this.navigate.bind(null, "NEXT")}
+              >
+                &rarr;
+              </Button>
             </div>
           </Col>
-          <Col>
-            {this.viewNamesGroup(messages)}
-          </Col>
+          <Col>{this.viewNamesGroup(messages)}</Col>
         </Row>
       </div>
     );
   }
 
-    navigate = action => {
-      this.props.onNavigate(action);
-    }
+  navigate = action => {
+    this.props.onNavigate(action);
+  };
 
-    view = view => {
-      this.props.onView(view);
-    }
+  view = view => {
+    this.props.onView(view);
+  };
 
-    viewNamesGroup(messages) {
-      let viewNames = this.props.views;
+  viewNamesGroup(messages) {
+    let viewNames = this.props.views;
 
-      if (viewNames.length > 1) {
-        return viewNames.map(name => (
-          <Button
-            variant="light"
-            className="cal-tb-nav-btn"
-            key={name}
-            onClick={this.view.bind(null, name)}
-          >
-            {messages[name]}
-          </Button>
-        ));
-      }
+    if (viewNames.length > 1) {
+      return viewNames.map(name => (
+        <Button
+          variant="light"
+          className="cal-tb-nav-btn"
+          key={name}
+          onClick={this.view.bind(null, name)}
+        >
+          {messages[name]}
+        </Button>
+      ));
     }
+  }
 }
+
+CalendarToolbar.propTypes = {
+  view: PropTypes.string.isRequired,
+  views: PropTypes.arrayOf(PropTypes.string).isRequired,
+  label: PropTypes.node.isRequired,
+  localizer: PropTypes.object,
+  onNavigate: PropTypes.func.isRequired,
+  onView: PropTypes.func.isRequired,
+};
 
 const EventCalendar = props => {
   return (
@@ -72,13 +97,17 @@ const EventCalendar = props => {
         event.end = Moment(event.end).toDate();
         return event;
       })}
-      components = {{toolbar : CalendarToolbar}}
+      components={{toolbar: CalendarToolbar}}
       startAccessor="start"
       endAccessor="end"
       views={["month", "day"]}
       defaultDate={Moment().toDate()}
     />
   );
+};
+
+EventCalendar.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default EventCalendar;
