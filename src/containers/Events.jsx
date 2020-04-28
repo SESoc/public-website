@@ -36,7 +36,7 @@ class Events extends Component {
               <Button
                 variant="secondary"
                 className="cal-add-btn"
-                href="https://calendar.google.com/calendar/ical/lb6ttb1ks37ql5r8isuasgcdo8%40group.calendar.google.com/public/basic.ics"
+                href="https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
               >
                 Add Calendar
               </Button>
