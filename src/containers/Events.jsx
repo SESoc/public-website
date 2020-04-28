@@ -22,7 +22,7 @@ class Events extends Component {
 
   render() {
     return (
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5">
         <Row>
           <Col sm={5}>
             {" "}
