@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import Moment from "moment";
 import "./styles/EventList.css";
 
 const Event = props => (
@@ -13,37 +13,42 @@ const Event = props => (
   </div>
 );
 
-const EventsList = props => {
-  const events = props.events;
-  const listItems = events.map(event => (
+Event.propTypes = {
+  event: PropTypes.object.isRequired,
+};
+
+const EventsList = props =>
+  props.events.map(event => (
     <tr>
       <th>
         <Event event={event} />
       </th>
     </tr>
   ));
-  return listItems;
-};
 
 class EventList extends Component {
   render() {
+    let curDateTime = Moment();
+    let upcomingEvents = this.props.events.filter(e =>
+      Moment(e.end).isAfter(curDateTime));
     return (
       <div className="event-list">
         <h1>upcoming events</h1>
-        <div>
-          <EventsList events={this.props.events} />
-        </div>
+
+        {upcomingEvents.length ? (
+          <table>
+            <EventsList events={upcomingEvents} />
+          </table>
+        ) : (
+          <div>We have more events coming to you soon! Stay tuned!</div>
+        )}
       </div>
     );
   }
 }
 
 EventList.propTypes = {
-  events: PropTypes.shape({
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }),
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default EventList;

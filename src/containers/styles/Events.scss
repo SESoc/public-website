@@ -6,18 +6,22 @@ $color-eng-lightest: #e1d5e8;
     margin-bottom: 100px;
 }
 
-.add-cal {
+.cal {
+    height: 600px;
+}
+
+.cal-add {
     margin-top: 20px;
     width: 100%;
 }
 
-.add-cal-btn {
+.cal-add-btn {
     float: right;
     background-color: $color-eng;
     border-width: 0px;
     margin-bottom: 3px;
 }
 
-.add-cal-btn:hover {
+.cal-add-btn:hover {
     background-color: $color-eng-light;
 }

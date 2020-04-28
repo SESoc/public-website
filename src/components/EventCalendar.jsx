@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Row, Col, Button} from "react-bootstrap";
 import {Calendar, momentLocalizer} from "react-big-calendar";
-import Moment from "moment";
 import Toolbar from "react-big-calendar/lib/Toolbar";
+import Moment from "moment";
 import "./styles/ReactBigCalendar.scss";
 import "./styles/EventCalendar.scss";
 
@@ -22,7 +22,7 @@ class CalendarToolbar extends Toolbar {
           <Col>
             <Button
               variant="light"
-              className="cal-tb-nav-btn"
+              className="cal-tb-btn"
               onClick={this.navigate.bind(null, "TODAY")}
             >
               Today
@@ -32,7 +32,7 @@ class CalendarToolbar extends Toolbar {
             <div className="cal-tb-nav">
               <Button
                 variant="light"
-                className="cal-tb-nav-btn"
+                className="cal-tb-btn"
                 onClick={this.navigate.bind(null, "PREV")}
               >
                 &larr;
@@ -40,7 +40,7 @@ class CalendarToolbar extends Toolbar {
               <div className="cal-date">{label}</div>
               <Button
                 variant="light"
-                className="cal-tb-nav-btn"
+                className="cal-tb-btn"
                 onClick={this.navigate.bind(null, "NEXT")}
               >
                 &rarr;
@@ -68,7 +68,7 @@ class CalendarToolbar extends Toolbar {
       return viewNames.map(name => (
         <Button
           variant="light"
-          className="cal-tb-nav-btn"
+          className="cal-tb-btn"
           key={name}
           onClick={this.view.bind(null, name)}
         >

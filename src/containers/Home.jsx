@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
@@ -66,6 +66,10 @@ const Content = props => (
     </Row>
   </Container>
 );
+
+Content.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 class Home extends Component {
   constructor() {
