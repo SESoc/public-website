@@ -40,7 +40,7 @@ class EventList extends Component {
             <EventsList events={upcomingEvents} />
           </table>
         ) : (
-          <div>We have more events coming to you soon! Stay tuned!</div>
+          <div className="mb-3">We have more events coming to you soon! Stay tuned!</div>
         )}
       </div>
     );
