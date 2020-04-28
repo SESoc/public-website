@@ -1,16 +1,6 @@
 @import "../../assets/colors";
-.container {
-    margin-top: 90px;
-    margin-bottom: 100px;
-}
-
 .cal {
     height: 600px;
-}
-
-.cal-add {
-    margin-top: 20px;
-    width: 100%;
 }
 
 .cal-add-btn {
@@ -23,3 +13,5 @@
 .cal-add-btn:hover {
     background-color: $color-eng-light;
 }
+
+@media (max-width: 992px) {}

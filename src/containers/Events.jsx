@@ -22,23 +22,23 @@ class Events extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col sm={5}>
             {" "}
             <EventList events={this.state.events} />{" "}
           </Col>
-          <Col sm={7}>
+          <Col sm={7} className="mt-5 mt-sm-0">
             <div className="cal">
               <EventCalendar events={this.state.events} />
             </div>
-            <div className="cal-add">
+            <div className="mt-3">
               <Button
                 variant="secondary"
                 className="cal-add-btn"
                 href="https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
               >
-                Add Calendar
+                + Google Calendar
               </Button>
             </div>
           </Col>
