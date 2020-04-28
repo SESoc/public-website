@@ -8,7 +8,7 @@ Getting started on your own!!
 6. There are also some environment files you must create (and should never be committed to git):
   - Google Calendar API:
     - make a copy of the .env_example file in the root directory public-website and name the copy .env (this is in the .gitignore and should not be committed to git)
-    - get the Calendar ID from google calendar and set the variable REACT_APP_GOOGLE_CALENDAR_ID to it (if you don't have access to the [SE Events] (https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) calendar contact @RobbieZhuang, @jenniferwills or @yingninggui, and we can help) 
+    - get the Calendar ID from google calendar and set the variable REACT_APP_GOOGLE_CALENDAR_ID to it (if you don't have access to the [SE Events](https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) calendar contact @RobbieZhuang, @jenniferwills or @yingninggui, and we can help) 
       - to get the Calendar ID if you have access to the SE Soc Events calendar go to settings and sharing (for the calendar) -> scroll down to “Integrate Calendar” section -> Calendar ID (this the ID you want)
     - Get a [Google API Key](https://developers.google.com/calendar/quickstart/js) (make sure to follow the entirety of step 1, you may need to enable google calendar API before generating a key) from google calendar and set REACT_APP_GOOGLE_CALENDAR_API_KEY to it.
 
