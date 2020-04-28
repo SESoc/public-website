@@ -1,11 +1,6 @@
 @charset "UTF-8";
-$color-primary: black;
-$color-eng: #692D90;
-$color-eng-light: #b496c7;
-$color-eng-lightest: #e1d5e8;
-$color-math: #E6237D;
-$color-math-light: #eb4e97;
-// Element colors
+@import "../../assets/colors";
+// Component colors
 $color-dates: $color-eng;
 $color-dates-invalid: $color-eng-light;
 $color-current-day: $color-eng-lightest;
