@@ -3,6 +3,15 @@ Getting started on your own!!
 2. cd public-website
 3. npm install
 4. npm start (this creates a new local server running the website, and will open a new browser window)
+5. Remember to run [npm run format](#npm-run-format) before you a PR up for review
+
+6. There are also some environment files you must create (and should never be committed to git):
+  - Google Calendar API:
+    - make a copy of the .env_example file in the root directory public-website and name the copy .env (this is in the .gitignore and should not be committed to git)
+    - get the Calendar ID from google calendar and set the variable REACT_APP_GOOGLE_CALENDAR_ID to it (if you don't have access to the [SE Events](https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) calendar contact @RobbieZhuang, @jenniferwills or @yingninggui, and we can help)
+      - to get the Calendar ID  go to settings and sharing (for the calendar) -> scroll down to “Integrate Calendar” section -> Calendar ID (this the ID you want)
+      - for development work involving the calendar API we suggest you create a test calendar and use the Calendar ID for that instead of the SE Soc Events calendar
+    - Get a [Google API Key](https://developers.google.com/calendar/quickstart/js) (make sure to follow the entirety of step 1, you may need to enable google calendar API before clicking the Create API Key button) from google calendar and set REACT_APP_GOOGLE_CALENDAR_API_KEY to it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -208,7 +217,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### `npm run format`
 
-Fully lints and formats .js, .jsx and package.json. Runs prettier-eslint, eslint and prettier-package-json. 
+Fully lints and formats .js, .jsx and package.json. Runs prettier-eslint, eslint and prettier-package-json.
 
 **Please run this and fix any errors before sending your PR out to review.**
 
