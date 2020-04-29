@@ -7,7 +7,7 @@ import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
 
 const Hero = () => (
-  <Jumbotron>
+  <Jumbotron style={{borderRadius: 0}}>
     <Container>
       <Row>
         <Col sm>
@@ -35,7 +35,7 @@ const Hero = () => (
 const Content = props => (
   <Container>
     <Row>
-      <Col sm className="mb-5">
+      <Col sm className="mb-5 mx-3 mx-sm-0">
         <NewsList
           numEntries={3}
           articles={[
@@ -57,7 +57,7 @@ const Content = props => (
           <Button variant="secondary">See Archive</Button>
         </Link>
       </Col>
-      <Col sm className="mb-5">
+      <Col sm className="mb-5 mx-3 mx-sm-0">
         <EventList events={props.events} />
         <Link to="/events">
           <Button variant="secondary">See All</Button>
