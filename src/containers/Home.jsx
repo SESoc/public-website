@@ -7,7 +7,7 @@ import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
 
 const Hero = () => (
-  <Jumbotron style={{borderRadius:0}}>
+  <Jumbotron style={{borderRadius: 0}}>
     <Container>
       <Row>
         <Col sm>
