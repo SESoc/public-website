@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import "./App.scss";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import "./App.scss";
 import Home from "./containers/Home.jsx";
 import Platforms from "./containers/Platforms.jsx";
 import Events from "./containers/Events.jsx";
