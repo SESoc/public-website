@@ -77,16 +77,16 @@ class App extends Component {
             </div>
           </div>
         </nav>
-        <Router>
+        <Router basename={'/~sesoc'}>
           <Switch>
 
-            <Route path="/events" component={Events} />
-            <Route path="/news" component={News} />
-            <Route path="/council" component={Council} />
-            <Route path="/about" component={About} />
-            <Route path="/platforms" component={Platforms} />
-            <Route path="/sponsors" component={Sponsors} />
-            <Route path="/" component={Home} />
+            <Route path={`${process.env.PUBLIC_URL}/events`} component={Events} />
+            <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
+            <Route path={`${process.env.PUBLIC_URL}/council`} component={Council} />
+            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+            <Route path={`${process.env.PUBLIC_URL}/platforms`} component={Platforms} />
+            <Route path={`${process.env.PUBLIC_URL}/sponsors`} component={Sponsors} />
+            <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
           </Switch>
         </Router>
       </div>
