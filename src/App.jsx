@@ -79,13 +79,14 @@ class App extends Component {
         </nav>
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/events" component={Events} />
-            <Route exact path="/news" component={News} />
-            <Route exact path="/council" component={Council} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/platforms" component={Platforms} />
-            <Route exact path="/sponsors" component={Sponsors} />
+
+            <Route path="/events" component={Events} />
+            <Route path="/news" component={News} />
+            <Route path="/council" component={Council} />
+            <Route path="/about" component={About} />
+            <Route path="/platforms" component={Platforms} />
+            <Route path="/sponsors" component={Sponsors} />
+            <Route path="/" component={Home} />
           </Switch>
         </Router>
       </div>
