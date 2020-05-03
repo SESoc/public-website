@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">
+          <Link to={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
             <img
               src={logo}
               width="30"
@@ -42,35 +42,35 @@ class App extends Component {
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                to="/"
+                to={`${process.env.PUBLIC_URL}/`}
               >
                 home
               </Link>
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                to="/events"
+                to={`${process.env.PUBLIC_URL}/events`}
               >
                 events
               </Link>
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                to="/news"
+                to={`${process.env.PUBLIC_URL}/news`}
               >
                 news
               </Link>
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                to="/council"
+                to={`${process.env.PUBLIC_URL}/council`}
               >
                 council
               </Link>
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                to="/about"
+                to={`${process.env.PUBLIC_URL}/about`}
               >
                 about
               </Link>
@@ -80,13 +80,13 @@ class App extends Component {
         <Router basename={'/~sesoc'}>
           <Switch>
 
-            <Route path="/events" component={Events} />
-            <Route path="/news" component={News} />
-            <Route path="/council" component={Council} />
-            <Route path="/about" component={About} />
-            <Route path="/platforms" component={Platforms} />
-            <Route path="/sponsors" component={Sponsors} />
-            <Route path="/" component={Home} />
+            <Route path={`${process.env.PUBLIC_URL}/events`} component={Events} />
+            <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
+            <Route path={`${process.env.PUBLIC_URL}/council`} component={Council} />
+            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+            <Route path={`${process.env.PUBLIC_URL}/platforms`} component={Platforms} />
+            <Route path={`${process.env.PUBLIC_URL}/sponsors`} component={Sponsors} />
+            <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
           </Switch>
         </Router>
       </div>
