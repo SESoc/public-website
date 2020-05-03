@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import "./App.scss";
 import Home from "./containers/Home.jsx";
 import Platforms from "./containers/Platforms.jsx";
@@ -15,14 +15,14 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
-          <a href="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img
               src={logo}
               width="30"
               className="d-inline-block align-top"
               alt=""
             ></img>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -39,54 +39,54 @@ class App extends Component {
             id="navbarSupportedContent"
           >
             <div className="nav navbar-nav mr-auto">
-              <a
+              <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/"
+                to="/"
               >
                 home
-              </a>
-              <a
+              </Link>
+              <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/events"
+                to="/events"
               >
                 events
-              </a>
-              <a
+              </Link>
+              <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/news"
+                to="/news"
               >
                 news
-              </a>
-              <a
+              </Link>
+              <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/council"
+                to="/council"
               >
                 council
-              </a>
-              <a
+              </Link>
+              <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/about"
+                to="/about"
               >
                 about
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
         <Router basename={'/~sesoc'}>
           <Switch>
 
-            <Route path={`${process.env.PUBLIC_URL}/events`} component={Events} />
-            <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
-            <Route path={`${process.env.PUBLIC_URL}/council`} component={Council} />
-            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
-            <Route path={`${process.env.PUBLIC_URL}/platforms`} component={Platforms} />
-            <Route path={`${process.env.PUBLIC_URL}/sponsors`} component={Sponsors} />
-            <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
+            <Route path="/events" component={Events} />
+            <Route path="/news" component={News} />
+            <Route path="/council" component={Council} />
+            <Route path="/about" component={About} />
+            <Route path="/platforms" component={Platforms} />
+            <Route path="/sponsors" component={Sponsors} />
+            <Route path="/" component={Home} />
           </Switch>
         </Router>
       </div>
