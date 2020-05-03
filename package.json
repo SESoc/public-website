@@ -1,6 +1,7 @@
 {
     "private": true,
     "name": "public-website",
+    "homepage": "http://csclub.uwaterloo.ca/~sesoc/",
     "version": "0.1.0",
     "scripts": {
         "build": "react-scripts build",
