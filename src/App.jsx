@@ -77,16 +77,15 @@ class App extends Component {
             </div>
           </div>
         </nav>
-        <Router basename={'/~sesoc'}>
+        <Router basename={"/~sesoc"}>
           <Switch>
-
-            <Route path={`/events`} component={Events} />
-            <Route path={`/news`} component={News} />
-            <Route path={`/council`} component={Council} />
-            <Route path={`/about`} component={About} />
-            <Route path={`/platforms`} component={Platforms} />
-            <Route path={`/sponsors`} component={Sponsors} />
-            <Route path={`/`} component={Home} />
+            <Route path={"/events"} component={Events} />
+            <Route path={"/news"} component={News} />
+            <Route path={"/council"} component={Council} />
+            <Route path={"/about"} component={About} />
+            <Route path={"/platforms"} component={Platforms} />
+            <Route path={"/sponsors"} component={Sponsors} />
+            <Route path={"/"} component={Home} />
           </Switch>
         </Router>
       </div>
