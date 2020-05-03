@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, NavLink} from "react-router-dom";
 import "./App.scss";
 import Home from "./containers/Home.jsx";
 import Platforms from "./containers/Platforms.jsx";
@@ -15,14 +15,14 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
-          <Link to={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
+          <NavLink to={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
             <img
               src={logo}
               width="30"
               className="d-inline-block align-top"
               alt=""
             ></img>
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -39,41 +39,41 @@ class App extends Component {
             id="navbarSupportedContent"
           >
             <div className="nav navbar-nav mr-auto">
-              <Link
+              <NavLink
                 activeClassName="active"
                 className="nav-link nav-item"
                 to={`${process.env.PUBLIC_URL}/`}
               >
                 home
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 activeClassName="active"
                 className="nav-link nav-item"
                 to={`${process.env.PUBLIC_URL}/events`}
               >
                 events
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 activeClassName="active"
                 className="nav-link nav-item"
                 to={`${process.env.PUBLIC_URL}/news`}
               >
                 news
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 activeClassName="active"
                 className="nav-link nav-item"
                 to={`${process.env.PUBLIC_URL}/council`}
               >
                 council
-              </Link>
-              <Link
+              </NavLink>
+              <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                to={`${process.env.PUBLIC_URL}/about`}
+                href={`${process.env.PUBLIC_URL}/about`}
               >
                 about
-              </Link>
+              </a>
             </div>
           </div>
         </nav>
