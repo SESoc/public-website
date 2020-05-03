@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
-          <Link href={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
+          <Link to={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
             <img
               src={logo}
               width="30"
@@ -49,7 +49,7 @@ class App extends Component {
               <Link
                 activeClassName="active"
                 className="nav-link nav-item"
-                href={`${process.env.PUBLIC_URL}/events`}
+                to={`${process.env.PUBLIC_URL}/events`}
               >
                 events
               </Link>
