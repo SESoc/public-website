@@ -14,7 +14,7 @@ Options -MultiViews
 1. login to any CSC server
 2. cd to the sesoc's subdirectory in users
 3. cd public-website
-4. git pull
+4. git pull (may need to login with github credentials)
 5. npm run build
 6. cp -r build/* ../www
 7. done!
