@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default navbar-fixed-top navbar-expand{-sm|-md|-lg|-xl} navbar-expand-lg navbar-light bg-light">
-          <a href="/" className="navbar-brand">
+          <a href={`${process.env.PUBLIC_URL}/`} className="navbar-brand">
             <img
               src={logo}
               width="30"
@@ -42,42 +42,42 @@ class App extends Component {
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/"
+                href={`${process.env.PUBLIC_URL}/`}
               >
                 home
               </a>
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/events"
+                href={`${process.env.PUBLIC_URL}/events`}
               >
                 events
               </a>
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/news"
+                href={`${process.env.PUBLIC_URL}/news`}
               >
                 news
               </a>
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/council"
+                href={`${process.env.PUBLIC_URL}/council`}
               >
                 council
               </a>
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
-                href="/about"
+                href={`${process.env.PUBLIC_URL}/about`}
               >
                 about
               </a>
             </div>
           </div>
         </nav>
-        <Router>
+        <Router basename={"/~sesoc"}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/events" component={Events} />
