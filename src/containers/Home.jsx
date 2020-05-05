@@ -16,7 +16,7 @@ const Hero = () => (
          */}
         </Col>
         <Col sm>
-          <h1>welcome</h1>
+          <h2>welcome</h2>
           <p>
             This is the official website of the UW Software Engineering Society.
             A place where we [find a collection of english words that emulate
