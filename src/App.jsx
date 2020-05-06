@@ -77,7 +77,7 @@ class App extends Component {
             </div>
           </div>
         </nav>
-        <Router basename={"/~sesoc"}>
+        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/events" component={Events} />
