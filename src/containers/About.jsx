@@ -4,6 +4,7 @@ import ProfileImageRow from "../components/ProfileImageRow.jsx";
 import "../assets/container/about.css";
 // Images temporary ideally these will be hosted online, and we won't import from assets
 import roxane from "../assets/images/roxane.jpg";
+import yingning from "../assets/images/yg.jpg";
 
 class About extends Component {
   render() {
@@ -30,31 +31,25 @@ class About extends Component {
         <ProfileImageRow people={
           [
             {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"}]} />
-        <p>Reps</p>
-        <ProfileImageRow people={
-          [
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"}]} />
+            {name:"Elisa Luan", src:roxane, year:"2021", position:"VP Events"},
+            {name:"Mayank Kanoria", src:roxane, year:"2021", position:"VP Finance"},
+            {name:"Jenny Wills", src:roxane, year:"2021", position:"VP Communications"}]} />
         <h3>A-Soc</h3>
         <p>Execs</p>
         <ProfileImageRow people={
           [
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"}]} />
+            {name:"Yingning Gui", src:yingning, year:"2022", position:"President"},
+            {name:"Alex Girard", src:roxane, year:"2022", position:"VP Events"},
+            {name:"Han Xiao", src:roxane, year:"2022", position:"VP Finance"},
+            {name:"Robbie Zhuang", src:roxane, year:"2022", position:"VP Communications"}]} />
         <p>Reps</p>
         <ProfileImageRow people={
           [
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"},
-            {name:"Roxane Fruytier", src:roxane, year:"2021", position:"President"}]} />
+            {name:"Aaron Abraham", src:roxane, year:"2024"},
+            {name:"Olivia Misasi", src:roxane, year:"2024"},
+            {name:"Danny Wu", src:roxane, year:"2024"},
+            {name:"Amolik Singh", src:roxane, year:"2022"},
+            {name:"Harry Tong", src:roxane, year:"2022"}]} />
       </Container>
     );
   }
