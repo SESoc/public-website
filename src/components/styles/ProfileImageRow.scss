@@ -1,0 +1,33 @@
+@import "../../styles/colors";
+.card-img {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.card {
+    border-width: 0px;
+    width: 100%;
+}
+
+.card-header {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    background-color: $color-eng;
+}
+
+.col-align-left {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.card-full-width {
+    // padding-left: 0px;
+    // margin-left: 0px;
+    width: 100%;
+}
+
+.text-center {
+    color: white;
+    align-items: center;
+}
