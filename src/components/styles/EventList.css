@@ -1,7 +1,3 @@
-.event-list tr:nth-child(even) .accent {
-    color: var(--color-accent-math)
-}
-
-.event-list tr:nth-child(odd) .accent {
+.event-list tr .accent {
     color: var(--color-accent-eng)
 }

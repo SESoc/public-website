@@ -7,7 +7,12 @@ const Event = props => (
   <div>
     <p className="mb-0">{props.event.dateLabel}</p>
     <p>
-      <span className="accent"> {props.event.title}: </span>{" "}
+      <span className="accent">
+        {props.event.title}
+        {!props.event.description || props.event.description.length === 0
+          ? ""
+          : ": "}
+      </span>
       {props.event.description}
     </p>
   </div>

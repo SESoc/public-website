@@ -61,24 +61,23 @@ a {
 
 h1 {
     color: $color-primary;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 p {
     color: $color-primary;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
-h2,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
 h3 {
     color: $color-eng;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
 }
 
 .center {
