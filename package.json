@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "public-website",
-    "homepage": "http://sesoc.uwaterloo.ca/",
+    "homepage": "https://sesoc.uwaterloo.ca/",
     "version": "0.1.0",
     "scripts": {
         "build": "react-scripts build",
