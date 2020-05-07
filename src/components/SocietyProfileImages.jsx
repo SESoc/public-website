@@ -37,13 +37,13 @@ class SocietyProfileImages extends Component {
     const execs = this.props.execs;
     const reps = this.props.reps;
     return (
-      <div>
+      <div className="society-profiles">
         <h3>{this.props.soc}</h3>
-        <p>Execs</p>
-        <Row>
+        <div>Execs</div>
+        <Row className="mb-3">
           <ImageRow people={execs} />
         </Row>
-        {reps && reps.length ? <p> Reps</p> : null}
+        {reps && reps.length ? <div>Reps</div> : null}
         {reps && reps.length ? (
           <Row>
             <ImageRow people={reps} />

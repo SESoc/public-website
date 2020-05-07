@@ -27,7 +27,7 @@ class About extends Component {
           bunch, feel free to say hi if we ever bump into each other on campus!
         </p>
         <SocietyProfileImages
-          soc={"B Soc"}
+          soc={"B-Soc"}
           execs={[
             {
               name: "Roxane Fruytier",
@@ -57,7 +57,7 @@ class About extends Component {
           reps={[]}
         />
         <SocietyProfileImages
-          soc={"A Soc"}
+          soc={"A-Soc"}
           execs={[
             {
               name: "Yingning Gui",
