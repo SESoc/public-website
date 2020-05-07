@@ -21,72 +21,77 @@ class About extends Component {
           you with someone to chat over coffee. We highlight the cool stuff that
           everyone in SE is up to by producing our podcast, Sessions by SE.
         </p>
-        <h1>Meet The Team</h1>
-        <p>
-          B-Soc represents the odd years (SE2021, SE2023, etc.) and A-Soc
-          represents the even years (SE2020, SE2022, etc.). We’re a friendly
-          bunch, feel free to say hi if we ever bump into each other on campus!
-        </p>
-        <ProfilePhotoGroup
-          soc={"B-Soc"}
-          execs={[
-            {
-              name: "Roxane Fruytier",
-              src: profileImage("roxane"),
-              year: "2021",
-              position: "President",
-            },
-            {
-              name: "Elisa Luan",
-              src: profileImage("elisa"),
-              year: "2021",
-              position: "VP Events",
-            },
-            {
-              name: "Mayank Kanoria",
-              src: profileImage("spencer"),
-              year: "2021",
-              position: "VP Finance",
-            },
-            {
-              name: "Jenny Wills",
-              src: profileImage("jenny"),
-              year: "2021",
-              position: "VP Communications",
-            },
-          ]}
-          color={"var(--color-eng)"}
-        />
-        <ProfilePhotoGroup
-          soc={"A-Soc"}
-          execs={[
-            {
-              name: "Yingning Gui",
-              src: profileImage("yingning"),
-              year: "2022",
-              position: "President",
-            },
-            {
-              name: "Alex Girard",
-              src: profileImage("alex"),
-              year: "2022",
-              position: "VP Events",
-            },
-            {
-              name: "Han Xiao",
-              src: profileImage("han"),
-              year: "2022",
-              position: "VP Finance",
-            },
-            {
-              name: "Robbie Zhuang",
-              src: profileImage("robbie"),
-              year: "2022",
-              position: "VP Communications",
-            },
-          ]}
-          color={"var(--color-math)"}
-        />
+        <Container className="mt-5 pl-0">
+          <h1>Meet The Team</h1>
+          <p>
+            B-Soc represents the odd years (SE2021, SE2023, etc.) and A-Soc
+            represents the even years (SE2020, SE2022, etc.). We’re a friendly
+            bunch, feel free to say hi if we ever bump into each other on
+            campus!
+          </p>
+          <ProfilePhotoGroup
+            soc={"B-Soc"}
+            execs={[
+              {
+                name: "Roxane Fruytier",
+                src: profileImage("roxane"),
+                year: "2021",
+                position: "President",
+              },
+              {
+                name: "Elisa Luan",
+                src: profileImage("elisa"),
+                year: "2021",
+                position: "VP Events",
+              },
+              {
+                name: "Mayank Kanoria",
+                src: profileImage("spencer"),
+                year: "2021",
+                position: "VP Finance",
+              },
+              {
+                name: "Jenny Wills",
+                src: profileImage("jenny"),
+                year: "2021",
+                position: "VP Communications",
+              },
+            ]}
+            reps={[]}
+            color={"var(--color-eng)"}
+          />
+          <ProfilePhotoGroup
+            soc={"A-Soc"}
+            execs={[
+              {
+                name: "Yingning Gui",
+                src: profileImage("yingning"),
+                year: "2022",
+                position: "President",
+              },
+              {
+                name: "Alex Girard",
+                src: profileImage("alex"),
+                year: "2022",
+                position: "VP Events",
+              },
+              {
+                name: "Han Xiao",
+                src: profileImage("han"),
+                year: "2022",
+                position: "VP Finance",
+              },
+              {
+                name: "Robbie Zhuang",
+                src: profileImage("robbie"),
+                year: "2022",
+                position: "VP Communications",
+              },
+            ]}
+            reps={[]}
+            color={"var(--color-math)"}
+          />
+        </Container>
       </Container>
     );
   }
