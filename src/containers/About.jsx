@@ -41,13 +41,13 @@ class About extends Component {
               {
                 name: "Elisa Luan",
                 src: profileImage("elisa"),
-                year: "2021",
+                year: "2023",
                 position: "VP Events",
               },
               {
                 name: "Mayank Kanoria",
                 src: profileImage("spencer"),
-                year: "2021",
+                year: "2023",
                 position: "VP Finance",
               },
               {

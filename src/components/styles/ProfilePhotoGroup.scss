@@ -27,37 +27,28 @@
 
 @media screen and (max-width: 768px) {
     .card {
-        font-size: calc(11px + 0.5vw);
+        font-size: calc(10px + 0.5vw);
         line-height: calc(1.1em + 0.5vw);
     }
 }
 
 .card {
-    margin-left: 0px !important;
     padding-left: 15px;
     border-width: 0px;
     width: 100%;
-    // 
 }
 
 .card-header {
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 10px;
     background-color: $color-eng;
 }
 
-.col-align-left {
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
 .card-full-width {
-    // padding-left: 0px;
-    // margin-left: 0px;
     width: 100%;
 }
 
-.text-center {
+.card-text {
     color: white;
-    align-items: center;
+    text-align: left;
 }

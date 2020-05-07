@@ -4,14 +4,13 @@ import {Card, Col, Row} from "react-bootstrap";
 import "./styles/ProfilePhotoGroup.scss";
 
 const Image = props => (
-  <Col xs={6} sm={6} md={6} lg={3} className="col-align-left">
-    <Card className="card" style={{width: "95%"}}>
+  <Col xs={6} sm={6} md={6} lg={3} className="ml-0 pl-0">
+    <Card className="ml-0 card" style={{width: "95%"}}>
       <Card.Header
         className="card-header"
         style={{backgroundColor: props.color}}
       >
-        <Card.Title className="text-center"></Card.Title>
-        <Card.Text className="text-center">
+        <Card.Text className="card-text">
           <strong>{props.person.name}</strong>
           <br />
           {props.person.year}
