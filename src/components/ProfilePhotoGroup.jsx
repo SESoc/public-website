@@ -6,7 +6,7 @@ import "./styles/ProfilePhotoGroup.scss";
 const Image = props => (
   <Col xs={6} sm={6} md={6} lg={3} className="col-align-left">
     <Card className="card" style={{width: "95%"}}>
-      <Card.Header className="card-header">
+      <Card.Header className="card-header" style={{backgroundColor:props.color}}>
         <Card.Title className="text-center"></Card.Title>
         <Card.Text className="text-center">
           <strong>{props.person.name}</strong>
@@ -22,12 +22,13 @@ const Image = props => (
 );
 
 Image.propTypes = {
+  color: PropTypes.string.isRequired,
   person: PropTypes.object.isRequired,
 };
 
 const ImageRow = props => {
   const listItems = props.people
-    ? props.people.map(person => <Image person={person} />)
+    ? props.people.map(person => <Image person={person} color={props.color}/>)
     : null;
   return listItems;
 };
@@ -36,12 +37,20 @@ class ProfilePhotoGroup extends Component {
   render() {
     const execs = this.props.execs;
     const reps = this.props.reps;
+    const soc = this.props.soc;
+    const color = this.props.color;
     return (
       <div className="society-profiles">
-        <h3>{this.props.soc}</h3>
-        <div>Execs</div>
+        {reps && reps.length ? (
+          <>
+            <h3>{soc}</h3>
+            <div>Execs</div>
+          </>
+        ) : (
+          <h3>{soc} Execs</h3>
+        )}
         <Row className="mb-3">
-          <ImageRow people={execs} />
+          <ImageRow people={execs} color={color}/>
         </Row>
         {reps && reps.length ? <div>Reps</div> : null}
         {reps && reps.length ? (
@@ -58,6 +67,7 @@ ProfilePhotoGroup.propTypes = {
   soc: PropTypes.string.isRequired,
   execs: PropTypes.arrayOf(PropTypes.object).isRequired,
   reps: PropTypes.arrayOf(PropTypes.object).isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default ProfilePhotoGroup;

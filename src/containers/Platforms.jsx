@@ -1,16 +1,16 @@
 import React, {Component} from "react";
 import Platform from "../components/Platform";
+import url from "url";
 
 // Styles
 import "../assets/pure/pure-min.css";
 import "../assets/pure/grids-responsive-min.css";
 import "../assets/container/platforms.css";
 
-// Images temporary ideally these will be hosted online, and we won't import from assets
-import ayush from "../assets/images/ayush.jpg";
-import yg from "../assets/images/yg.jpg";
-import katherine from "../assets/images/katherine.jpg";
-import spencer from "../assets/images/spencer.jpg";
+const ayush = url.resolve(process.env.PUBLIC_URL, "/profiles/ayush.jpg");
+const yg = url.resolve(process.env.PUBLIC_URL, "/profiles/yingning.jpg");
+const katherine = url.resolve(process.env.PUBLIC_URL,"/profiles/katherine.jpg");
+const spencer = url.resolve(process.env.PUBLIC_URL, "/profiles/spencer.jpg");
 
 const platformData = [
   {

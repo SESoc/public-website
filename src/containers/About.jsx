@@ -2,9 +2,10 @@ import React, {Component} from "react";
 import {Container} from "react-bootstrap";
 import ProfilePhotoGroup from "../components/ProfilePhotoGroup.jsx";
 import "../assets/container/about.css";
-// Images temporary ideally these will be hosted online, and we won't import from assets
-import roxane from "../assets/images/roxane.jpg";
-import ayush from "../assets/images/ayush.jpg";
+import url from "url";
+
+const profileImage = name =>
+  url.resolve(process.env.PUBLIC_URL, `/profiles/${name}.jpg`);
 
 class About extends Component {
   render() {
@@ -31,66 +32,60 @@ class About extends Component {
           execs={[
             {
               name: "Roxane Fruytier",
-              src: roxane,
+              src: profileImage("roxane"),
               year: "2021",
               position: "President",
             },
             {
               name: "Elisa Luan",
-              src: roxane,
+              src: profileImage("elisa"),
               year: "2021",
               position: "VP Events",
             },
             {
               name: "Mayank Kanoria",
-              src: roxane,
+              src: profileImage("spencer"),
               year: "2021",
               position: "VP Finance",
             },
             {
               name: "Jenny Wills",
-              src: roxane,
+              src: profileImage("jenny"),
               year: "2021",
               position: "VP Communications",
             },
           ]}
-          reps={[]}
+          color={("var(--color-eng)")}
         />
         <ProfilePhotoGroup
           soc={"A-Soc"}
           execs={[
             {
               name: "Yingning Gui",
-              src: ayush,
+              src: profileImage("yingning"),
               year: "2022",
               position: "President",
             },
             {
               name: "Alex Girard",
-              src: ayush,
+              src: profileImage("alex"),
               year: "2022",
               position: "VP Events",
             },
             {
               name: "Han Xiao",
-              src: ayush,
+              src: profileImage("han"),
               year: "2022",
               position: "VP Finance",
             },
             {
               name: "Robbie Zhuang",
-              src: ayush,
+              src: profileImage("robbie"),
               year: "2022",
               position: "VP Communications",
             },
           ]}
-          reps={[
-            {name: "Aaron Abraham", src: roxane, year: "2024", position: "1B Rep"},
-            {name: "Olivia Misasi", src: roxane, year: "2024", position: "1B Rep"},
-            {name: "Danny Wu", src: roxane, year: "2024", position: "1B Rep"},
-            {name: "Amolik Singh", src: roxane, year: "2022", position: "3A Rep"},
-            {name: "Harry Tong", src: roxane, year: "2022", position: "3A Rep"},
-          ]}
+          color={("var(--color-math)")}
         />
       </Container>
     );
