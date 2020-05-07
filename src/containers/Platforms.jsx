@@ -9,7 +9,10 @@ import "../assets/container/platforms.css";
 
 const ayush = url.resolve(process.env.PUBLIC_URL, "/profiles/ayush.jpg");
 const yg = url.resolve(process.env.PUBLIC_URL, "/profiles/yingning.jpg");
-const katherine = url.resolve(process.env.PUBLIC_URL,"/profiles/katherine.jpg");
+const katherine = url.resolve(
+  process.env.PUBLIC_URL,
+  "/profiles/katherine.jpg",
+);
 const spencer = url.resolve(process.env.PUBLIC_URL, "/profiles/spencer.jpg");
 
 const platformData = [

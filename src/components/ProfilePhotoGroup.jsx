@@ -6,7 +6,10 @@ import "./styles/ProfilePhotoGroup.scss";
 const Image = props => (
   <Col xs={6} sm={6} md={6} lg={3} className="col-align-left">
     <Card className="card" style={{width: "95%"}}>
-      <Card.Header className="card-header" style={{backgroundColor:props.color}}>
+      <Card.Header
+        className="card-header"
+        style={{backgroundColor: props.color}}
+      >
         <Card.Title className="text-center"></Card.Title>
         <Card.Text className="text-center">
           <strong>{props.person.name}</strong>
@@ -28,7 +31,7 @@ Image.propTypes = {
 
 const ImageRow = props => {
   const listItems = props.people
-    ? props.people.map(person => <Image person={person} color={props.color}/>)
+    ? props.people.map(person => <Image person={person} color={props.color} />)
     : null;
   return listItems;
 };
@@ -50,7 +53,7 @@ class ProfilePhotoGroup extends Component {
           <h3>{soc} Execs</h3>
         )}
         <Row className="mb-3">
-          <ImageRow people={execs} color={color}/>
+          <ImageRow people={execs} color={color} />
         </Row>
         {reps && reps.length ? <div>Reps</div> : null}
         {reps && reps.length ? (

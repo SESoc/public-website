@@ -55,7 +55,7 @@ class About extends Component {
               position: "VP Communications",
             },
           ]}
-          color={("var(--color-eng)")}
+          color={"var(--color-eng)"}
         />
         <ProfilePhotoGroup
           soc={"A-Soc"}
@@ -85,7 +85,7 @@ class About extends Component {
               position: "VP Communications",
             },
           ]}
-          color={("var(--color-math)")}
+          color={"var(--color-math)"}
         />
       </Container>
     );
