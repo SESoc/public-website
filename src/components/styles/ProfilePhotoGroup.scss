@@ -13,11 +13,33 @@
     max-height: 256px;
 }
 
+@media screen and (min-width: 768px) {
+    .card {
+        font-size: calc(5px + .75vw);
+        line-height: calc(1.1em + 0.5vw);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card {
+        font-size: calc(10px + 1vw);
+        line-height: calc(1.1em + 0.5vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        font-size: calc(11px + 0.5vw);
+        line-height: calc(1.1em + 0.5vw);
+    }
+}
+
 .card {
     margin-left: 0px !important;
     padding-left: 15px;
     border-width: 0px;
     width: 100%;
+    // 
 }
 
 .card-header {

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Container} from "react-bootstrap";
-import SocietyProfileImages from "../components/SocietyProfileImages.jsx";
+import ProfilePhotoGroup from "../components/ProfilePhotoGroup.jsx";
 import "../assets/container/about.css";
 // Images temporary ideally these will be hosted online, and we won't import from assets
 import roxane from "../assets/images/roxane.jpg";
@@ -26,7 +26,7 @@ class About extends Component {
           represents the even years (SE2020, SE2022, etc.). We’re a friendly
           bunch, feel free to say hi if we ever bump into each other on campus!
         </p>
-        <SocietyProfileImages
+        <ProfilePhotoGroup
           soc={"B-Soc"}
           execs={[
             {
@@ -56,7 +56,7 @@ class About extends Component {
           ]}
           reps={[]}
         />
-        <SocietyProfileImages
+        <ProfilePhotoGroup
           soc={"A-Soc"}
           execs={[
             {
@@ -85,11 +85,11 @@ class About extends Component {
             },
           ]}
           reps={[
-            {name: "Aaron Abraham", src: roxane, year: "2024"},
-            {name: "Olivia Misasi", src: roxane, year: "2024"},
-            {name: "Danny Wu", src: roxane, year: "2024"},
-            {name: "Amolik Singh", src: roxane, year: "2022"},
-            {name: "Harry Tong", src: roxane, year: "2022"},
+            {name: "Aaron Abraham", src: roxane, year: "2024", position: "1B Rep"},
+            {name: "Olivia Misasi", src: roxane, year: "2024", position: "1B Rep"},
+            {name: "Danny Wu", src: roxane, year: "2024", position: "1B Rep"},
+            {name: "Amolik Singh", src: roxane, year: "2022", position: "3A Rep"},
+            {name: "Harry Tong", src: roxane, year: "2022", position: "3A Rep"},
           ]}
         />
       </Container>

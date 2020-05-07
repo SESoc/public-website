@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Card, Col, Row} from "react-bootstrap";
-import "./styles/SocietyProfileImages.scss";
+import "./styles/ProfilePhotoGroup.scss";
 
 const Image = props => (
-  <Col xs={6} md={3} className="col-align-left">
+  <Col xs={6} sm={6} md={6} lg={3} className="col-align-left">
     <Card className="card" style={{width: "95%"}}>
       <Card.Header className="card-header">
         <Card.Title className="text-center"></Card.Title>
@@ -32,7 +32,7 @@ const ImageRow = props => {
   return listItems;
 };
 
-class SocietyProfileImages extends Component {
+class ProfilePhotoGroup extends Component {
   render() {
     const execs = this.props.execs;
     const reps = this.props.reps;
@@ -54,10 +54,10 @@ class SocietyProfileImages extends Component {
   }
 }
 
-SocietyProfileImages.propTypes = {
+ProfilePhotoGroup.propTypes = {
   soc: PropTypes.string.isRequired,
   execs: PropTypes.arrayOf(PropTypes.object).isRequired,
   reps: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default SocietyProfileImages;
+export default ProfilePhotoGroup;
