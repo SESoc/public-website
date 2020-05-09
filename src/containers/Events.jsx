@@ -24,11 +24,10 @@ class Events extends Component {
     return (
       <Container className="mt-5 mb-5">
         <Row>
-          <Col sm={5}>
-            {" "}
-            <EventList events={this.state.events} />{" "}
+          <Col lg={5}>
+            <EventList events={this.state.events} />
           </Col>
-          <Col sm={7} className="mt-5 mt-sm-0">
+          <Col lg={7} className="mt-5 mt-sm-0">
             <div className="cal">
               <EventCalendar events={this.state.events} />
             </div>
@@ -37,6 +36,7 @@ class Events extends Component {
                 variant="secondary"
                 className="cal-add-btn"
                 href="https://calendar.google.com/calendar?cid=bGI2dHRiMWtzMzdxbDVyOGlzdWFzZ2NkbzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                target="_blank"
               >
                 + Google Calendar
               </Button>

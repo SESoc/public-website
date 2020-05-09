@@ -16,9 +16,14 @@ export function getEvents(callback) {
           dateLabel: Moment(event.start.date || event.start.dateTime).format("MMMM Do, YYYY"),
           title: event.summary,
           description: event.description,
+          link: event.htmlLink,
         });
       });
-      callback(events);
+      callback(events.sort((e1, e2) => {
+        var d1 = new Date(e1.start),
+          d2 = new Date(e2.start);
+        return d1 - d2;
+      }));
     },
     error => {
       // eslint-disable-next-line no-console
