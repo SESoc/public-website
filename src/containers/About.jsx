@@ -46,7 +46,7 @@ class About extends Component {
               },
               {
                 name: "Mayank Kanoria",
-                src: profileImage("spencer"),
+                src: profileImage("mayank"),
                 year: "2023",
                 position: "VP Finance",
               },

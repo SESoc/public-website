@@ -7,13 +7,13 @@ import "../assets/pure/pure-min.css";
 import "../assets/pure/grids-responsive-min.css";
 import "../assets/container/platforms.css";
 
-const ayush = url.resolve(process.env.PUBLIC_URL, "/profiles/ayush.jpg");
+const ayush = url.resolve(process.env.PUBLIC_URL, "/profiles/yingning.jpg");
 const yg = url.resolve(process.env.PUBLIC_URL, "/profiles/yingning.jpg");
 const katherine = url.resolve(
   process.env.PUBLIC_URL,
-  "/profiles/katherine.jpg",
+  "/profiles/yingning.jpg",
 );
-const spencer = url.resolve(process.env.PUBLIC_URL, "/profiles/spencer.jpg");
+const spencer = url.resolve(process.env.PUBLIC_URL, "/profiles/yingning.jpg");
 
 const platformData = [
   {
