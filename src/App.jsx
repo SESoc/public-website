@@ -8,7 +8,7 @@ import About from "./containers/About.jsx";
 import News from "./containers/News.jsx";
 import Council from "./containers/Council.jsx";
 import Sponsors from "./containers/Sponsors.jsx";
-import logo from "./assets/images/SE_Logo_inverted_Trimmed.png";
+import logo from "./assets/images/SE_Logo_inverted_Trimmed_transparent.png";
 
 class App extends Component {
   render() {
