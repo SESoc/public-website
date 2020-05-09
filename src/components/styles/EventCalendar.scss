@@ -13,12 +13,11 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    display: table;
 }
 
 .cal-date {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    display: table-cell;
     text-align: center;
     color: $color-eng;
 }
