@@ -4,11 +4,12 @@ import Moment from "moment";
 import "./styles/EventList.css";
 
 const Event = props => (
-  <div>
-    <p className="mb-0">{props.event.dateLabel}</p>
+  <div className="event-body">
     <p>
-      <span className="accent"> {props.event.title}: </span>{" "}
-      {props.event.description}
+      <strong>{props.event.dateLabel}</strong>
+      <br />
+      <span className="accent">{props.event.title}</span>
+      <div dangerouslySetInnerHTML={{__html: props.event.description}} />
     </p>
   </div>
 );
@@ -20,9 +21,9 @@ Event.propTypes = {
 const EventsList = props =>
   props.events.map(event => (
     <tr>
-      <th>
+      <td>
         <Event event={event} />
-      </th>
+      </td>
     </tr>
   ));
 
@@ -34,11 +35,12 @@ class EventList extends Component {
     return (
       <div className="event-list">
         <h1>upcoming events</h1>
-
         {upcomingEvents.length ? (
-          <table>
-            <EventsList events={upcomingEvents} />
-          </table>
+          <div className="fade-in-bottom">
+            <table className="scroll">
+              <EventsList events={upcomingEvents} />
+            </table>
+          </div>
         ) : (
           <div className="mb-3">
             We have more events coming to you soon! Stay tuned!
