@@ -1,183 +1,98 @@
 import React, {Component} from "react";
+import {Container} from "react-bootstrap";
+import ProfilePhotoGroup from "../components/ProfilePhotoGroup.jsx";
 import "../assets/container/about.css";
-import Card from "react-bootstrap/Card";
-// Images temporary ideally these will be hosted online, and we won't import from assets
-import ayush from "../assets/images/ayush.jpg";
-import yg from "../assets/images/yg.jpg";
-import katherine from "../assets/images/katherine.jpg";
-import spencer from "../assets/images/spencer.jpg";
-import jenny from "../assets/images/jenny.jpg";
-import roxane from "../assets/images/roxane.jpg";
-import elisa from "../assets/images/spencer.jpg";
-import mayank from "../assets/images/spencer.jpg";
-import bilal from "../assets/images/bilal.jpg";
+import url from "url";
+
+const profileImage = name =>
+  url.resolve(process.env.PUBLIC_URL, `/profiles/${name}.jpg`);
 
 class About extends Component {
   render() {
     return (
-      <div className="center">
-        <h3>We&apos;d love to hear from you!</h3>
-        <div>
-          <a href="mailto:se-soc@uwaterloo.ca">se-soc@uwaterloo.ca</a>
-        </div>
-        <h1>Meet the Exec Teams</h1>
-        <div className="ASoc">
-          <h2>A-Soc Execs</h2>
-          <div className="team row">
-            <Card className="card prez">
-              <Card.Header>
-                <h3 className="exec-name">Spencer Dobrik </h3>
-                <h4 className="class-year">SE 2020</h4>
-                <h4 className="exec-role">President</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={spencer}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">About Spencer</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpcom">
-              <Card.Header>
-                <h3 className="exec-name">Yingning Gui </h3>
-                <h4 className="class-year">SE 2022</h4>
-                <h4 className="exec-role">VP Communications</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={yg}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpe">
-              <Card.Header>
-                <h3 className="exec-name">Katherine Lu </h3>
-                <h4 className="class-year">SE 2020</h4>
-
-                <h4 className="exec-role">VP Events</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={katherine}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpf">
-              <Card.Header>
-                <h3 className="exec-name">Ayush Kapur </h3>
-                <h4 className="class-year">SE 2022</h4>
-
-                <h4 className="exec-role">VP Finance</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={ayush}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-        <div className="BSoc">
-          <h2>B-Soc Execs</h2>
-          <div className="team row">
-            <Card className="card prez">
-              <Card.Header>
-                <h3 className="exec-name">Roxane Fruytier </h3>
-                <h4 className="class-year">SE 2021</h4>
-
-                <h4 className="exec-role">President</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={roxane}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpcom">
-              <Card.Header>
-                <h3 className="exec-name">Jenny Wills </h3>
-                <h4 className="class-year">SE 2021</h4>
-
-                <h4 className="exec-role">VP Communications</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={jenny}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpe">
-              <Card.Header>
-                <h3 className="exec-name">Elisa Luan </h3>
-                <h4 className="class-year">SE 2023</h4>
-
-                <h4 className="exec-role">VP Events</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={elisa}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card vpf">
-              <Card.Header>
-                <h3 className="exec-name">Mayank Kanoria </h3>
-                <h4 className="class-year">SE 2023</h4>
-                <h4 className="exec-role">VP Finance</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={mayank}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-        <div className="old">
-          <h2>Graduated Execs</h2>
-          <div className="team">
-            <Card className="card">
-              <Card.Header>
-                <h3 className="exec-name">Bilal Akhtar </h3>
-                <h4 className="class-year">SE 2019</h4>
-
-                <h4 className="exec-role">B-Soc President Winter 2019</h4>
-              </Card.Header>
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src={bilal}
-                  className="exec-img"
-                ></Card.Img>
-                <Card.Text className="exec-about">text</Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-      </div>
+      <Container className="mt-5 mb-5">
+        <h1>What is SE Soc?</h1>
+        <p>
+          Software Engineering Society (SE Soc) is a council that runs community
+          initiatives within the SE program. We give you a better shot at the
+          jobs you want by hosting resume critiques and interview prep sessions.
+          We build a sense of community by organizing class dinners and social
+          events. We introduce you to upper-years and lower-years by matching
+          you with someone to chat over coffee. We highlight the cool stuff that
+          everyone in SE is up to by producing our podcast, Sessions by SE.
+        </p>
+        <Container className="mt-5 pl-0">
+          <h1>Meet The Team</h1>
+          <p>
+            B-Soc represents the odd years (SE2021, SE2023, etc.) and A-Soc
+            represents the even years (SE2020, SE2022, etc.). We’re a friendly
+            bunch, feel free to say hi if we ever bump into each other on
+            campus!
+          </p>
+          <ProfilePhotoGroup
+            soc={"B-Soc"}
+            execs={[
+              {
+                name: "Roxane Fruytier",
+                src: profileImage("roxane"),
+                year: "2021",
+                position: "President",
+              },
+              {
+                name: "Elisa Luan",
+                src: profileImage("elisa"),
+                year: "2023",
+                position: "VP Events",
+              },
+              {
+                name: "Mayank Kanoria",
+                src: profileImage("mayank"),
+                year: "2023",
+                position: "VP Finance",
+              },
+              {
+                name: "Jenny Wills",
+                src: profileImage("jenny"),
+                year: "2021",
+                position: "VP Communications",
+              },
+            ]}
+            reps={[]}
+            color={"var(--color-eng)"}
+          />
+          <ProfilePhotoGroup
+            soc={"A-Soc"}
+            execs={[
+              {
+                name: "Yingning Gui",
+                src: profileImage("yingning"),
+                year: "2022",
+                position: "President",
+              },
+              {
+                name: "Alex Girard",
+                src: profileImage("alex"),
+                year: "2022",
+                position: "VP Events",
+              },
+              {
+                name: "Han Xiao",
+                src: profileImage("han"),
+                year: "2022",
+                position: "VP Finance",
+              },
+              {
+                name: "Robbie Zhuang",
+                src: profileImage("robbie"),
+                year: "2022",
+                position: "VP Communications",
+              },
+            ]}
+            reps={[]}
+            color={"var(--color-math)"}
+          />
+        </Container>
+      </Container>
     );
   }
 }

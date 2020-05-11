@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import logo from "../assets/images/SE_Logo_inverted_Trimmed.png";
+import url from "url";
+
+const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
 
 class ComingSoon extends Component {
   render() {

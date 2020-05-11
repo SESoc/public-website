@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import url from "url";
 import "./App.scss";
 import Home from "./containers/Home.jsx";
-import Platforms from "./containers/Platforms.jsx";
 import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
 import News from "./containers/News.jsx";
 import Council from "./containers/Council.jsx";
 import Sponsors from "./containers/Sponsors.jsx";
-import logo from "./assets/images/SE_Logo_inverted_Trimmed_transparent.png";
+
+const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
 
 class App extends Component {
   render() {
@@ -84,7 +85,6 @@ class App extends Component {
             <Route exact path="/news" component={News} />
             <Route exact path="/council" component={Council} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/platforms" component={Platforms} />
             <Route exact path="/sponsors" component={Sponsors} />
           </Switch>
         </Router>
