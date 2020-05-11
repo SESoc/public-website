@@ -1,7 +1,7 @@
 @import "styles/colors";
 :root {
-    --color-accent-eng: #{$color-eng};
-    --color-accent-math: #{$color-math};
+    --color-eng: #{$color-eng};
+    --color-math: #{$color-math};
 }
 
 .App {
@@ -71,7 +71,8 @@ h2 {
 }
 
 h3 {
-    color: $color-eng;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 p {

@@ -1,15 +1,23 @@
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import url from "url";
 import PropTypes from "prop-types";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
-import hero from "./hero.png";
+import "./styles/Home.scss";
+
+const heroImage = url.resolve(process.env.PUBLIC_URL, "/illustrations/hero.png");
 
 const Hero = () => (
   <Jumbotron style={{borderRadius: 0}}>
-    <Container>
+    <img
+        alt="Hero Image"
+        className="hero-image"
+        src={heroImage}
+      />
+      <Container className="hero-container">
       <Row>
         <Col sm={8}>
           <h2>Software Engineering Society brings the SE student community together.</h2>
@@ -20,7 +28,7 @@ const Hero = () => (
 );
 
 const Content = props => (
-  <Container>
+  <Container style={{backgroundColor: "#fff"}}>
     <Row>
       <Col sm className="mb-5 mx-3 mx-sm-0">
         <NewsList
@@ -76,7 +84,6 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
-        <img src="./hero.png" alt="MC, QNC, M3, DC" style={{float:"right", width:"42px", height:"42px"}}></img>
         <Content events={this.state.events} />
       </Fragment>
     );

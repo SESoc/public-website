@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import Moment from "moment";
-import "./styles/EventList.css";
+import "./styles/EventList.scss";
 
 const Event = props => (
   <div className="event-body">
