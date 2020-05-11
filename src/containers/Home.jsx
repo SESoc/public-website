@@ -5,27 +5,14 @@ import PropTypes from "prop-types";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
+import hero from "./hero.png";
 
 const Hero = () => (
   <Jumbotron style={{borderRadius: 0}}>
     <Container>
       <Row>
-        <Col sm>
-          {/* <PhotoReel />
-          TODO: Implement PhotoReel
-         */}
-        </Col>
-        <Col sm>
-          <h2>welcome</h2>
-          <p>
-            This is the official website of the UW Software Engineering Society.
-            A place where we [find a collection of english words that emulate
-            our desire to create events to support our program socially and
-            professionally]
-          </p>
-          <Link to="/events" style={{color: "var(--color-accent-eng)"}}>
-            something about our latest move --&gt;
-          </Link>
+        <Col sm={8}>
+          <h2>Software Engineering Society brings the SE student community together.</h2>
         </Col>
       </Row>
     </Container>
@@ -89,6 +76,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
+        <img src="./hero.png" alt="MC, QNC, M3, DC" style={{float:"right", width:"42px", height:"42px"}}></img>
         <Content events={this.state.events} />
       </Fragment>
     );

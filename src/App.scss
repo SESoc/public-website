@@ -65,12 +65,6 @@ h1 {
     font-weight: 700;
 }
 
-p {
-    color: $color-primary;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
 h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -78,6 +72,12 @@ h2 {
 
 h3 {
     color: $color-eng;
+}
+
+p {
+    color: $color-primary;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .center {
