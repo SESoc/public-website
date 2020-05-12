@@ -12,13 +12,22 @@ const heroImage = url.resolve(
   process.env.PUBLIC_URL,
   "/illustrations/hero.png",
 );
+const eventCal = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/calendar.png",
+);
+const coffeeChat = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/coffee-chat.png",
+);
+
 
 const Hero = () => (
   <Jumbotron className="jumbotron-fluid jumbo-container">
     <img alt="Hero" className="hero-image" src={heroImage} />
     <Container className="intro-container">
       <Row>
-        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9} xl={10}>
+        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9}>
           <h2>
             Software Engineering Society brings the SE student community
             together.
@@ -32,33 +41,21 @@ const Hero = () => (
 const Content = props => (
   <Container>
     <Row>
-      <Col sm className="mb-5 mx-3 mx-sm-0">
-        <NewsList
-          numEntries={3}
-          articles={[
-            {
-              title: "Upcoming Elections",
-              description: "Checkout the candidate profiles",
-            },
-            {
-              title: "SESX S01E01",
-              description: "Running a Startup as an SE Student",
-            },
-            {
-              title: "Ibrahim: What I wish I knew in 1A",
-              description: "Intro to the blog",
-            },
-          ]}
-        />
-        <Link to="/news">
-          <Button variant="secondary">See Archive</Button>
-        </Link>
+      <Col md={4} className="mb-5 mx-3 mx-sm-0">
+        <img alt="Calendar Illustration" src={eventCal} className="blurb-image"/>
       </Col>
-      <Col sm className="mb-5 mx-3 mx-sm-0">
-        <EventList events={props.events} />
-        <Link to="/events">
-          <Button variant="secondary">See All</Button>
-        </Link>
+      <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
+        <h3>Missed us last time? Catch us at: </h3>
+        <p> [name of next event]. Check out all upcoming events</p>
+      </Col>
+    </Row>
+    <Row>
+      <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
+        <h3>Curious about life in SE? Check out our latest feature: </h3>
+        <p>SXSE S01E03: How to make the most out of your first coop. Check out more content</p>
+      </Col>
+      <Col md={4} className="mb-5 mx-3 mx-sm-0">
+        <img alt="Coffee Chat Illustration" src={coffeeChat} className="pull-right img-responsive blurb-image"/>
       </Col>
     </Row>
   </Container>

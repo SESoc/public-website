@@ -40,7 +40,7 @@
 @media screen and (min-width: 576px) {
     .hero-image {
         width: calc(450px + 40vw);
-        right: calc(-50% + 40vw);
+        right: calc(-60% + 52vw);
         top: 5px;
     }
     .jumbo-container {
@@ -71,4 +71,18 @@
     h2 {
         font-size: 28px;
     }
+}
+
+.blurb-image {
+    width: 300px;
+}
+
+.blurb-image-right {
+    width: 300px;
+    position: relative;
+}
+
+.blurb-content {
+    padding-top: 100px;
+    vertical-align: middle;
 }
