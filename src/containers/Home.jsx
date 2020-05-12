@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from "react";
-import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
+import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
 import PropTypes from "prop-types";
@@ -53,7 +53,11 @@ const Content = props => {
         >
           <h3>Missed us last time? Catch us at: </h3>
           <p>
-            <a href={upcomingEventLink} target="_blank">
+            <a
+              href={upcomingEventLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {upcomingEvent}
             </a>
             . Or, check out all <Link to="/events"> upcoming events </Link>
@@ -106,8 +110,6 @@ class Home extends Component {
     getEvents(events => {
       this.setState({events});
     });
-    // console.log("Happens After");
-    // console.log(this.state);
   }
 
   render() {

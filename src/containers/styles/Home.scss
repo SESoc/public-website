@@ -1,3 +1,5 @@
+/* Home Page Hero */
+
 .hero-image {
     overflow-x: hidden;
     position: absolute;
@@ -73,9 +75,8 @@
     }
 }
 
-.blurb-image-container {
-    align-items: center;
-}
+
+/* Home Page Content */
 
 .blurb-image {
     max-width: 100%;
@@ -95,14 +96,9 @@ p {
     font-size: calc(10px + .7vw);
 }
 
-@media screen and (max-width: 1665px) {
+@media screen and (min-width: 1665px) {
     .blurb-image {
         max-width: 340px;
-    }
-    .blurb-image-container {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center
     }
     h3 {
         font-size: 37px;
