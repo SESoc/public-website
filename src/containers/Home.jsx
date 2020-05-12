@@ -8,19 +8,21 @@ import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
 import "./styles/Home.scss";
 
-const heroImage = url.resolve(process.env.PUBLIC_URL, "/illustrations/hero.png");
+const heroImage = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/hero.png",
+);
 
 const Hero = () => (
-  <Jumbotron style={{borderRadius: 0}}>
-    <img
-        alt="Hero Image"
-        className="hero-image"
-        src={heroImage}
-      />
-      <Container className="hero-container">
+  <Jumbotron className="jumbotron-fluid jumbo-container">
+    <img alt="Hero" className="hero-image" src={heroImage} />
+    <Container className="intro-container">
       <Row>
-        <Col sm={8}>
-          <h2>Software Engineering Society brings the SE student community together.</h2>
+        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={9} md={8} lg={8} xl={9}>
+          <h2>
+            Software Engineering Society brings the SE student community
+            together.
+          </h2>
         </Col>
       </Row>
     </Container>
@@ -28,7 +30,7 @@ const Hero = () => (
 );
 
 const Content = props => (
-  <Container style={{backgroundColor: "#fff"}}>
+  <Container>
     <Row>
       <Col sm className="mb-5 mx-3 mx-sm-0">
         <NewsList

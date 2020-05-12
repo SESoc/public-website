@@ -1,11 +1,117 @@
 .hero-image {
-    width: 75%;
     overflow-x: hidden;
-    position: relative;
-    float: right;
-    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }
 
-.hero-container {
-    margin-top: -50px;
+.jumbo-container {
+    background-color: #F0EDF1;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+.intro-container {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 1665px) {
+    .hero-image {
+        width: 1100px;
+        right: 0;
+    }
+    .jumbo-container {
+        height: 500px;
+    }
+    .intro-container {
+        padding-top: 5%;
+    }
+    h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1664px) {
+    .hero-image {
+        width: calc(100px + 70vw);
+        right: 0;
+    }
+    .jumbo-container {
+        height: 500px;
+    }
+    .intro-container {
+        padding-top: 5%;
+    }
+    h2 {
+        font-size: calc(23px + 1vw);
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-image {
+        width: calc(100px + 60vw);
+        right: 0;
+    }
+    .jumbo-container {
+        height: 400px;
+    }
+    .intro-container {
+        padding-top: 7%;
+    }
+    h2 {
+        font-size: calc(18.5px + 1vw);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-image {
+        width: calc(200px + 50vw);
+        right: 0;
+    }
+    .jumbo-container {
+        height: 300px;
+    }
+    .intro-container {
+        padding-top: 4%;
+    }
+    h2 {
+        font-size: calc(18.5px + 1vw);
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .hero-image {
+        width: calc(450px + 30vw);
+        right: -20%;
+    }
+    .jumbo-container {
+        height: 300px;
+    }
+    .intro-container {
+        padding-top: 4%;
+    }
+    h2 {
+        font-size: calc(17px + 1vw);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-image {
+        width: calc(100px + 100vw);
+        opacity: 50%;
+        right: -20%;
+        top: calc(100px - 12vw);
+    }
+    .jumbo-container {
+        height: 300px;
+    }
+    .intro-container {
+        padding-top: 12%;
+    }
+    h2 {
+        font-size: 28px;
+    }
 }
