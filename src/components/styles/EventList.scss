@@ -1,4 +1,31 @@
 @import "../../styles/colors";
 .event-list tr .accent {
-    color: $color-eng
+    color: var(--color-eng)
+}
+
+.event-body {
+    padding-bottom: 20px;
+}
+
+.scroll {
+    height: 525px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.fade-in-bottom {
+    position: relative;
+}
+
+.fade-in-bottom:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
+    width: 100%;
+    height: 3em;
 }

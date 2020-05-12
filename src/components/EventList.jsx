@@ -5,12 +5,10 @@ import "./styles/EventList.scss";
 
 const Event = props => (
   <div className="event-body">
-    <p>
-      <strong>{props.event.dateLabel}</strong>
+      <p><strong>{props.event.dateLabel}</strong>
       <br />
-      <span className="accent">{props.event.title}</span>
+      <span className="accent">{props.event.title}</span></p>
       <div dangerouslySetInnerHTML={{__html: props.event.description}} />
-    </p>
   </div>
 );
 
@@ -19,10 +17,10 @@ Event.propTypes = {
 };
 
 const EventsList = props =>
-  props.events.map(event => (
-    <tr>
+  props.events.map((event, index) => (
+    <tr key={index}>
       <td>
-        <Event event={event} />
+        <Event event={event}/>
       </td>
     </tr>
   ));
@@ -38,7 +36,9 @@ class EventList extends Component {
         {upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
+            <tbody>
               <EventsList events={upcomingEvents} />
+              </tbody>
             </table>
           </div>
         ) : (
