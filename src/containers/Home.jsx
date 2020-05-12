@@ -21,7 +21,6 @@ const coffeeChat = url.resolve(
   "/illustrations/coffee-chat.png",
 );
 
-
 const Hero = () => (
   <Jumbotron className="jumbotron-fluid jumbo-container">
     <img alt="Hero" className="hero-image" src={heroImage} />
@@ -42,7 +41,11 @@ const Content = props => (
   <Container>
     <Row>
       <Col md={4} className="mb-5 mx-3 mx-sm-0">
-        <img alt="Calendar Illustration" src={eventCal} className="blurb-image"/>
+        <img
+          alt="Calendar Illustration"
+          src={eventCal}
+          className="blurb-image"
+        />
       </Col>
       <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
         <h3>Missed us last time? Catch us at: </h3>
@@ -52,10 +55,17 @@ const Content = props => (
     <Row>
       <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
         <h3>Curious about life in SE? Check out our latest feature: </h3>
-        <p>SXSE S01E03: How to make the most out of your first coop. Check out more content</p>
+        <p>
+          SXSE S01E03: How to make the most out of your first coop. Check out
+          more content
+        </p>
       </Col>
       <Col md={4} className="mb-5 mx-3 mx-sm-0">
-        <img alt="Coffee Chat Illustration" src={coffeeChat} className="pull-right img-responsive blurb-image"/>
+        <img
+          alt="Coffee Chat Illustration"
+          src={coffeeChat}
+          className="pull-right img-responsive blurb-image"
+        />
       </Col>
     </Row>
   </Container>

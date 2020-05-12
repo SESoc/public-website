@@ -22,7 +22,7 @@
 @media screen and (min-width: 1665px) {
     .hero-image {
         width: 1122px;
-        right: -160.50px;
+        left: 40%;
         top: 5px;
     }
     .jumbo-container {
@@ -37,10 +37,10 @@
 }
 
 // Tablet to desktop screen optimized
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 1664px) {
     .hero-image {
         width: calc(450px + 40vw);
-        right: calc(-60% + 52vw);
+        right: calc(-50% + 40vw);
         top: 5px;
     }
     .jumbo-container {
