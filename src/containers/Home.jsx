@@ -38,30 +38,47 @@ const Hero = () => (
 );
 
 const Content = props => {
-  const firstEvent = props.events[0];
+  var upcomingEvent = "";
+  var upcomingEventLink = "";
+  if (props.events[0] && props.events[0].title && props.events[0].link) {
+    upcomingEvent = props.events[0].title;
+    upcomingEventLink = props.events[0].link;
+  }
   return (
     <Container>
-      <Row>
-        <Col md={4} className="mb-5 mx-3 mx-sm-0">
+      <Row className="mb-sm-5 mx-0 mx-sm-0">
+        <Col
+          sm={{size: "auto", offset: 1}}
+          className="blurb-content order-sm-2"
+        >
+          <h3>Missed us last time? Catch us at: </h3>
+          <p>
+            <a href={upcomingEventLink} target="_blank">
+              {upcomingEvent}
+            </a>
+            . Or, check out all <Link to="/events"> upcoming events </Link>
+          </p>
+        </Col>
+        <Col sm={4} className="blurb-image-container order-sm-1">
           <img
             alt="Calendar Illustration"
             src={eventCal}
             className="blurb-image"
           />
         </Col>
-        <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
-          <h3>Missed us last time? Catch us at: </h3>
-          <p> [Upcoming Event]. <Link to="/events"> Or, check out all upcoming events </Link></p>
-        </Col>
       </Row>
       <Row>
-        <Col md={8} className="mb-5 mx-3 mx-sm-0 blurb-content">
-          <h3>Curious about life in SE? Check out our latest feature: </h3>
-          <p>
-            <a href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA">SXSE S01E02: SE FYDP: Team Mask</a>
-          </p>
+        <Col sm={7} className="mx-3 mx-sm-0 blurb-content">
+          <div>
+            <h3>Curious about life in SE? Check out our latest feature: </h3>
+            <p>
+              <a href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA">
+                SXSE S01E02 - SE FYDP: Team Mask
+              </a>
+            </p>
+          </div>
         </Col>
-        <Col md={4} className="mb-5 mx-3 mx-sm-0">
+        <Col sm={{size: "auto", offset: 1}} className="blurb-image-container">
           <img
             alt="Coffee Chat Illustration"
             src={coffeeChat}
