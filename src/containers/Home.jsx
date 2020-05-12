@@ -18,7 +18,7 @@ const Hero = () => (
     <img alt="Hero" className="hero-image" src={heroImage} />
     <Container className="intro-container">
       <Row>
-        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={9} md={8} lg={8} xl={9}>
+        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9} xl={10}>
           <h2>
             Software Engineering Society brings the SE student community
             together.
