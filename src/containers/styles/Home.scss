@@ -18,98 +18,55 @@
     z-index: 1;
 }
 
+// Upper bound
 @media screen and (min-width: 1665px) {
     .hero-image {
-        width: 1100px;
-        right: 0;
+        width: 1122px;
+        right: -160.50px;
+        top: 5px;
     }
     .jumbo-container {
-        height: 500px;
+        height: 536px;
     }
     .intro-container {
         padding-top: 5%;
     }
     h2 {
-        font-size: 40px;
+        font-size: 37px;
     }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1664px) {
+// Tablet to desktop screen optimized
+@media screen and (min-width: 576px) {
     .hero-image {
-        width: calc(100px + 70vw);
-        right: 0;
+        width: calc(450px + 40vw);
+        right: calc(-50% + 40vw);
+        top: 5px;
     }
     .jumbo-container {
-        height: 500px;
+        height: calc(200px + 20vw);
     }
     .intro-container {
         padding-top: 5%;
     }
     h2 {
-        font-size: calc(23px + 1vw);
+        font-size: calc(16px + 1.25vw);
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    .hero-image {
-        width: calc(100px + 60vw);
-        right: 0;
-    }
-    .jumbo-container {
-        height: 400px;
-    }
-    .intro-container {
-        padding-top: 7%;
-    }
-    h2 {
-        font-size: calc(18.5px + 1vw);
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .hero-image {
-        width: calc(200px + 50vw);
-        right: 0;
-    }
-    .jumbo-container {
-        height: 300px;
-    }
-    .intro-container {
-        padding-top: 4%;
-    }
-    h2 {
-        font-size: calc(18.5px + 1vw);
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-    .hero-image {
-        width: calc(450px + 30vw);
-        right: -20%;
-    }
-    .jumbo-container {
-        height: 300px;
-    }
-    .intro-container {
-        padding-top: 4%;
-    }
-    h2 {
-        font-size: calc(17px + 1vw);
-    }
-}
-
+// Mobile Screen Optimized
 @media screen and (max-width: 576px) {
     .hero-image {
         width: calc(100px + 100vw);
         opacity: 50%;
         right: -20%;
-        top: calc(100px - 12vw);
+        top: calc(80px - 12vw);
     }
     .jumbo-container {
         height: 300px;
     }
     .intro-container {
-        padding-top: 12%;
+        padding-top: 10%;
     }
     h2 {
         font-size: 28px;
