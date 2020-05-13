@@ -9,8 +9,8 @@ const Event = props => (
       <strong>{props.event.dateLabel}</strong>
       <br />
       <span className="accent">{props.event.title}</span>
-      <div dangerouslySetInnerHTML={{__html: props.event.description}} />
     </p>
+    <div dangerouslySetInnerHTML={{__html: props.event.description}} />
   </div>
 );
 
@@ -19,8 +19,8 @@ Event.propTypes = {
 };
 
 const EventsList = props =>
-  props.events.map(event => (
-    <tr>
+  props.events.map((event, index) => (
+    <tr key={index}>
       <td>
         <Event event={event} />
       </td>
@@ -38,7 +38,9 @@ class EventList extends Component {
         {upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
-              <EventsList events={upcomingEvents} />
+              <tbody>
+                <EventsList events={upcomingEvents} />
+              </tbody>
             </table>
           </div>
         ) : (
