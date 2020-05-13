@@ -65,18 +65,18 @@ h1 {
     font-weight: 700;
 }
 
-p {
-    color: $color-primary;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
 h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
 h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    color: $color-primary;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }

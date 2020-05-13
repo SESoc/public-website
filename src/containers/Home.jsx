@@ -1,31 +1,28 @@
 import React, {Component, Fragment} from "react";
 import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import url from "url";
 import PropTypes from "prop-types";
 import EventList from "../components/EventList";
 import NewsList from "../components/NewsList";
 import {getEvents} from "../modules/gcal";
+import "./styles/Home.scss";
+
+const heroImage = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/hero.png",
+);
 
 const Hero = () => (
-  <Jumbotron style={{borderRadius: 0}}>
-    <Container>
+  <Jumbotron className="jumbotron-fluid jumbo-container">
+    <img alt="Hero" className="hero-image" src={heroImage} />
+    <Container className="intro-container">
       <Row>
-        <Col sm>
-          {/* <PhotoReel />
-          TODO: Implement PhotoReel
-         */}
-        </Col>
-        <Col sm>
-          <h2>welcome</h2>
-          <p>
-            This is the official website of the UW Software Engineering Society.
-            A place where we [find a collection of english words that emulate
-            our desire to create events to support our program socially and
-            professionally]
-          </p>
-          <Link to="/events" style={{color: "var(--color-math)"}}>
-            something about our latest move --&gt;
-          </Link>
+        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9}>
+          <h2>
+            Software Engineering Society brings the SE student community
+            together.
+          </h2>
         </Col>
       </Row>
     </Container>
