@@ -1,6 +1,6 @@
 @import "../../styles/colors";
 .event-list tr .accent {
-    color: $color-eng
+    color: $color-eng;
 }
 
 .event-body {
@@ -12,7 +12,8 @@
 }
 
 .scroll {
-    height: 525px;
+    height: auto;
+    max-height: 525px;
     padding-right: 10px;
     overflow-y: auto;
     display: block;

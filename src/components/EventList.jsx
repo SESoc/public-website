@@ -8,9 +8,17 @@ const Event = props => (
     <p className="body-title">
       <strong>{props.event.dateLabel}</strong>
       <br />
-      <span className="accent">{props.event.title}</span>
+      <span className="accent">
+        <a href={props.event.link} target="_blank" rel="noopener noreferrer">
+          {" "}
+          {props.event.title}
+        </a>
+      </span>
     </p>
-    <div dangerouslySetInnerHTML={{__html: props.event.description}} />
+    <div
+      className="event-description"
+      dangerouslySetInnerHTML={{__html: props.event.description}}
+    />
   </div>
 );
 
@@ -31,7 +39,7 @@ class EventList extends Component {
   render() {
     return (
       <div className="event-list">
-        <h1>upcoming events</h1>
+        <h1>Upcoming Events</h1>
         {upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
