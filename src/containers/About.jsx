@@ -21,7 +21,7 @@ class About extends Component {
           you with someone to chat over coffee. We highlight the cool stuff that
           everyone in SE is up to by producing our podcast, Sessions by SE.
         </p>
-        <Container className="mt-5 pl-0">
+        <Container className="mt-4 pl-0">
           <h1>Meet The Team</h1>
           <p>
             B-Soc represents the odd years (SE2021, SE2023, etc.) and A-Soc
