@@ -7,10 +7,14 @@
     padding-bottom: 20px;
 }
 
+.body-title {
+    margin-bottom: 0px;
+}
+
 .scroll {
     height: 525px;
     padding-right: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
     display: block;
     padding-bottom: 30px;
 }

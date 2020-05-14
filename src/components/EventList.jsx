@@ -5,7 +5,7 @@ import "./styles/EventList.scss";
 
 const Event = props => (
   <div className="event-body">
-    <p>
+    <p className="body-title">
       <strong>{props.event.dateLabel}</strong>
       <br />
       <span className="accent">{props.event.title}</span>
