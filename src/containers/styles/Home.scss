@@ -78,9 +78,18 @@
 
 /* Home Page Content */
 
-.blurb-image {
-    max-width: 100%;
-    max-height: 100%;
+.blurb-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blurb-image-cal {
+    max-width: 75%;
+}
+
+.blurb-image-coffee {
+    max-width: 90%;
 }
 
 .blurb-content {
@@ -88,20 +97,13 @@
     margin-bottom: auto;
 }
 
-@media screen and (min-width: 1665px) {
-    .blurb-image {
-        max-width: 340px;
-    }
-}
-
 @media screen and (max-width: 576px) {
-    .blurb-image {
-        max-width: 80%;
-        max-height: 80%;
-    }
     .blurb-image-container {
         display: table-cell;
         vertical-align: middle;
         text-align: center
+    }
+    .blurb-image-cal {
+        max-width: 65%;
     }
 }

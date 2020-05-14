@@ -1,11 +1,17 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import url from "url";
 import "./styles/EventList.scss";
 import {upcomingEvents} from "../modules/gcal";
 
+const moreEvents = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/more-events.png",
+);
+
 const Event = props => (
-  <div className="event-body">
-    <p className="body-title">
+  <div className="event">
+    <p className="event-title">
       <strong>{props.event.dateLabel}</strong>
       <br />
       <span className="accent">
@@ -40,7 +46,7 @@ class EventList extends Component {
     return (
       <div className="event-list">
         <h1>Upcoming Events</h1>
-        {upcomingEvents.length ? (
+        {!upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
@@ -49,8 +55,8 @@ class EventList extends Component {
             </table>
           </div>
         ) : (
-          <div className="mb-3">
-            We have more events coming to you soon! Stay tuned!
+          <div className="mt-5 mb-5" id="empty-event-list">
+            <img alt="More events coming soon." id="more-events" src={moreEvents} />
           </div>
         )}
       </div>

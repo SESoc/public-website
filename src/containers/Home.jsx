@@ -46,7 +46,7 @@ const Content = props => {
   }
   return (
     <Container>
-      <Row className="mb-sm-5 mx-0 mx-sm-0">
+      <Row className="mb-sm-3 mx-0 mx-sm-0">
         <Col
           sm={{size: "auto", offset: 1}}
           className="blurb-content order-sm-2"
@@ -63,11 +63,11 @@ const Content = props => {
             . Or, check out all <Link to="/events"> upcoming events </Link>
           </p>
         </Col>
-        <Col sm={4} className="blurb-image-container order-sm-1">
+        <Col sm={4} className="blurb-image-container order-sm-1 px-0 mb-5">
           <img
             alt="Calendar Illustration"
             src={eventCal}
-            className="blurb-image"
+            className="blurb-image-cal"
           />
         </Col>
       </Row>
@@ -86,11 +86,11 @@ const Content = props => {
             </p>
           </div>
         </Col>
-        <Col sm={{size: "auto", offset: 1}} className="blurb-image-container">
+        <Col sm={{size: "auto", offset: 1}} className="blurb-image-container px-0">
           <img
             alt="Coffee Chat Illustration"
             src={coffeeChat}
-            className="pull-right img-responsive blurb-image"
+            className="pull-right img-responsive blurb-image-coffee"
           />
         </Col>
       </Row>

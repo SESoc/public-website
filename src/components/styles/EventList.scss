@@ -3,11 +3,11 @@
     color: $color-eng;
 }
 
-.event-body {
+.event {
     padding-bottom: 20px;
 }
 
-.body-title {
+.event-title {
     margin-bottom: 0px;
 }
 
@@ -33,4 +33,20 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
     width: 100%;
     height: 3em;
+}
+
+#empty-event-list {
+    display: flex;
+    height: 400px;
+    align-items: center;
+}
+
+#more-events {
+    width: 80%;
+}
+
+@media screen and (max-width: 991px) {
+    #empty-event-list {
+        justify-content: center;
+    }
 }
