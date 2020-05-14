@@ -76,7 +76,11 @@ const Content = props => {
           <div>
             <h3>Curious about life in SE? Check out our latest feature: </h3>
             <p>
-              <a href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA">
+              <a
+                href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 SXSE S01E02 - SE FYDP: Team Mask
               </a>
             </p>
