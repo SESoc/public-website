@@ -3,7 +3,7 @@ import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
 import PropTypes from "prop-types";
-import {getEvents} from "../modules/gcal";
+import {getEvents, upcomingEvents} from "../modules/gcal";
 import "./styles/Home.scss";
 
 const heroImage = url.resolve(
@@ -116,7 +116,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
-        <Content events={this.state.events} />
+        <Content events={upcomingEvents(this.state.events)} />
       </Fragment>
     );
   }

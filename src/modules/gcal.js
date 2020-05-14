@@ -31,3 +31,8 @@ export function getEvents(callback) {
     },
   );
 }
+
+export function upcomingEvents(events) {
+  let curDateTime = Moment();
+  return events.filter(e => Moment(e.end).isAfter(curDateTime));
+}

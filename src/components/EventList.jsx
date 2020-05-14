@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Moment from "moment";
 import "./styles/EventList.scss";
+import {upcomingEvents} from "../modules/gcal";
 
 const Event = props => (
   <div className="event-body">
@@ -29,9 +29,6 @@ const EventsList = props =>
 
 class EventList extends Component {
   render() {
-    let curDateTime = Moment();
-    let upcomingEvents = this.props.events.filter(e =>
-      Moment(e.end).isAfter(curDateTime));
     return (
       <div className="event-list">
         <h1>upcoming events</h1>
@@ -39,7 +36,7 @@ class EventList extends Component {
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
-                <EventsList events={upcomingEvents} />
+                <EventsList events={upcomingEvents(this.props.events)} />
               </tbody>
             </table>
           </div>

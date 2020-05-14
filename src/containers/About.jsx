@@ -58,7 +58,7 @@ class About extends Component {
               },
             ]}
             reps={[]}
-            color={"var(--color-eng)"}
+            color={"var(--color-math)"}
           />
           <ProfilePhotoGroup
             soc={"A-Soc"}
@@ -89,7 +89,7 @@ class About extends Component {
               },
             ]}
             reps={[]}
-            color={"var(--color-math)"}
+            color={"var(--color-eng)"}
           />
         </Container>
       </Container>
