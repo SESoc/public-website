@@ -22,12 +22,12 @@ const coffeeChat = url.resolve(
 );
 
 const Hero = () => (
-  <Jumbotron className="jumbotron-fluid jumbo-container">
+  <Jumbotron className="jumbotron-fluid" id="hero">
     <img alt="Hero" id="hero-image" src={heroImage} />
-    <Container className="intro-container">
+    <Container id="intro">
       <Row>
         <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9}>
-          <h2 id="intro">
+          <h2 id="intro-text">
             Software Engineering Society brings the SE student community
             together.
           </h2>
