@@ -86,7 +86,10 @@ const Content = props => {
             </p>
           </div>
         </Col>
-        <Col sm={{size: "auto", offset: 1}} className="blurb-image-container px-0">
+        <Col
+          sm={{size: "auto", offset: 1}}
+          className="blurb-image-container px-0"
+        >
           <img
             alt="Coffee Chat Illustration"
             src={coffeeChat}

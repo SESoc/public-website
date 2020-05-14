@@ -46,7 +46,7 @@ class EventList extends Component {
     return (
       <div className="event-list">
         <h1>Upcoming Events</h1>
-        {!upcomingEvents.length ? (
+        {upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
@@ -56,7 +56,11 @@ class EventList extends Component {
           </div>
         ) : (
           <div className="mt-5 mb-5" id="empty-event-list">
-            <img alt="More events coming soon." id="more-events" src={moreEvents} />
+            <img
+              alt="More events coming soon."
+              id="more-events"
+              src={moreEvents}
+            />
           </div>
         )}
       </div>
