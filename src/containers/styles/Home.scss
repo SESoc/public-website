@@ -1,6 +1,6 @@
 /* Home Page Hero */
 
-.hero-image {
+#hero-image {
     overflow-x: hidden;
     position: absolute;
     top: 0;
@@ -21,44 +21,48 @@
 }
 
 // Upper bound
-@media screen and (min-width: 1665px) {
-    .hero-image {
-        width: 1122px;
-        left: 40%;
+@media screen and (min-width: 1400px) {
+    #hero-image {
+        width: 1010px;
+        margin-left: 150px;
         top: 5px;
     }
     .jumbo-container {
-        height: 536px;
+        height: 480px;
+        display: flex;
+        justify-content: center;
     }
     .intro-container {
-        padding-top: 5%;
+        padding-top: 70px;
     }
-    h2 {
-        font-size: 37px;
+    #intro {
+        font-size: 33.5px;
     }
 }
 
 // Tablet to desktop screen optimized
-@media screen and (min-width: 576px) and (max-width: 1664px) {
-    .hero-image {
+@media screen and (min-width: 576px) and (max-width: 1399px) {
+    #hero-image {
         width: calc(450px + 40vw);
-        right: calc(-50% + 40vw);
+        margin-left: 150px;
         top: 5px;
     }
     .jumbo-container {
         height: calc(200px + 20vw);
+        display: flex;
+        justify-content: center;
     }
     .intro-container {
         padding-top: 5%;
     }
-    h2 {
+    #intro {
         font-size: calc(16px + 1.25vw);
     }
 }
 
 // Mobile screen optimized
 @media screen and (max-width: 576px) {
-    .hero-image {
+    #hero-image {
         width: calc(100px + 100vw);
         opacity: 50%;
         right: -20%;
@@ -70,7 +74,7 @@
     .intro-container {
         padding-top: 10%;
     }
-    h2 {
+    #intro {
         font-size: 28px;
     }
 }
@@ -88,23 +92,9 @@
     margin-bottom: auto;
 }
 
-h3 {
-    font-size: calc(16px + 1.25vw);
-}
-
-p {
-    font-size: calc(10px + .7vw);
-}
-
 @media screen and (min-width: 1665px) {
     .blurb-image {
         max-width: 340px;
-    }
-    h3 {
-        font-size: 37px;
-    }
-    p {
-        font-size: 22px;
     }
 }
 
@@ -117,11 +107,5 @@ p {
         display: table-cell;
         vertical-align: middle;
         text-align: center
-    }
-    h3 {
-        font-size: calc(20px + 1.25vw);
-    }
-    p {
-        font-size: calc(14px + .7vw);
     }
 }
