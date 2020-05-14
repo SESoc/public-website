@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import url from "url";
 import "./styles/EventList.scss";
-import {upcomingEvents} from "../modules/gcal";
 
 const moreEvents = url.resolve(
   process.env.PUBLIC_URL,
@@ -33,7 +32,7 @@ Event.propTypes = {
 };
 
 const EventsList = props =>
-  props.events.map((event, index) => (
+  props.upcomingEvents.map((event, index) => (
     <tr key={index}>
       <td>
         <Event event={event} />
@@ -46,11 +45,11 @@ class EventList extends Component {
     return (
       <div className="event-list">
         <h1>Upcoming Events</h1>
-        {upcomingEvents.length ? (
+        {this.props.upcomingEvents && this.props.upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
-                <EventsList events={upcomingEvents(this.props.events)} />
+                <EventsList upcomingEvents={this.props.upcomingEvents} />
               </tbody>
             </table>
           </div>
@@ -69,7 +68,7 @@ class EventList extends Component {
 }
 
 EventList.propTypes = {
-  events: PropTypes.arrayOf(PropTypes.object).isRequired,
+  upcomingEvents: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default EventList;

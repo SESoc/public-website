@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import EventList from "../components/EventList";
 import EventCalendar from "../components/EventCalendar";
 import {Container, Row, Col, Button} from "react-bootstrap";
-import {getEvents} from "../modules/gcal";
+import {getEvents, filterUpcomingEvents} from "../modules/gcal";
 import "./../App.scss";
 import "./styles/Events.scss";
 
@@ -25,7 +25,9 @@ class Events extends Component {
       <Container className="mt-5 mb-5">
         <Row>
           <Col lg={5}>
-            <EventList events={this.state.events} />
+            <EventList
+              upcomingEvents={filterUpcomingEvents(this.state.events)}
+            />
           </Col>
           <Col lg={7} className="mt-5 mt-sm-0">
             <div className="cal">

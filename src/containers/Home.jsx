@@ -3,7 +3,7 @@ import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
 import PropTypes from "prop-types";
-import {getEvents, upcomingEvents} from "../modules/gcal";
+import {getEvents, filterUpcomingEvents} from "../modules/gcal";
 import "./styles/Home.scss";
 
 const heroImage = url.resolve(
@@ -38,11 +38,9 @@ const Hero = () => (
 );
 
 const Content = props => {
-  var upcomingEvent = "";
-  var upcomingEventLink = "";
-  if (props.events[0] && props.events[0].title && props.events[0].link) {
-    upcomingEvent = props.events[0].title;
-    upcomingEventLink = props.events[0].link;
+  var upcomingEvent;
+  if (props.events[0]) {
+    upcomingEvent = props.events[0];
   }
   return (
     <Container>
@@ -51,17 +49,28 @@ const Content = props => {
           sm={{size: "auto", offset: 1}}
           className="blurb-content order-sm-2"
         >
-          <h3>Missed us last time? Catch us at: </h3>
-          <p>
-            <a
-              href={upcomingEventLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {upcomingEvent}
-            </a>
-            . Or, check out all <Link to="/events"> upcoming events </Link>
-          </p>
+          {upcomingEvent ? (
+            <>
+              <h3>Missed us last time? Catch us at:</h3>
+              <p>
+                <a
+                  href={upcomingEvent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {upcomingEvent.title}
+                </a>
+                . Or, check out all <Link to="/events"> upcoming events</Link>.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3>More events are coming soon!</h3>
+              <p>
+                Check out all of our <Link to="/events"> past events</Link>.
+              </p>
+            </>
+          )}
         </Col>
         <Col sm={4} className="blurb-image-container order-sm-1 px-0 mb-5">
           <img
@@ -81,7 +90,7 @@ const Content = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SXSE S01E02 - SE FYDP: Team Mask
+                SXSE Podcast S01E02 - SE FYDP: Team Mask
               </a>
             </p>
           </div>
@@ -123,7 +132,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
-        <Content events={upcomingEvents(this.state.events)} />
+        <Content events={filterUpcomingEvents(this.state.events)} />
       </Fragment>
     );
   }
