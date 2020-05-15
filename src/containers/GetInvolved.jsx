@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "../assets/container/council.css";
 
-class Council extends Component {
+class GetInvolved extends Component {
   render() {
     return (
       <div>
@@ -38,4 +38,4 @@ class Council extends Component {
   }
 }
 
-export default Council;
+export default GetInvolved;
