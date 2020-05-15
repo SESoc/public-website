@@ -3,7 +3,7 @@ import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
 import PropTypes from "prop-types";
-import {getEvents} from "../modules/gcal";
+import {getEvents, filterUpcomingEvents} from "../modules/gcal";
 import "./styles/Home.scss";
 
 const heroImage = url.resolve(
@@ -22,12 +22,12 @@ const coffeeChat = url.resolve(
 );
 
 const Hero = () => (
-  <Jumbotron className="jumbotron-fluid jumbo-container">
-    <img alt="Hero" className="hero-image" src={heroImage} />
-    <Container className="intro-container">
+  <Jumbotron className="jumbotron-fluid" id="hero">
+    <img alt="Hero" id="hero-image" src={heroImage} />
+    <Container id="intro">
       <Row>
         <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9}>
-          <h2>
+          <h2 id="intro-text">
             Software Engineering Society brings the SE student community
             together.
           </h2>
@@ -38,36 +38,45 @@ const Hero = () => (
 );
 
 const Content = props => {
-  var upcomingEvent = "";
-  var upcomingEventLink = "";
-  if (props.events[0] && props.events[0].title && props.events[0].link) {
-    upcomingEvent = props.events[0].title;
-    upcomingEventLink = props.events[0].link;
+  var upcomingEvent;
+  if (props.events[0]) {
+    upcomingEvent = props.events[0];
   }
   return (
     <Container>
-      <Row className="mb-sm-5 mx-0 mx-sm-0">
+      <Row className="mb-sm-3 mx-0 mx-sm-0">
         <Col
           sm={{size: "auto", offset: 1}}
           className="blurb-content order-sm-2"
         >
-          <h3>Missed us last time? Catch us at: </h3>
-          <p>
-            <a
-              href={upcomingEventLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {upcomingEvent}
-            </a>
-            . Or, check out all <Link to="/events"> upcoming events </Link>
-          </p>
+          {upcomingEvent ? (
+            <>
+              <h3>Missed us last time? Catch us at:</h3>
+              <p>
+                <a
+                  href={upcomingEvent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {upcomingEvent.title}
+                </a>
+                . Or, check out all <Link to="/events"> upcoming events</Link>.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3>More events are coming soon!</h3>
+              <p>
+                Check out all of our <Link to="/events"> past events</Link>.
+              </p>
+            </>
+          )}
         </Col>
-        <Col sm={4} className="blurb-image-container order-sm-1">
+        <Col sm={4} className="blurb-image-container order-sm-1 px-0 mb-5">
           <img
             alt="Calendar Illustration"
             src={eventCal}
-            className="blurb-image"
+            className="blurb-image-cal"
           />
         </Col>
       </Row>
@@ -76,17 +85,24 @@ const Content = props => {
           <div>
             <h3>Curious about life in SE? Check out our latest feature: </h3>
             <p>
-              <a href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA">
-                SXSE S01E02 - SE FYDP: Team Mask
+              <a
+                href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SXSE Podcast S01E02 - SE FYDP: Team Mask
               </a>
             </p>
           </div>
         </Col>
-        <Col sm={{size: "auto", offset: 1}} className="blurb-image-container">
+        <Col
+          sm={{size: "auto", offset: 1}}
+          className="blurb-image-container px-0"
+        >
           <img
             alt="Coffee Chat Illustration"
             src={coffeeChat}
-            className="pull-right img-responsive blurb-image"
+            className="pull-right img-responsive blurb-image-coffee"
           />
         </Col>
       </Row>
@@ -116,7 +132,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Hero />
-        <Content events={this.state.events} />
+        <Content events={filterUpcomingEvents(this.state.events)} />
       </Fragment>
     );
   }
