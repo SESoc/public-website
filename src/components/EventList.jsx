@@ -1,72 +1,60 @@
-/* eslint-disable react/jsx-key */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import "./styles/EventList.css";
+import Moment from "moment";
+import "./styles/EventList.scss";
 
-const eventsData = [
-  {
-    date: "January 1, 2020",
-    title: "The SE Coffee House",
-    body:
-      "Come out for a night of music, a stage full of talent and an atmosphere of good vibes.",
-  },
-  {
-    date: "January 1, 2020",
-    title: "SE Esports Tourney",
-    body:
-      "Lockdown blues? Join us online to prove your skills, make new friends and play through the night.",
-  },
-  {
-    date: "January 1, 2020",
-    title: "Club Penguin Squad Up",
-    body:
-      "Waddle Waddle. Join us for a penguin party. Full SEnd south pole style.",
-  },
-];
+const Event = props => (
+  <div className="event-body">
+    <p>
+      <strong>{props.event.dateLabel}</strong>
+      <br />
+      <span className="accent">{props.event.title}</span>
+    </p>
+    <div dangerouslySetInnerHTML={{__html: props.event.description}} />
+  </div>
+);
 
-function Event(props) {
-  return (
-    <div>
-      <p className="mb-0">{props.event.date}</p>
-      <p>
-        <span className='accent'> {props.event.title}: </span> {props.event.body}
-      </p>
-    </div>
-  );
-}
+Event.propTypes = {
+  event: PropTypes.object.isRequired,
+};
 
-function EventsList(props) {
-  const events = props.events;
-
-  const listItems = events.map((event) => (
-    <tr>
-      <th>
+const EventsList = props =>
+  props.events.map((event, index) => (
+    <tr key={index}>
+      <td>
         <Event event={event} />
-      </th>
+      </td>
     </tr>
   ));
-  return listItems;
-}
 
 class EventList extends Component {
   render() {
+    let curDateTime = Moment();
+    let upcomingEvents = this.props.events.filter(e =>
+      Moment(e.end).isAfter(curDateTime));
     return (
       <div className="event-list">
         <h1>upcoming events</h1>
-        <div>
-          <EventsList events={eventsData} />
-        </div>
+        {upcomingEvents.length ? (
+          <div className="fade-in-bottom">
+            <table className="scroll">
+              <tbody>
+                <EventsList events={upcomingEvents} />
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="mb-3">
+            We have more events coming to you soon! Stay tuned!
+          </div>
+        )}
       </div>
     );
   }
 }
 
-Event.propTypes = {
-  event: {
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  },
+EventList.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default EventList;

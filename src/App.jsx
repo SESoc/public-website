@@ -1,14 +1,13 @@
 import React, {Component} from "react";
-import "./App.scss";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import url from "url";
+import "./App.scss";
 import Home from "./containers/Home.jsx";
-import Platforms from "./containers/Platforms.jsx";
 import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
-import News from "./containers/News.jsx";
-import Council from "./containers/Council.jsx";
-import Sponsors from "./containers/Sponsors.jsx";
 import NavigationBar from "./components/NavigationBar.jsx";
+
+const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
 
 class App extends Component {
   render() {
@@ -18,12 +17,8 @@ class App extends Component {
           <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/events" component={Events} />
-            <Route exact path="/news" component={News} />
-            <Route exact path="/council" component={Council} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/platforms" component={Platforms} />
-            <Route exact path="/sponsors" component={Sponsors} />
+            <Route exact path="/events" component={Events} />
           </Switch>
         </div>
       </Router>

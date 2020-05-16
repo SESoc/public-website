@@ -1,10 +1,9 @@
-$color-primary: black;
-$color-accent-eng: #692D90;
-$color-accent-math: #E6237D;
+@import "styles/colors";
 :root {
-    --color-accent-eng: #{$color-accent-eng};
-    --color-accent-math: #{$color-accent-math};
+    --color-eng: #{$color-eng};
+    --color-math: #{$color-math};
 }
+
 .App {
     text-align: center;
 }
@@ -43,7 +42,7 @@ $color-accent-math: #E6237D;
 
 a {
     margin-top: 0em;
-    color: $color-accent-eng;
+    color: $color-eng;
 }
 
 .primary-nav {
@@ -57,25 +56,23 @@ a {
 
 h1 {
     color: $color-primary;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 p {
     color: $color-primary;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-
-h2,
-h3 {
-    color: $color-accent-eng;
-}
-
-body {
-    /* font-family:"Comic Sans MS", cursive, sans-serif;  */
-    /* font-family: 'Source Code Pro', monospace; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
@@ -83,23 +80,8 @@ body {
     text-align: center;
 }
 
-.calendar {
-    border: 0;
-    width: 100%;
-    height: 600px;
-}
-
 .container {
     margin-top: 0px;
     width: 100%;
     overflow: hidden;
-}
-
-.container-left {
-    width: 500px;
-    float: left;
-}
-
-.container-right {
-    margin-left: 540px;
 }

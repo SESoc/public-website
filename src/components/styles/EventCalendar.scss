@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+.cal-c {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.cal-tb-btn {
+    background-color: white;
+    color: white;
+}
+
+.cal-tb-nav {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.cal-date {
+    display: table-cell;
+    text-align: center;
+    color: $color-eng;
+}
+
+.cal-tb-nav-bf {
+    background-color: white;
+    color: $color-eng;
+    border-width: 0px;
+}
+
+.cal-tb-btn {
+    background-color: white;
+    color: $color-eng;
+    border-width: 0px;
+}
+
+.cal-tb-btn:hover {
+    background-color: $color-eng-lightest;
+    color: $color-eng;
+    border-width: 0px;
+}

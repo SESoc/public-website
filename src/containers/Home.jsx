@@ -1,78 +1,138 @@
 import React, {Component, Fragment} from "react";
-import {Button, Container, Jumbotron, Row, Col} from "react-bootstrap";
+import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import EventList from "../components/EventList";
-import NewsList from "../components/NewsList";
+import url from "url";
+import PropTypes from "prop-types";
+import {getEvents, filterUpcomingEvents} from "../modules/gcal";
+import "./styles/Home.scss";
+
+const heroImage = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/hero.png",
+);
+
+const eventCal = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/calendar.png",
+);
+
+const coffeeChat = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/coffee-chat.png",
+);
 
 const Hero = () => (
-  <Jumbotron>
-    <Container>
+  <Jumbotron className="jumbotron-fluid" id="hero">
+    <img alt="Hero" id="hero-image" src={heroImage} />
+    <Container id="intro">
       <Row>
-        <Col sm>
-          {/* <PhotoReel />
-          TODO: Implement PhotoReel
-         */}
-        </Col>
-        <Col sm>
-          <h1>welcome</h1>
-          <p>
-            This is the official website of the UW Software Engineering Society.
-            A place where we [find a collection of english words that emulate
-            our desire to create events to support our program socially and
-            professionally]
-          </p>
-          <Link to="/events" style={{color:"var(--color-accent-eng)"}}>something about our latest move --&gt;</Link>
+        <Col className="mb-5 mx-3 mx-sm-0" xs={11} sm={8} md={9}>
+          <h2 id="intro-text">
+            Software Engineering Society brings the SE student community
+            together.
+          </h2>
         </Col>
       </Row>
     </Container>
   </Jumbotron>
 );
 
-const Content = () => (
-  <Container>
-    <Row>
-      <Col sm className="mb-5">
-        <NewsList
-          numEntries={3}
-          articles={[
-            {
-              title: "Upcoming Elections",
-              description: "Checkout the candidate profiles",
-            },
-            {
-              title: "SESX S01E01",
-              description: "Running a Startup as an SE Student",
-            },
-            {
-              title: "Ibrahim: What I wish I knew in 1A",
-              description: "Intro to the blog",
-            },
-          ]}
-        />
-        <Link to='/news'>
-          <Button variant="secondary">
-            See Archive
-          </Button>
-        </Link>
-      </Col>
-      <Col sm className="mb-5">
-        <EventList />
-        <Link to="/events">
-          <Button variant="secondary">
-            See All
-          </Button>
-        </Link>
-      </Col>
-    </Row>
-  </Container>
-);
+const Content = props => {
+  var upcomingEvent;
+  if (props.events[0]) {
+    upcomingEvent = props.events[0];
+  }
+  return (
+    <Container>
+      <Row className="mb-sm-3 mx-0 mx-sm-0">
+        <Col
+          sm={{size: "auto", offset: 1}}
+          className="blurb-content order-sm-2"
+        >
+          {upcomingEvent ? (
+            <>
+              <h3>Missed us last time? Catch us at:</h3>
+              <p>
+                <a
+                  href={upcomingEvent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {upcomingEvent.title}
+                </a>
+                . Or, check out all <Link to="/events"> upcoming events</Link>.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3>More events are coming soon!</h3>
+              <p>
+                Check out all of our <Link to="/events"> past events</Link>.
+              </p>
+            </>
+          )}
+        </Col>
+        <Col sm={4} className="blurb-image-container order-sm-1 px-0 mb-5">
+          <img
+            alt="Calendar Illustration"
+            src={eventCal}
+            className="blurb-image-cal"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={7} className="mx-3 mx-sm-0 blurb-content">
+          <div>
+            <h3>Curious about life in SE? Check out our latest feature: </h3>
+            <p>
+              <a
+                href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SXSE Podcast S01E02 - SE FYDP: Team Mask
+              </a>
+            </p>
+          </div>
+        </Col>
+        <Col
+          sm={{size: "auto", offset: 1}}
+          className="blurb-image-container px-0"
+        >
+          <img
+            alt="Coffee Chat Illustration"
+            src={coffeeChat}
+            className="pull-right img-responsive blurb-image-coffee"
+          />
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+Content.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      events: [],
+    };
+  }
+
+  componentDidMount() {
+    getEvents(events => {
+      this.setState({events});
+    });
+  }
+
   render() {
     return (
       <Fragment>
         <Hero />
-        <Content />
+        <Content events={filterUpcomingEvents(this.state.events)} />
       </Fragment>
     );
   }
