@@ -1,8 +1,10 @@
 import React from "react";
-import logo from "../assets/images/SE_Logo_inverted_Trimmed.png";
+import url from 'url';
 import {Container, Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
 import "./styles/NavigationBar.css";
+
+const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
 
 const NavigationBar = () => (
   <Navbar bg="transparent" expand="sm" collapseOnSelect >
