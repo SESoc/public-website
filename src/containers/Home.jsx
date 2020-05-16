@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
