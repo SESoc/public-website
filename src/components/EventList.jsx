@@ -31,15 +31,6 @@ Event.propTypes = {
   event: PropTypes.object.isRequired,
 };
 
-const EventsList = props =>
-  props.upcomingEvents.map((event, index) => (
-    <tr key={index}>
-      <td>
-        <Event event={event} />
-      </td>
-    </tr>
-  ));
-
 class EventList extends Component {
   render() {
     return (
@@ -49,7 +40,13 @@ class EventList extends Component {
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
-                <EventsList upcomingEvents={this.props.upcomingEvents} />
+                {this.props.upcomingEvents.map((event, index) => (
+                  <tr key={index}>
+                    <td>
+                      <Event event={event} />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
