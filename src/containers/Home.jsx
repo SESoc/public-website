@@ -3,6 +3,7 @@ import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
 import PropTypes from "prop-types";
+import Footer from "../components/Footer.jsx";
 import {getEvents, filterUpcomingEvents} from "../modules/gcal";
 import "./styles/Home.scss";
 
@@ -97,7 +98,7 @@ const Content = props => {
         </Col>
         <Col
           sm={{size: "auto", offset: 1}}
-          className="blurb-image-container px-0"
+          className="blurb-image-container px-0 mb-5"
         >
           <img
             alt="Coffee Chat Illustration"
@@ -133,6 +134,7 @@ class Home extends Component {
       <Fragment>
         <Hero />
         <Content events={filterUpcomingEvents(this.state.events)} />
+        <Footer color={"var(--color-eng)"} />
       </Fragment>
     );
   }
