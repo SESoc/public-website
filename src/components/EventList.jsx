@@ -1,16 +1,29 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Moment from "moment";
+import url from "url";
 import "./styles/EventList.scss";
 
+const moreEvents = url.resolve(
+  process.env.PUBLIC_URL,
+  "/illustrations/more-events.png",
+);
+
 const Event = props => (
-  <div className="event-body">
-    <p>
+  <div className="event">
+    <p className="event-title">
       <strong>{props.event.dateLabel}</strong>
       <br />
-      <span className="accent">{props.event.title}</span>
+      <span className="accent">
+        <a href={props.event.link} target="_blank" rel="noopener noreferrer">
+          {" "}
+          {props.event.title}
+        </a>
+      </span>
     </p>
-    <div dangerouslySetInnerHTML={{__html: props.event.description}} />
+    <div
+      className="event-description"
+      dangerouslySetInnerHTML={{__html: props.event.description}}
+    />
   </div>
 );
 
@@ -18,34 +31,32 @@ Event.propTypes = {
   event: PropTypes.object.isRequired,
 };
 
-const EventsList = props =>
-  props.events.map((event, index) => (
-    <tr key={index}>
-      <td>
-        <Event event={event} />
-      </td>
-    </tr>
-  ));
-
 class EventList extends Component {
   render() {
-    let curDateTime = Moment();
-    let upcomingEvents = this.props.events.filter(e =>
-      Moment(e.end).isAfter(curDateTime));
     return (
       <div className="event-list">
-        <h1>upcoming events</h1>
-        {upcomingEvents.length ? (
+        <h1>Upcoming Events</h1>
+        {this.props.upcomingEvents && this.props.upcomingEvents.length ? (
           <div className="fade-in-bottom">
             <table className="scroll">
               <tbody>
-                <EventsList events={upcomingEvents} />
+                {this.props.upcomingEvents.map((event, index) => (
+                  <tr key={index}>
+                    <td>
+                      <Event event={event} />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         ) : (
-          <div className="mb-3">
-            We have more events coming to you soon! Stay tuned!
+          <div className="mt-5 mb-5" id="empty-event-list">
+            <img
+              alt="More events coming soon."
+              id="more-events"
+              src={moreEvents}
+            />
           </div>
         )}
       </div>
@@ -54,7 +65,7 @@ class EventList extends Component {
 }
 
 EventList.propTypes = {
-  events: PropTypes.arrayOf(PropTypes.object).isRequired,
+  upcomingEvents: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default EventList;
