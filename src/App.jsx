@@ -5,9 +5,6 @@ import "./App.scss";
 import Home from "./containers/Home.jsx";
 import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
-import News from "./containers/News.jsx";
-import Council from "./containers/Council.jsx";
-import Sponsors from "./containers/Sponsors.jsx";
 
 const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
 
@@ -45,35 +42,21 @@ class App extends Component {
                 className="nav-link nav-item"
                 href={`${process.env.PUBLIC_URL}/`}
               >
-                home
-              </a>
-              <a
-                activeClassName="active"
-                className="nav-link nav-item"
-                href={`${process.env.PUBLIC_URL}/events`}
-              >
-                events
-              </a>
-              <a
-                activeClassName="active"
-                className="nav-link nav-item"
-                href={`${process.env.PUBLIC_URL}/news`}
-              >
-                news
-              </a>
-              <a
-                activeClassName="active"
-                className="nav-link nav-item"
-                href={`${process.env.PUBLIC_URL}/council`}
-              >
-                council
+                Home
               </a>
               <a
                 activeClassName="active"
                 className="nav-link nav-item"
                 href={`${process.env.PUBLIC_URL}/about`}
               >
-                about
+                About
+              </a>
+              <a
+                activeClassName="active"
+                className="nav-link nav-item"
+                href={`${process.env.PUBLIC_URL}/events`}
+              >
+                Events
               </a>
             </div>
           </div>
@@ -81,11 +64,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/events" component={Events} />
-            <Route exact path="/news" component={News} />
-            <Route exact path="/council" component={Council} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/sponsors" component={Sponsors} />
+            <Route exact path="/events" component={Events} />
           </Switch>
         </Router>
       </div>
