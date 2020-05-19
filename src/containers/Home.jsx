@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import {Container, Jumbotron, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import url from "url";
@@ -131,11 +131,13 @@ class Home extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Hero />
-        <Content events={filterUpcomingEvents(this.state.events)} />
-        <Footer color={"var(--color-eng)"} />
-      </Fragment>
+      <div className="footer-to-bottom">
+        <body>
+          <Hero />
+          <Content events={filterUpcomingEvents(this.state.events)} />
+        </body>
+        <Footer color={"purple"} />
+      </div>
     );
   }
 }
