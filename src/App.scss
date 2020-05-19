@@ -106,3 +106,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
 }
+
+a:hover {
+    color: $color-math-light;
+}
