@@ -6,7 +6,10 @@ import Home from "./containers/Home.jsx";
 import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
 
-const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
+const logo = url.resolve(
+  process.env.PUBLIC_URL,
+  "/icons/se-logo-trimmed-transparent.png",
+);
 
 class App extends Component {
   render() {
