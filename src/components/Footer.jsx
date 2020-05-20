@@ -5,7 +5,7 @@ import "./styles/Footer.scss";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer" style={{backgroundColor: this.props.color}}>
+      <div className={`footer theme-${this.props.color}`}>
         Have any questions? You can reach us on the{" "}
         <a
           className="link"
