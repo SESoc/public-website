@@ -19,8 +19,8 @@ const NavigationBar = (props) => {
   }
 
   return (
-    <Navbar className="mx-3 mx-sm-auto" expand="sm" collapseOnSelect style={{backgroundColor:color}}>
-      <Container>
+    <Navbar expand="sm" collapseOnSelect style={{backgroundColor:color}}>
+      <Container className="mx-3 mx-sm-auto">
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
