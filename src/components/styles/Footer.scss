@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.link {
+    color: white;
+}
+
+.theme {
+    &-purple {
+        background-color: $color-eng;
+        a:hover {
+            color: $color-math-light;
+        }
+    }
+    &-pink {
+        background-color: $color-math;
+        a:hover {
+            color: $color-eng;
+        }
+    }
+}

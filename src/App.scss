@@ -87,3 +87,23 @@ p {
     width: 100%;
     overflow: hidden;
 }
+
+
+/*
+    `footer-to-bottom` wraps the body and footer for each page.
+    It spaces the two containers out so that the footer is pushed 
+    to the bottom of the view if the body contents do not fill up 
+    the whole view. Otherwise, the footer will rest below the 
+    body content.
+*/
+
+.footer-to-bottom {
+    display: flex;
+    min-height: calc(100vh - 60.59px); // Total view height - navbar height
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a:hover {
+    color: $color-math-light;
+}
