@@ -87,18 +87,3 @@ p {
     width: 100%;
     overflow: hidden;
 }
-
-.root { 
-}
-
-header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-}
-
-main {
-  padding-top: $header-padding;
-}
