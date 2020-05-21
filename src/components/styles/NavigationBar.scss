@@ -1,9 +1,11 @@
+@import '../../styles/colors';
+
 .navbar-nav a.nav-link.active:nth-child(odd) {
-    color: var(--color-accent-eng);
+    color: $color-eng;
 }
 
 .navbar-nav a.nav-link.active:nth-child(even) {
-    color: var(--color-accent-math);
+    color: $color-math;
 }
 
 .navbar-nav.bg-transparent {
