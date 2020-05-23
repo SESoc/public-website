@@ -6,7 +6,7 @@ import "./styles/NavigationBar.scss";
 
 const logo = url.resolve(
   process.env.PUBLIC_URL,
-  "/icons/se-logo-trimmed-transparent.png",
+  "/logos/se-logo-trimmed-transparent.png",
 );
 
 const NavigationBar = props => {
