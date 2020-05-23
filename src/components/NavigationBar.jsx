@@ -44,7 +44,7 @@ const NavigationBar = props => {
               className="mr-4"
               exact
               to="/">
-          Home
+              Home
             </Nav.Link>
             <Nav.Link
               as={NavLink}
@@ -52,7 +52,7 @@ const NavigationBar = props => {
               className="mr-4"
               exact
               to="/about">
-          About
+              About
             </Nav.Link>
             <Nav.Link
               as={NavLink}
@@ -61,7 +61,7 @@ const NavigationBar = props => {
               exact
               to="/events"
             >
-          Events
+              Events
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
