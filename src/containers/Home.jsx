@@ -44,7 +44,7 @@ const Content = props => {
     upcomingEvent = props.events[0];
   }
   return (
-    <Container id='home-content'>
+    <Container id="home-content">
       <Row className="mb-sm-3 mx-0 mx-sm-0">
         <Col
           sm={{size: "auto", offset: 1}}
@@ -65,12 +65,12 @@ const Content = props => {
               </p>
             </>
           ) : (
-              <>
-                <h3>More events are coming soon!</h3>
-                <p>
-                  Check out all of our <Link to="/events"> past events</Link>.
-                </p>
-              </>
+            <>
+              <h3>More events are coming soon!</h3>
+              <p>
+                Check out all of our <Link to="/events"> past events</Link>.
+              </p>
+            </>
           )}
         </Col>
         <Col sm={4} className="blurb-image-container order-sm-1 px-0 mb-5">

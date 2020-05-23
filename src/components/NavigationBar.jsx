@@ -4,7 +4,10 @@ import {Container, Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink, useLocation} from "react-router-dom";
 import "./styles/NavigationBar.scss";
 
-const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed-transparent.png");
+const logo = url.resolve(
+  process.env.PUBLIC_URL,
+  "/icons/se-logo-trimmed-transparent.png",
+);
 
 const NavigationBar = props => {
   let location = useLocation();
@@ -43,7 +46,8 @@ const NavigationBar = props => {
               activeClassName="active"
               className="mr-4"
               exact
-              to="/">
+              to="/"
+            >
               Home
             </Nav.Link>
             <Nav.Link
@@ -51,7 +55,8 @@ const NavigationBar = props => {
               activeClassName="active"
               className="mr-4"
               exact
-              to="/about">
+              to="/about"
+            >
               About
             </Nav.Link>
             <Nav.Link
@@ -71,7 +76,6 @@ const NavigationBar = props => {
 };
 
 // Props from withRouter HOC
-NavigationBar.propTypes = {
-};
+NavigationBar.propTypes = {};
 
 export default NavigationBar;
