@@ -1,0 +1,9 @@
+@import '../../styles/colors';
+
+.navbar-nav a.nav-link.active:nth-child(odd) {
+    color: $color-eng;
+}
+
+.navbar-nav a.nav-link.active:nth-child(even) {
+    color: $color-math;
+}

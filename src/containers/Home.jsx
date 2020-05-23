@@ -44,7 +44,7 @@ const Content = props => {
     upcomingEvent = props.events[0];
   }
   return (
-    <Container>
+    <Container id="home-content">
       <Row className="mb-sm-3 mx-0 mx-sm-0">
         <Col
           sm={{size: "auto", offset: 1}}

@@ -1,4 +1,5 @@
 @import "styles/colors";
+
 :root {
     --color-eng: #{$color-eng};
     --color-math: #{$color-math};
@@ -51,11 +52,6 @@ a {
     margin-right: 0;
     text-align: right;
 }
-
-.nav-link.active {
-    color: #000;
-}
-
 
 /* Site-wide styling */
 
