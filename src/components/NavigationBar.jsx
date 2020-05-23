@@ -4,9 +4,9 @@ import {Container, Nav, Navbar} from "react-bootstrap";
 import {Link, NavLink, useLocation} from "react-router-dom";
 import "./styles/NavigationBar.scss";
 
-const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
+const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed-transparent.png");
 
-const NavigationBar = (props) => {
+const NavigationBar = props => {
   let location = useLocation();
   let color = "";
   switch (location.pathname) {
@@ -19,7 +19,7 @@ const NavigationBar = (props) => {
   }
 
   return (
-    <Navbar expand="sm" collapseOnSelect style={{backgroundColor:color}}>
+    <Navbar expand="sm" collapseOnSelect style={{backgroundColor: color}}>
       <Container className="mx-3 mx-sm-auto">
         <Navbar.Brand as={Link} to="/">
           <img
