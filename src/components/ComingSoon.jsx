@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import url from "url";
 
-const logo = url.resolve(process.env.PUBLIC_URL, "/icons/se-logo-trimmed.png");
+const logo = url.resolve(process.env.PUBLIC_URL, "/logos/se-logo-trimmed.png");
 
 class ComingSoon extends Component {
   render() {
