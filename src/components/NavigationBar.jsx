@@ -6,7 +6,7 @@ import "./styles/NavigationBar.scss";
 
 const logo = url.resolve(
   process.env.PUBLIC_URL,
-  "/logos/se-logo-trimmed-transparent.png",
+  "/logos/se-logo-trimmed-transparent-bw.png",
 );
 
 const NavigationBar = props => {
@@ -27,7 +27,7 @@ const NavigationBar = props => {
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
-            width="30"
+            width="40"
             className="d-inline-block align-top"
             alt="SE Society"
           />
