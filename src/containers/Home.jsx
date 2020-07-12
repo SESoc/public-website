@@ -87,11 +87,11 @@ const Content = props => {
             <h3>Curious about life in SE? Check out our latest feature: </h3>
             <p>
               <a
-                href="https://open.spotify.com/episode/24aGh1lNgFf8UPzdGGse5h?si=esEsyvC8T8Ko3fQQjc-zpA"
+                href="https://open.spotify.com/episode/6dSt5jaAgEtxvUew7YXz48?si=3v5Rp-_FStGwNUsTvYqLgA"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SXSE Podcast S01E02 - SE FYDP: Team Mask
+                SXSE Podcast S01E03 - How To Make The Most Out Of Your First Co-op!
               </a>
             </p>
           </div>
