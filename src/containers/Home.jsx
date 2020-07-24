@@ -91,7 +91,8 @@ const Content = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SXSE Podcast S01E03 - How To Make The Most Out Of Your First Co-op!
+                SXSE Podcast S01E03 - How To Make The Most Out Of Your First
+                Co-op!
               </a>
             </p>
           </div>

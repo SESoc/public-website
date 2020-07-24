@@ -11,23 +11,16 @@
     width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 462px) {
     .card {
-        font-size: calc(5px + .75vw);
+        font-size: calc(14px);
         line-height: calc(1.1em + 0.5vw);
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (max-width: 461px) {
     .card {
-        font-size: calc(10px + 1vw);
-        line-height: calc(1.1em + 0.5vw);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .card {
-        font-size: calc(10px + 0.5vw);
+        font-size: calc(9px + 0.25vw);
         line-height: calc(1.1em + 0.5vw);
     }
 }
