@@ -17,19 +17,20 @@ class About extends Component {
             <h1>What is SE Soc?</h1>
             <p>
               Software Engineering Society (SE Soc) is a council that runs
-              community initiatives within the SE program. We give you a better
-              shot at the jobs you want by hosting resume critiques and
-              interview prep sessions. We build a sense of community by
-              organizing class dinners and social events. We introduce you to
-              upper-years and lower-years by matching you with someone to chat
-              over coffee. We highlight the cool stuff that everyone in SE is up
-              to by producing our podcast, Sessions by SE.
+              community initiatives within the SE program. Through class and
+              program-wide events, such as game nights, online events, virtual
+              dinners and coffee chats, we hope you get to meet all the other
+              brilliant people in SE! We also run resume critiques and interview
+              prep sessions, hosted by upper years, to help you get a better
+              shot at the jobs you want. You can listen to a highlight of the
+              cool stuff that everyone in SE is up to through our podcast,
+              Sessions by SE.
             </p>
             <Container className="mt-4 pl-0">
               <h1>Meet The Team</h1>
               <p>
-                B-Soc represents the odd years (SE2021, SE2023, etc.) and A-Soc
-                represents the even years (SE2020, SE2022, etc.). We’re a
+                B-Soc represents the odd years (SE2021, SE2023, SE2025) and A-Soc
+                represents the even years (SE2022, SE2024). We’re a
                 friendly bunch, feel free to say hi if we ever bump into each
                 other on campus!
               </p>

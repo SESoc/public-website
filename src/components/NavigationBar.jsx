@@ -68,6 +68,15 @@ const NavigationBar = props => {
             >
               Events
             </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              activeClassName="active"
+              className="mr-4"
+              exact
+              to="/getinvolved"
+            >
+              Get Involved
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

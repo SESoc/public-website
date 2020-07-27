@@ -4,6 +4,7 @@ import "./App.scss";
 import Home from "./containers/Home.jsx";
 import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
+import GetInvolved from "./containers/GetInvolved.jsx";
 import NavigationBar from "./components/NavigationBar.jsx";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/events" component={Events} />
+            <Route exact path="/getinvolved" component={GetInvolved} />
           </Switch>
         </div>
       </Router>

@@ -1,0 +1,21 @@
+@import "../../styles/colors";
+.action-row {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.no-bottom-space {
+    margin-bottom: 0;
+}
+
+.way-btn {
+    float: right;
+    background-color: $color-math;
+    border-width: 0px;
+    width: 150px;
+}
+
+.way-btn:hover {
+    background-color: $color-math-light;
+}

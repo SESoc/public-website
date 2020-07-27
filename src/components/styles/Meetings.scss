@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+.col-height {
+    height: 400px;
+}
+
+.meeting-pdf {
+    height: 100%;
+    width: 100%;
+}
+
+.no-bottom-space {
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.colour {
+    &-upcoming {
+        background-color: $color-math;
+    }
+    &-previous {
+        color: black;
+    }
+}
+
+.archive-btn {
+    float: right;
+    background-color: lightgrey;
+    border-width: 0px;
+    margin-bottom: 3px;
+}
+
+.archive-btn :hover {
+    background-color: $color-math-light;
+}
+
+.archive-row {
+    display: flex;
+    align-items: center;
+}
