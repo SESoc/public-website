@@ -29,8 +29,8 @@ class About extends Component {
             <Container className="mt-4 pl-0">
               <h1>Meet The Team</h1>
               <p>
-                B-Soc represents the odd years (SE2021, SE2023, SE2025) and A-Soc
-                represents the even years (SE2022, SE2024). We’re a
+                B-Soc represents the odd years (SE2021, SE2023, SE2025) and
+                A-Soc represents the even years (SE2022, SE2024). We’re a
                 friendly bunch, feel free to say hi if we ever bump into each
                 other on campus!
               </p>

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, {Component} from "react";
+import {Container, Row, Col} from "react-bootstrap";
 import "../assets/container/council.css";
 import GetInvolvedWays from "../components/GetInvolvedWays.jsx";
 import Meetings from "../components/Meetings.jsx";
@@ -19,19 +19,19 @@ class GetInvolved extends Component {
         <body>
           <Container className="mt-5 mb-5 flex-wrapper">
             <Row>
-              <Col md={6} className="mb-5">
+              <Col md={6}>
                 <h1>Get Involved</h1>
                 <GetInvolvedWays
                   actions={[
                     {
                       prompt: "Have an event in mind?",
-                      buttonText: "Suggest an event",
-                      link: "https://github.com/SESoc/public-website/issues",
+                      buttonText: "Suggest an Event",
+                      link: "https://forms.gle/UJsMioSPRCo3orrQ7",
                     },
                     {
                       prompt: "Questions or concerns?",
                       buttonText: "Send Feedback",
-                      link: "https://github.com/SESoc/public-website/issues",
+                      link: "https://forms.gle/foQJsfMmdndVRFkN7",
                     },
                     {
                       prompt: "Contribute to the website!",
@@ -41,7 +41,7 @@ class GetInvolved extends Component {
                   ]}
                 />
               </Col>
-              <Col md={6} className="image-get-involved-container mt-5 mt-sm-0">
+              <Col md={6} className="image-get-involved-container mt-5 mb-5">
                 <img
                   alt="Get Involved with SE Soc Illustration"
                   src={getInvolved}
@@ -57,23 +57,22 @@ class GetInvolved extends Component {
                     {
                       type: "upcoming",
                       title: "Next Meeting",
-                      date: "Monday, Sept 20th, 2020",
-                      time: "6 to 8pm",
-                      location: "E7 1234",
-                      link:
-                        "https://drive.google.com/file/d/1_e7VpiyhpUONBOlgQ_QT7i_wzgeBErCY/preview",
+                      date: "TBD",
+                      time: "",
+                      location: "",
+                      link: "",
                     },
                     {
                       type: "previous",
                       title: "Previous Meeting",
-                      date: "Monday, Sept 20th, 2020",
-                      time: "6 to 8pm",
-                      location: "E7 1234",
+                      date: "June 12, 2020",
+                      time: "1pm",
+                      location: "",
                       link:
-                        "https://drive.google.com/file/d/1_e7VpiyhpUONBOlgQ_QT7i_wzgeBErCY/preview",
+                        "https://drive.google.com/file/d/1gDSUy1ptNfHVmIOZ4IRD-KGCtS6QpOlb/preview",
                     },
                   ]}
-                  archiveLink="https://drive.google.com/file/d/1_e7VpiyhpUONBOlgQ_QT7i_wzgeBErCY/preview"
+                  archiveLink="https://drive.google.com/drive/folders/1U0IEIHzhV5oJIspB0fyf9H9zdP0w-o9t?usp=sharing"
                 />
               </Col>
             </Row>

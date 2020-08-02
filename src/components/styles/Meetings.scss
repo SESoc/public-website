@@ -6,6 +6,9 @@
 .meeting-pdf {
     height: 100%;
     width: 100%;
+    border-radius: 4px;
+    border-color: lightgrey;
+    border-style: solid;
 }
 
 .no-bottom-space {
@@ -18,7 +21,7 @@
 
 .colour {
     &-upcoming {
-        background-color: $color-math;
+        color: $color-math;
     }
     &-previous {
         color: black;
@@ -32,8 +35,11 @@
     margin-bottom: 3px;
 }
 
-.archive-btn :hover {
-    background-color: $color-math-light;
+.archive-btn:hover,
+.archive-btn:focus,
+.archive-btn:active {
+    background-color: $color-math;
+    color: white;
 }
 
 .archive-row {

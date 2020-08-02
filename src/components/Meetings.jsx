@@ -1,26 +1,32 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Button } from "react-bootstrap";
+import {Row, Col, Button} from "react-bootstrap";
 import "./styles/Meetings.scss";
 
-// TODO: Fix colour for Upcoming meeting
-// TODO: Add proper links
 const Meeting = props => (
-  <Row className="mb-0 mt-3 ">
+  <Row className="mb-0 mt-3">
     <Col md={3} className="mb-1">
-      <p className="no-bottom-space bold colour-${props.meeting.type}"> {props.meeting.title} </p>
+      <p className={`no-bottom-space bold colour-${props.meeting.type}`}>
+        {props.meeting.title}
+      </p>
       <p className="no-bottom-space"> {props.meeting.date} </p>
       <p className="no-bottom-space"> {props.meeting.time} </p>
       <p className="no-bottom-space"> {props.meeting.location} </p>
     </Col>
-    <Col md={9} className="mb-5 col-height">
-      <iframe
-        title="02-19-2019"
-        height="100%"
-        className="meeting-pdf"
-        src={props.meeting.link}
-      ></iframe>
-    </Col>
+    {props.meeting.link ? (
+      <Col md={9} className="mb-5 col-height">
+        <iframe
+          title="02-19-2019"
+          height="100%"
+          className="meeting-pdf"
+          src={props.meeting.link}
+        ></iframe>
+      </Col>
+    ) : (
+      <Col md={9}>
+        <p>The meeting agenda will be posted soon! Stay tuned.</p>
+      </Col>
+    )}
   </Row>
 );
 
@@ -36,17 +42,20 @@ class Meetings extends Component {
           <Meeting meeting={meeting} />
         ))}
         <Row className="archive-row">
-          <Col sm={9}>
-            <p className="no-bottom-space"> Take a look at our past initiatives by viewing our previous meeting minutes.</p>
-          </Col>
           <Col>
+            <p className="no-bottom-space">
+              Take a look at our past initiatives by reading our past meeting
+              minutes.
+            </p>
+          </Col>
+          <Col xs={5}>
             <Button
               variant="secondary"
               className="archive-btn"
               href={this.props.archiveLink}
               target="_blank"
             >
-              Archive
+              Meetings Archive
             </Button>
           </Col>
         </Row>

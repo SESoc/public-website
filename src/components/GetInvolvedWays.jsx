@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {Row, Col, Button} from "react-bootstrap";
 import "./styles/GetInvolvedWays.scss";
 
-// TODO: Create google forms links for actions
 // Prompt Text + Action Button
 // eg.    Have an event in mind?      [Suggest an Event]
 const Action = props => (
