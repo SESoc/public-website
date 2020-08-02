@@ -75,7 +75,7 @@ class About extends Component {
                     position: "President",
                   },
                   {
-                    name: "Alex Girard",
+                    name: "Alexandra Girard",
                     src: profileImage("alex"),
                     year: "2022",
                     position: "VP Events",
