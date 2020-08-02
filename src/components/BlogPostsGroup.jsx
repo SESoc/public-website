@@ -11,7 +11,11 @@ export const BLOG_TYPES = {
   NEWS: "News",
 };
 
-const getDefaultImage = type => url.resolve(process.env.PUBLIC_URL, `/blog/${type === BLOG_TYPES.PODCAST ? "podcast" : "default"}.png`);
+const getDefaultImage = type =>
+  url.resolve(
+    process.env.PUBLIC_URL,
+    `/blog/${type === BLOG_TYPES.PODCAST ? "podcast" : "default"}.png`,
+  );
 
 const BlogTile = ({color, type, title, image, links}) => {
   const imgSrc = image || getDefaultImage(type);
@@ -53,7 +57,9 @@ const BlogTileRow = ({blogPosts, color}) => {
   if (!blogPosts) return null;
   return (
     <Row className="blog-row">
-      {blogPosts.map(blog => <BlogTile {...blog} color={color} />)}
+      {blogPosts.map(blog => (
+        <BlogTile {...blog} color={color} />
+      ))}
     </Row>
   );
 };

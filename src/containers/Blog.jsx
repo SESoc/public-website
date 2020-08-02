@@ -96,15 +96,20 @@ const testposts = [
 
 const getDate = (date, dateFn = date => date) => dateFn(Moment.unix(date));
 
-const formatPostsByDate = (blogPosts, dateFn, sortOrder) => flow([
-  partialRight(groupBy, post => getDate(post.date, dateFn)),
-  partialRight(map, (posts, key) => ([key, posts])),
-  partialRight(orderBy, 0, sortOrder),
-])(blogPosts);
+const formatPostsByDate = (blogPosts, dateFn, sortOrder) =>
+  flow([
+    partialRight(groupBy, post => getDate(post.date, dateFn)),
+    partialRight(map, (posts, key) => [key, posts]),
+    partialRight(orderBy, 0, sortOrder),
+  ])(blogPosts);
 
 class Blog extends Component {
   renderBlogPosts(yearlyPosts) {
-    const monthlyPosts = formatPostsByDate(yearlyPosts, date => date.month(), "asc");
+    const monthlyPosts = formatPostsByDate(
+      yearlyPosts,
+      date => date.month(),
+      "asc",
+    );
     return map(monthlyPosts, ([month, posts], index) => {
       const orderedPosts = orderBy(posts, "date", "asc");
       return (
@@ -118,7 +123,11 @@ class Blog extends Component {
   }
 
   renderMonthlyPosts() {
-    const yearlyPosts = formatPostsByDate(testposts, date => date.year(), "desc");
+    const yearlyPosts = formatPostsByDate(
+      testposts,
+      date => date.year(),
+      "desc",
+    );
     return map(yearlyPosts, ([year, posts]) => (
       <div className="">
         <h3 className="text-center my-4 my-md-5">{year}</h3>
