@@ -12,7 +12,7 @@ export const LINK_ICON_MAP = {
   default: <i className="fas fa-link" />,
   spotify: <i className="fab fa-spotify" />,
   apple: <i className="fab fa-apple" />,
-  anchor: <img className="social-img" src={anchorLogoSrc} />,
+  anchor: <img className="social-img" src={anchorLogoSrc} alt="Anchor Logo" />,
   rss: <i className="fas fa-rss-square" />,
 };
 

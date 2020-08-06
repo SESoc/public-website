@@ -76,7 +76,7 @@ class BlogPostsGroup extends Component {
     return (
       <Row className="justify-content-center align-content-center">
         <Col sm={12} md={3}>
-          <h2 className="blog-month">{month}</h2>
+          <h3 className="blog-month">{month}</h3>
         </Col>
         <Col sm={12} md={9}>
           <BlogTileRow blogPosts={blogPosts} color={color} />
