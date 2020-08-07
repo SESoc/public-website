@@ -42,13 +42,13 @@ class Meetings extends Component {
           <Meeting meeting={meeting} />
         ))}
         <Row className="archive-row">
-          <Col>
-            <p className="no-bottom-space">
-              Take a look at our past initiatives by reading our past meeting
-              minutes.
+          <Col sm={12} md={9}>
+            <p className="no-bottom-space col-md-12 text-center text-md-left mb-3 mb-md-0">
+              Take a look at our past initiatives by reading our previous
+              meeting notes.
             </p>
           </Col>
-          <Col xs={5}>
+          <Col className="d-flex justify-content-center justify-content-md-end">
             <Button
               variant="secondary"
               className="archive-btn"
