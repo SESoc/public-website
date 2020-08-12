@@ -35,12 +35,12 @@ const BlogTile = ({color, type, title, image, links}) => {
 
 BlogTile.propTypes = {
   color: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(Object.values(BLOG_TYPES)),
+  type: PropTypes.oneOf([...Object.values(BLOG_TYPES)]),
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string,
-    link: PropTypes.oneOf("default") || PropTypes.string,
+    link: PropTypes.oneOf(["default", PropTypes.string]),
   })).isRequired,
 };
 

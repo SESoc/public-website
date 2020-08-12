@@ -6,6 +6,7 @@ import Events from "./containers/Events.jsx";
 import About from "./containers/About.jsx";
 import GetInvolved from "./containers/GetInvolved.jsx";
 import Blog from "./containers/Blog.jsx";
+import Wise from "./containers/Wise.jsx";
 import NavigationBar from "./components/NavigationBar.jsx";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/events" component={Events} />
             <Route exact path="/getinvolved" component={GetInvolved} />
             <Route exact path="/blog" component={Blog} />
+            <Route exact path="/wise" component={Wise} />
           </Switch>
         </div>
       </Router>

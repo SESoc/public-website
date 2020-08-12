@@ -1,8 +1,10 @@
 @import "../../styles/colors";
-.action-row {
-    height: 60px;
-    display: flex;
-    align-items: center;
+
+.action-grid {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-gap: 20px 10px;
+  align-items: center;
 }
 
 .no-bottom-space {
@@ -13,7 +15,7 @@
     float: right;
     background-color: $color-math;
     border-width: 0px;
-    width: 150px;
+    // max-width: 200px;
 }
 
 .way-btn:hover {

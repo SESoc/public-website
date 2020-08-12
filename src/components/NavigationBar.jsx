@@ -86,6 +86,15 @@ const NavigationBar = props => {
             >
               Blog
             </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              activeClassName="active"
+              className="mr-4"
+              exact
+              to="/wise"
+            >
+              WiSE
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

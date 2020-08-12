@@ -1,0 +1,99 @@
+@import "../../styles/colors";
+
+.wise-logo {
+  max-height: 90px;
+  float: right;
+}
+
+.girls-img, .computer-img {
+  width: 100%;
+  height: auto;
+}
+
+.discord-btn {
+  background-color: $color-eng;
+  border-width: 0px;
+}
+
+.discord-btn:hover {
+  background-color: $color-eng-light;
+}
+
+.wise-accordian {
+  & > :first-child {
+    border-width: 1px
+  }
+}
+
+.wise-card {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-width: 0 1px 1px;
+  border-color: #E8E8E8;
+  border-style: solid;
+  border-radius: 0;
+}
+
+.card-body {
+  padding: 0;
+  margin: 1.25rem;
+  background-color: white;
+
+  a {
+    display: inline-block;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.wise-card-header {
+  transition: background-color .15s ease-in-out;
+  background-color: white;
+  border-radius: 0 !important;
+  border: none;
+
+  .btn-link {
+    color: black;
+    font-size: 18px;
+    &:hover, &:focus {
+      text-decoration: none !important;
+    }
+  }
+
+  button {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.wise-card-header.active {
+  background-color: $color-math;
+
+  .btn-link {
+    color: white;
+  }
+}
+
+.faq-question {
+  white-space: normal;
+}
+
+@media screen and (max-width: 991px) {
+  .computer-img {
+    max-height: 450px;
+    width: auto;
+  }
+
+  .wise-get-involved {
+    .action-grid {
+      grid-template-columns: 1fr;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
