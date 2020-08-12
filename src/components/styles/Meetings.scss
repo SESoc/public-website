@@ -1,0 +1,48 @@
+@import "../../styles/colors";
+.col-height {
+    height: 400px;
+}
+
+.meeting-pdf {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    border-color: lightgrey;
+    border-style: solid;
+}
+
+.no-bottom-space {
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.colour {
+    &-upcoming {
+        color: $color-math;
+    }
+    &-previous {
+        color: black;
+    }
+}
+
+.archive-btn {
+    float: right;
+    background-color: lightgrey;
+    border-width: 0px;
+    margin-bottom: 3px;
+}
+
+.archive-btn:hover,
+.archive-btn:focus,
+.archive-btn:active {
+    background-color: $color-math;
+    color: white;
+}
+
+.archive-row {
+    display: flex;
+    align-items: center;
+}

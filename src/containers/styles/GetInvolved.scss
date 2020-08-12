@@ -1,0 +1,17 @@
+.image-get-involved-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 559px) {
+    .image-get-involved {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .image-get-involved {
+        max-width: 75%;
+    }
+}
