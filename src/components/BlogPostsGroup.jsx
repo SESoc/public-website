@@ -3,13 +3,8 @@ import url from "url";
 import PropTypes from "prop-types";
 import {Card, Col, Row} from "react-bootstrap";
 import BlogSocialLinks from "./BlogSocialLinks";
+import {BLOG_TYPES} from "../content/BlogContent";
 import "./styles/BlogPostsGroup.scss";
-
-export const BLOG_TYPES = {
-  PODCAST: "Podcast",
-  BLOG: "Blog",
-  NEWS: "News",
-};
 
 const getDefaultImage = type =>
   url.resolve(
