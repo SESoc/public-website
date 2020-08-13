@@ -5,6 +5,7 @@ import url from "url";
 import PropTypes from "prop-types";
 import Footer from "../components/Footer.jsx";
 import {getEvents, filterUpcomingEvents} from "../modules/gcal";
+import {recentBlogPost} from "../content/BlogContent";
 import "./styles/Home.scss";
 
 const heroImage = url.resolve(
@@ -43,6 +44,9 @@ const Content = props => {
   if (props.events[0]) {
     upcomingEvent = props.events[0];
   }
+
+  const featureLink = recentBlogPost.links.find(({type}) => type === "default" || type === "spotify").link;
+
   return (
     <Container id="home-content">
       <Row className="mb-sm-3 mx-0 mx-sm-0">
@@ -86,13 +90,8 @@ const Content = props => {
           <div>
             <h3>Curious about life in SE? Check out our latest feature: </h3>
             <p>
-              <a
-                href="https://open.spotify.com/episode/6dSt5jaAgEtxvUew7YXz48?si=3v5Rp-_FStGwNUsTvYqLgA"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SXSE Podcast S01E03 - How To Make The Most Out Of Your First
-                Co-op!
+              <a href={featureLink} target="_blank" rel="noopener noreferrer">
+                {recentBlogPost.title}
               </a>
             </p>
           </div>

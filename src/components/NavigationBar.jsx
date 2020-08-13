@@ -77,6 +77,15 @@ const NavigationBar = props => {
             >
               Get Involved
             </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              activeClassName="active"
+              className="mr-4"
+              exact
+              to="/blog"
+            >
+              Blog
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
