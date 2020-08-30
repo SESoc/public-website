@@ -88,6 +88,15 @@ CalendarToolbar.propTypes = {
   onView: PropTypes.func.isRequired,
 };
 
+const CalendarEventWrapper = ({event, children}) => <a href={event.link} target="_blank" rel="noopener noreferrer">{children}</a>;
+
+CalendarEventWrapper.propTypes = {
+  event: PropTypes.objectOf({
+    link: PropTypes.string.isRequired,
+  }),
+  children: PropTypes.node.isRequired,
+};
+
 const EventCalendar = props => {
   return (
     <Calendar
@@ -97,7 +106,7 @@ const EventCalendar = props => {
         event.end = Moment(event.end).toDate();
         return event;
       })}
-      components={{toolbar: CalendarToolbar}}
+      components={{eventWrapper: CalendarEventWrapper, toolbar: CalendarToolbar}}
       startAccessor="start"
       endAccessor="end"
       views={["month", "day"]}

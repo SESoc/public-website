@@ -15,7 +15,18 @@
   border-width: 0px;
 }
 
-.discord-btn:hover {
+.cal {
+  height: 500px;
+}
+
+.cal-add-btn {
+  float: right;
+  background-color: $color-eng;
+  border-width: 0px;
+  margin-bottom: 3px;
+}
+
+.cal-add-btn:hover, .discord-btn:hover {
   background-color: $color-eng-light;
 }
 

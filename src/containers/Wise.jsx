@@ -4,11 +4,15 @@ import url from "url";
 import PropTypes from "prop-types";
 import Footer from "../components/Footer.jsx";
 import PromptActionButtons from "../components/PromptActionButtons.jsx";
+import EventCalendar from "../components/EventCalendar";
+import {getEvents, CALENDARS} from "../modules/gcal";
 import "./styles/Wise.scss";
 
-const DISCORD_LINK = "https://discord.gg/MRQq7H";
-const MAILING_LIST_FACEBOOK_LINK = "https://forms.gle/taTaauMpc193CTSFA";
-const FEEDBACK_FORM_LINK = "https://forms.gle/V6LNiG9zpqriavEh6";
+const DISCORD_LINK = "https://discord.gg/UBfZqb";
+const MAILING_LIST_LINK = "https://lists.uwaterloo.ca/mailman/listinfo/women-in-se";
+const FACEBOOK_LINK = "https://forms.gle/piWhPZ85zyRVCNa77";
+const FEEDBACK_FORM_LINK = "https://forms.gle/rvzrQ7X4kStmKDYh9";
+const CALENDAR_LINK = "https://calendar.google.com/calendar/b/7?cid=dXdhdGVybG9vd2lzZUBnbWFpbC5jb20";
 
 const girlsImage = url.resolve(
   process.env.PUBLIC_URL,
@@ -20,6 +24,7 @@ const computerImage = url.resolve(
 );
 const wiseLogo = url.resolve(process.env.PUBLIC_URL, "/logos/wise-logo.png");
 
+// TODO: use ExternalLink component on rest of site
 const ExternalLink = ({href, children, ...restProps}) => (
   <a href={href} target="_blank" rel="noopener noreferrer" {...restProps}>
     {children}
@@ -61,8 +66,7 @@ const FAQS = [
       <p>
         Events vary from term to term, but in the past we have run a brunch,
         various mentoring activities, several casual board game nights, and a
-        “How to get an awesome co-op” workshop. Check out the events page WiSE
-        calendar for more information about our upcoming events!
+        “How to get an awesome co-op” workshop. Check our our <a href="#wise-events">WiSE events calendar</a> below for more information about our upcoming events!
       </p>
     ),
   },
@@ -220,6 +224,30 @@ Faqs.propTypes = {
   })).isRequired,
 };
 
+
+const Events = ({events}) => (
+  <div className="pb-5" id="wise-events">
+    <h2 className="pt-5 pb-2">Events</h2>
+    <div className="cal">
+      <EventCalendar events={events} />
+    </div>
+    <div className="mt-3">
+      <Button
+        variant="secondary"
+        className="cal-add-btn"
+        href={CALENDAR_LINK}
+        target="_blank"
+      >
+        + WiSE Google Calendar
+      </Button>
+    </div>
+  </div>
+);
+
+Events.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
 const Resources = () => (
   <>
     <h2 className="pt-4 pb-2">Resources</h2>
@@ -232,7 +260,7 @@ const Resources = () => (
         rel="noopener noreferrer"
         className="text-nowrap"
       >
-        resource hub ↗
+        resource hub
       </a>
       .
     </p>
@@ -253,18 +281,17 @@ const GetInvolved = () => (
         {
           prompt: "Interested in attending events?",
           buttonText: "Join Our Facebook Group",
-          link: MAILING_LIST_FACEBOOK_LINK,
+          link: FACEBOOK_LINK,
         },
         {
           prompt: "Stay updated?",
           buttonText: "Join Our Mailing List",
-          link: MAILING_LIST_FACEBOOK_LINK,
+          link: MAILING_LIST_LINK,
         },
         {
           prompt: "Questions or concerns?",
           buttonText: "Send Us An Email",
-          // TODO: update with wise email
-          link: "mailto:se-soc@uwaterloo.ca?subject=WiSE",
+          link: "mailto:uwaterloowise@gmail.com",
         },
       ]}
     />
@@ -293,6 +320,16 @@ const ImageSection = ({children}) => (
 ImageSection.propTypes = {children: PropTypes.node.isRequired};
 
 class Wise extends Component {
+  state = {
+    events: [],
+  };
+
+  componentDidMount() {
+    getEvents(CALENDARS.WISE, events => {
+      this.setState({events});
+    });
+  }
+
   render() {
     return (
       <div className="footer-to-bottom">
@@ -301,6 +338,7 @@ class Wise extends Component {
             <Name />
             <WhoWeAre />
             <Faqs faqs={FAQS} />
+            <Events events={this.state.events} />
             <ImageSection>
               <Resources />
               <GetInvolved />

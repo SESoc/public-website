@@ -3,7 +3,7 @@ import EventList from "../components/EventList";
 import EventCalendar from "../components/EventCalendar";
 import Footer from "../components/Footer.jsx";
 import {Container, Row, Col, Button} from "react-bootstrap";
-import {getEvents, filterUpcomingEvents} from "../modules/gcal";
+import {getEvents, filterUpcomingEvents, CALENDARS} from "../modules/gcal";
 import "./../App.scss";
 import "./styles/Events.scss";
 
@@ -16,7 +16,7 @@ class Events extends Component {
   }
 
   componentDidMount() {
-    getEvents(events => {
+    getEvents(CALENDARS.SESOC, events => {
       this.setState({events});
     });
   }
