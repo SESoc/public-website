@@ -66,7 +66,9 @@ const FAQS = [
       <p>
         Events vary from term to term, but in the past we have run a brunch,
         various mentoring activities, several casual board game nights, and a
-        “How to get an awesome co-op” workshop. Check our our <a href="#wise-events">WiSE events calendar</a> below for more information about our upcoming events!
+        “How to get an awesome co-op” workshop. Check our our{" "}
+        <a href="#wise-events">WiSE events calendar</a> below for more
+        information about our upcoming events!
       </p>
     ),
   },
@@ -223,7 +225,6 @@ Faqs.propTypes = {
     answer: PropTypes.node.isRequired,
   })).isRequired,
 };
-
 
 const Events = ({events}) => (
   <div className="pb-5" id="wise-events">

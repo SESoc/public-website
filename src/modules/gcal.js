@@ -12,7 +12,8 @@ export const CALENDARS = {
   },
 };
 
-const buildUrl = (CALENDAR_ID, API_KEY) => `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
+const buildUrl = (CALENDAR_ID, API_KEY) =>
+  `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 
 export function getEvents(calendarType, callback) {
   const {CALENDAR_ID, API_KEY} = calendarType;
