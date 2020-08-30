@@ -58,7 +58,7 @@ const blogPosts = [
   },
   {
     type: BLOG_TYPES.PODCAST,
-    title: "SXSE S01E03 - How To Make The Most Out Of Your First Co-op!",
+    title: "SXSE S01E03 - How To Make The Most Out Of Your First Co-op",
     date: "1593561600",
     links: [
       {
@@ -75,6 +75,51 @@ const blogPosts = [
         type: "apple",
         link:
           "https://podcasts.apple.com/us/podcast/how-to-make-the-most-out-of-your-first-co-op/id1508757308?i=1000480893251",
+      },
+      podcastRSSLink,
+    ],
+  },
+  {
+    type: BLOG_TYPES.PODCAST,
+    title: "SXSE S01E04 - An SE Student's Guide to Extracurriculars",
+    date: "1596931200",
+    links: [
+      {
+        type: "spotify",
+        link: "https://open.spotify.com/episode/4gHp1pky25xFfYdl7SlnTV",
+      },
+      {
+        type: "anchor",
+        link:
+          "https://anchor.fm/sesoc/episodes/An-SE-Students-Guide-to-Extracurriculars-ehtc1v",
+      },
+      {
+        type: "apple",
+        link:
+          "https://podcasts.apple.com/us/podcast/an-se-students-guide-to-extracurriculars/id1508757308?i=1000487614833",
+      },
+      podcastRSSLink,
+    ],
+  },
+  {
+    type: BLOG_TYPES.PODCAST,
+    title:
+      "SXSE S01E05 - The Wild Adventure of First-Year Software Engineering",
+    date: "1598659200",
+    links: [
+      {
+        type: "spotify",
+        link: "https://open.spotify.com/episode/0uB0ULL9OC5mFSsy7oOGh5",
+      },
+      {
+        type: "anchor",
+        link:
+          "https://anchor.fm/sesoc/episodes/The-Wild-Adventure-of-First-Year-Software-Engineering-eir3ar",
+      },
+      {
+        type: "apple",
+        link:
+          "https://podcasts.apple.com/us/podcast/the-wild-adventure-of-first-year-software-engineering/id1508757308?i=1000489507047",
       },
       podcastRSSLink,
     ],
