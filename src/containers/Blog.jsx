@@ -12,7 +12,9 @@ import BlogPostsGroup from "../components/BlogPostsGroup.jsx";
 import {blogPosts} from "../content/BlogContent.js";
 import "./../App.scss";
 
-const getDate = (date, dateFn = date => date) => dateFn(Moment.unix(date));
+const getDate = (date, dateFn = date => date) => {
+  return dateFn(Moment.unix(date));
+};
 
 const formatPostsByDate = (blogPosts, dateFn, sortOrder) =>
   flow([
@@ -25,13 +27,16 @@ class Blog extends Component {
   renderBlogPosts(yearlyPosts) {
     const monthlyPosts = formatPostsByDate(
       yearlyPosts,
-      date => date.month(),
+      // 1. The Moment library has the audacity to return months (& dates) zero-indexed (0=Jan, 11=Dec)
+      // we don't need to worry about dates because we just sort with them (and never display them).
+      date => date.month() + 1,
       "desc",
     );
     return map(monthlyPosts, ([month, posts], index) => {
-      const orderedPosts = orderBy(posts, "date", "asc");
+      const orderedPosts = orderBy(posts, "date", "desc");
       return (
         <BlogPostsGroup
+          // 2. But when actually processing the month, treats it 1-indexed (1=Jan, 12=Dec)
           month={Moment(month).format("MMMM")}
           color={index % 2 === 0 ? "var(--color-eng)" : "var(--color-math)"}
           blogPosts={orderedPosts}
