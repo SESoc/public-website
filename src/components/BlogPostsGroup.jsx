@@ -40,7 +40,7 @@ BlogTile.propTypes = {
   image: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string,
-    link: PropTypes.oneOf("default") || PropTypes.string,
+    link: PropTypes.oneOf(["default", PropTypes.string]),
   })).isRequired,
 };
 

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import "../assets/container/council.css";
-import GetInvolvedWays from "../components/GetInvolvedWays.jsx";
+import PromptActionButtons from "../components/PromptActionButtons.jsx";
 import Meetings from "../components/Meetings.jsx";
 import url from "url";
 import Footer from "../components/Footer.jsx";
@@ -21,7 +21,7 @@ class GetInvolved extends Component {
             <Row>
               <Col md={6}>
                 <h1>Get Involved</h1>
-                <GetInvolvedWays
+                <PromptActionButtons
                   actions={[
                     {
                       prompt: "Have an event in mind?",

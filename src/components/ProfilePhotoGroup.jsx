@@ -51,7 +51,7 @@ class ProfilePhotoGroup extends Component {
         ) : (
           <h3>{soc} Execs</h3>
         )}
-        <Row className="mb-3">
+        <Row className="mb-3 ml-0">
           <ImageRow people={execs} color={color} />
         </Row>
         {reps && reps.length ? <div>Reps</div> : null}

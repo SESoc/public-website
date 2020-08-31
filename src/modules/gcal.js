@@ -1,11 +1,24 @@
 import Axios from "axios";
 import Moment from "moment";
 
-const CALENDAR_ID = process.env.REACT_APP_GOOGLE_CALENDAR_ID;
-const API_KEY = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
-const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
+export const CALENDARS = {
+  SESOC: {
+    CALENDAR_ID: process.env.REACT_APP_GOOGLE_CALENDAR_ID,
+    API_KEY: process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY,
+  },
+  WISE: {
+    CALENDAR_ID: process.env.REACT_APP_GOOGLE_CALENDAR_ID_WISE,
+    API_KEY: process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY_WISE,
+  },
+};
 
-export function getEvents(callback) {
+const buildUrl = (CALENDAR_ID, API_KEY) =>
+  `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
+
+export function getEvents(calendarType, callback) {
+  const {CALENDAR_ID, API_KEY} = calendarType;
+  const url = buildUrl(CALENDAR_ID, API_KEY);
+
   Axios.get(url).then(
     response => {
       const events = [];

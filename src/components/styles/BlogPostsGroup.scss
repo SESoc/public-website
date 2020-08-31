@@ -60,7 +60,8 @@
 }
 
 .card-body {
-  padding: 10px 14px;
+  padding: 10px 14px !important;
+  margin: 0 !important;
   background-color: $color-eng;
   color: white;
   text-align: left;

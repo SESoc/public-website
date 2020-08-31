@@ -45,7 +45,7 @@ const BlogSocialLinks = ({type, links}) => {
 BlogSocialLinks.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string,
-    link: PropTypes.oneOf("default", "spotify", "apple", "anchor", "rss"),
+    link: PropTypes.oneOf(["default", "spotify", "apple", "anchor", "rss"]),
   })).isRequired,
   type: PropTypes.string.isRequired,
 };
