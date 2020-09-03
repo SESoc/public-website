@@ -8,7 +8,7 @@ import EventCalendar from "../components/EventCalendar";
 import {getEvents, CALENDARS} from "../modules/gcal";
 import "./styles/Wise.scss";
 
-const DISCORD_LINK = "https://discord.gg/UBfZqb";
+const DISCORD_LINK = "https://discord.gg/tbppDCc";
 const MAILING_LIST_LINK = "https://lists.uwaterloo.ca/mailman/listinfo/women-in-se";
 const FACEBOOK_LINK = "https://forms.gle/piWhPZ85zyRVCNa77";
 const FEEDBACK_FORM_LINK = "https://forms.gle/rvzrQ7X4kStmKDYh9";
@@ -150,8 +150,9 @@ const WhoWeAre = () => (
       <h2 className="pt-0 pt-md-5 pb-2">Who We Are</h2>
       <p>
         Women in Software Engineering (WiSE) is a student-run organization that
-        exists to encourage, support and advocate for women and non-binary* who
-        are studying Software Engineering at the University of Waterloo.
+        exists to encourage, support and advocate for women and non-binary*
+        individuals who are studying Software Engineering at the University of
+        Waterloo.
       </p>
       <p>
         We strive to build an inclusive and diverse environment which supports
