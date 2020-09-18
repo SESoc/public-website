@@ -8,7 +8,7 @@ import EventCalendar from "../components/EventCalendar";
 import {getEvents, CALENDARS} from "../modules/gcal";
 import "./styles/Wise.scss";
 
-const DISCORD_LINK = "https://discord.gg/tbppDCc";
+const SLACK_LINK = "https://join.slack.com/t/uw-wise/signup"
 const MAILING_LIST_LINK = "https://lists.uwaterloo.ca/mailman/listinfo/women-in-se";
 const FACEBOOK_LINK = "https://forms.gle/piWhPZ85zyRVCNa77";
 const FEEDBACK_FORM_LINK = "https://forms.gle/rvzrQ7X4kStmKDYh9";
@@ -101,7 +101,7 @@ const FAQS = [
     question: "Where can I give my feedback about WiSE?",
     answer: (
       <p>
-        We love to hear feedback! You can give your feedback on our discord, or
+        We love to hear feedback! You can give your feedback on our slack, or
         for an anonymous option - fill out our{" "}
         <ExternalLink href={FEEDBACK_FORM_LINK}>feedback form</ExternalLink>.
       </p>
@@ -120,7 +120,7 @@ const FAQS = [
     question: "How can I get involved?",
     answer: (
       <p>
-        <ExternalLink href={DISCORD_LINK}>Join our discord!</ExternalLink> There
+        <ExternalLink href={SLACK_LINK}>Join our slack!</ExternalLink> There
         you can chat with other WiSE, make event suggestions and volunteer to
         help run events. You can also attend our planning meeting that is held
         at the beginning of each term.
@@ -164,11 +164,11 @@ const WhoWeAre = () => (
       <div className="mt-4">
         <Button
           variant="secondary"
-          className="discord-btn"
-          href={DISCORD_LINK}
+          className="slack-btn"
+          href={SLACK_LINK}
           target="_blank"
         >
-          Join Our Discord
+          Join Our Slack
         </Button>
       </div>
     </Col>
@@ -277,8 +277,8 @@ const GetInvolved = () => (
       actions={[
         {
           prompt: "Want to continue the conversation?",
-          buttonText: "Join Our Discord",
-          link: DISCORD_LINK,
+          buttonText: "Join Our Slack",
+          link: SLACK_LINK,
         },
         {
           prompt: "Interested in attending events?",
