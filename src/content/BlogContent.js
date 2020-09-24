@@ -124,6 +124,28 @@ const blogPosts = [
       podcastRSSLink,
     ],
   },
+  {
+    type: BLOG_TYPES.BLOG,
+    title: "Useful links for Waterloo Software Engineering students",
+    date: "1600574400",
+    links: [
+      {
+        type: "default",
+        link: "https://github.com/Dhvani35729/UWaterloo-Links-SE",
+      },
+    ],
+  },
+  {
+    type: BLOG_TYPES.BLOG,
+    title: "Technical Interview Prep Workshop",
+    date: "1600747200",
+    links: [
+      {
+        type: "default",
+        link: "https://youtu.be/Oyf7P1_7MHM",
+      },
+    ],
+  },
 ];
 
 const recentBlogPost = blogPosts.reduce((prev, curr) =>
