@@ -4,7 +4,7 @@ import {Card, Col, Row} from "react-bootstrap";
 import "./styles/ProfilePhotoGroup.scss";
 
 const Image = props => (
-  <Col xs={6} sm={6} md={6} lg={3} className="ml-0 pl-0">
+  <Col xs={6} sm={6} md={6} lg={3} className="ml-0 pl-0 pb-3">
     <Card className="ml-0 card" style={{width: "95%"}}>
       <Card.Header
         className="card-header"
@@ -18,7 +18,7 @@ const Image = props => (
           {props.person.position}
         </Card.Text>
       </Card.Header>
-      <Card.Img className="card-img" variant="bottom" src={props.person.src} />
+      <Card.Img variant="bottom" className="card-img" src={props.person.src} />
     </Card>
   </Col>
 );
