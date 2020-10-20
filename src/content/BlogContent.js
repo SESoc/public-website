@@ -2,7 +2,15 @@ const BLOG_TYPES = {
   PODCAST: "Podcast",
   BLOG: "Blog",
   NEWS: "News",
+  VIDEO: "Video",
 };
+
+const BLOG_ICONS_MAP = new Map([
+  [BLOG_TYPES.PODCAST, "podcast.png"],
+  [BLOG_TYPES.BLOG, "default.png"],
+  [BLOG_TYPES.NEWS, "default.png"],
+  [BLOG_TYPES.VIDEO, "video.png"],
+]);
 
 const podcastRSSLink = {
   type: "rss",
@@ -126,7 +134,7 @@ const blogPosts = [
   },
   {
     type: BLOG_TYPES.BLOG,
-    title: "Useful links for Waterloo Software Engineering students",
+    title: "Useful Links for Waterloo Software Engineering Students",
     date: "1600574400",
     links: [
       {
@@ -136,7 +144,7 @@ const blogPosts = [
     ],
   },
   {
-    type: BLOG_TYPES.BLOG,
+    type: BLOG_TYPES.VIDEO,
     title: "Technical Interview Prep Workshop",
     date: "1600747200",
     links: [
@@ -151,4 +159,4 @@ const blogPosts = [
 const recentBlogPost = blogPosts.reduce((prev, curr) =>
   Number(prev.date) > Number(curr.age) ? prev : curr);
 
-export {BLOG_TYPES, blogPosts, recentBlogPost};
+export {BLOG_TYPES, BLOG_ICONS_MAP, blogPosts, recentBlogPost};
