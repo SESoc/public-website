@@ -3,19 +3,15 @@
     margin-top: 30px;
 }
 
-.card-img {
-    padding: 0px;
-    margin: 0px;
-    border-radius: 0px 0px 5px 5px;
-    object-fit: cover;
-    width: 100%;
-}
-
 @media screen and (min-width: 462px) {
     .card {
         font-size: calc(14px);
         line-height: calc(1.1em + 0.5vw);
     }
+}
+
+.card-img {
+    max-height: 100% !important;
 }
 
 @media screen and (max-width: 461px) {
