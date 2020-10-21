@@ -3,14 +3,11 @@ import url from "url";
 import PropTypes from "prop-types";
 import {Card, Col, Row} from "react-bootstrap";
 import BlogSocialLinks from "./BlogSocialLinks";
-import {BLOG_TYPES} from "../content/BlogContent";
+import {BLOG_TYPES, BLOG_ICONS_MAP} from "../content/BlogContent";
 import "./styles/BlogPostsGroup.scss";
 
 const getDefaultImage = type =>
-  url.resolve(
-    process.env.PUBLIC_URL,
-    `/blog/${type === BLOG_TYPES.PODCAST ? "podcast" : "default"}.png`,
-  );
+  url.resolve(process.env.PUBLIC_URL, `/blog/${BLOG_ICONS_MAP.get(type)}`);
 
 const BlogTile = ({color, type, title, image, links}) => {
   const imgSrc = image || getDefaultImage(type);
