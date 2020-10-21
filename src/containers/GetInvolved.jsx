@@ -57,19 +57,19 @@ class GetInvolved extends Component {
                     {
                       type: "upcoming",
                       title: "Next Meeting",
-                      date: "TBD",
-                      time: "",
+                      date: "November, 8, 2020",
+                      time: "7pm",
                       location: "",
                       link: "",
                     },
                     {
                       type: "previous",
                       title: "Previous Meeting",
-                      date: "June 12, 2020",
-                      time: "1pm",
+                      date: "October 18, 2020",
+                      time: "8pm",
                       location: "",
                       link:
-                        "https://drive.google.com/file/d/1gDSUy1ptNfHVmIOZ4IRD-KGCtS6QpOlb/preview",
+                        "https://drive.google.com/file/d/109q0x_LEa6JKnjIA6ePeMJGv1THIyA3B/preview",
                     },
                   ]}
                   archiveLink="https://drive.google.com/drive/folders/1U0IEIHzhV5oJIspB0fyf9H9zdP0w-o9t?usp=sharing"
