@@ -56,20 +56,20 @@ class GetInvolved extends Component {
                   meetings={[
                     {
                       type: "upcoming",
-                      title: "Next Meeting",
-                      date: "November, 8, 2020",
-                      time: "7pm",
+                      title: "TBD",
+                      date: "",
+                      time: "",
                       location: "",
                       link: "",
                     },
                     {
                       type: "previous",
                       title: "Previous Meeting",
-                      date: "October 18, 2020",
-                      time: "8pm",
+                      date: "December 6, 2020",
+                      time: "4pm ET",
                       location: "",
                       link:
-                        "https://drive.google.com/file/d/109q0x_LEa6JKnjIA6ePeMJGv1THIyA3B/preview",
+                        "https://drive.google.com/file/d/1cu89EDz-CbYh9pslYjTpJnBdUw5UiXiP/preview",
                     },
                   ]}
                   archiveLink="https://drive.google.com/drive/folders/1U0IEIHzhV5oJIspB0fyf9H9zdP0w-o9t?usp=sharing"
