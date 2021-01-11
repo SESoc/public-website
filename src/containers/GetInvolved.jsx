@@ -66,7 +66,7 @@ class GetInvolved extends Component {
                       type: "previous",
                       title: "Previous Meeting",
                       date: "Janurary 10, 2021",
-                      time: "3pm ET",
+                      time: "11:30am ET",
                       location: "",
                       link:
                         "https://drive.google.com/file/d/19r-zIdAoeFAWKG4AQnsiZaspHkf75Bds/preview",
