@@ -69,7 +69,7 @@ class GetInvolved extends Component {
                       time: "3pm ET",
                       location: "",
                       link:
-                        "https://drive.google.com/file/d/19r-zIdAoeFAWKG4AQnsiZaspHkf75Bds/preview"
+                        "https://drive.google.com/file/d/19r-zIdAoeFAWKG4AQnsiZaspHkf75Bds/preview",
                     },
                   ]}
                   archiveLink="https://drive.google.com/drive/folders/1U0IEIHzhV5oJIspB0fyf9H9zdP0w-o9t?usp=sharing"
