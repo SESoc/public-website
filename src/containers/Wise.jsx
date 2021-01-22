@@ -319,6 +319,20 @@ const ImageSection = ({children}) => (
   </Row>
 );
 
+const Videos = () => (
+  <>
+    <h2 className="pt-5 pb-2">Videos</h2>
+    <h4>WiSE Upper Year Panel: Fall 2020</h4>
+    <iframe
+      title="WiSE Upper Year Panel: Fall 2020"
+      alt="WiSE Upper Year Panel: Fall 2020"
+      src="https://drive.google.com/file/d/1ouxt001mRjDq3p1StSJ57d7wXxxBpMdC/preview"
+      width="1000"
+      height="670"
+    />
+  </>
+);
+
 ImageSection.propTypes = {children: PropTypes.node.isRequired};
 
 class Wise extends Component {
@@ -340,6 +354,7 @@ class Wise extends Component {
             <Name />
             <WhoWeAre />
             <Faqs faqs={FAQS} />
+            <Videos />
             <Events events={this.state.events} />
             <ImageSection>
               <Resources />
