@@ -107,4 +107,19 @@
       }
     }
   }
+} 
+  
+//from: https://www.benmarshall.me/responsive-iframes/
+.video-div {
+  position: relative;
+  padding-top: 66.66%; 
+  overflow: hidden;
+  
+  iframe {
+    position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+  }
 }
