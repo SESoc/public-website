@@ -1,130 +1,125 @@
-/** @format */
-
 @import "../../styles/colors";
 
 .wise-logo {
-	max-height: 90px;
-	float: right;
+  max-height: 90px;
+  float: right;
 }
 
-.girls-img,
-.computer-img {
-	width: 100%;
-	height: auto;
+.girls-img, .computer-img {
+  width: 100%;
+  height: auto;
 }
 
 .slack-btn {
-	background-color: $color-eng;
-	border-width: 0px;
+  background-color: $color-eng;
+  border-width: 0px;
 }
 
 .cal {
-	height: 500px;
+  height: 500px;
 }
 
 .cal-add-btn {
-	float: right;
-	background-color: $color-eng;
-	border-width: 0px;
-	margin-bottom: 3px;
+  float: right;
+  background-color: $color-eng;
+  border-width: 0px;
+  margin-bottom: 3px;
 }
 
-.cal-add-btn:hover,
-.slack-btn:hover {
-	background-color: $color-eng-light;
+.cal-add-btn:hover, .slack-btn:hover {
+  background-color: $color-eng-light;
 }
 
 .wise-accordian {
-	& > :first-child {
-		border-width: 1px;
-	}
+  & > :first-child {
+    border-width: 1px
+  }
 }
 
 .wise-card {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border-width: 0 1px 1px;
-	border-color: #e8e8e8;
-	border-style: solid;
-	border-radius: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-width: 0 1px 1px;
+  border-color: #E8E8E8;
+  border-style: solid;
+  border-radius: 0;
 }
 
 .card-body {
-	padding: 0;
-	margin: 1.25rem;
-	background-color: white;
+  padding: 0;
+  margin: 1.25rem;
+  background-color: white;
 
-	a {
-		display: inline-block;
-	}
+  a {
+    display: inline-block;
+  }
 
-	p {
-		margin: 0;
-	}
+  p {
+    margin: 0;
+  }
 }
 
 .wise-card-header {
-	transition: background-color 0.15s ease-in-out;
-	background-color: white;
-	border-radius: 0 !important;
-	border: none;
+  transition: background-color .15s ease-in-out;
+  background-color: white;
+  border-radius: 0 !important;
+  border: none;
 
-	.btn-link {
-		color: black;
-		font-size: 18px;
-		&:hover,
-		&:focus {
-			text-decoration: none !important;
-		}
-	}
+  .btn-link {
+    color: black;
+    font-size: 18px;
+    &:hover, &:focus {
+      text-decoration: none !important;
+    }
+  }
 
-	button {
-		width: 100%;
-		text-align: left;
-	}
+  button {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .wise-card-header.active {
-	background-color: $color-math;
+  background-color: $color-math;
 
-	.btn-link {
-		color: white;
-	}
+  .btn-link {
+    color: white;
+  }
 }
 
 .faq-question {
-	white-space: normal;
+  white-space: normal;
 }
 
 @media screen and (max-width: 991px) {
-	.computer-img {
-		max-height: 450px;
-		width: auto;
-	}
+  .computer-img {
+    max-height: 450px;
+    width: auto;
+  }
 
-	.wise-get-involved {
-		.action-grid {
-			grid-template-columns: 1fr;
+  .wise-get-involved {
+    .action-grid {
+      grid-template-columns: 1fr;
 
-			p {
-				display: none;
-			}
-		}
-	}
-}
-
+      p {
+        display: none;
+      }
+    }
+  }
+} 
+  
 //from: https://www.benmarshall.me/responsive-iframes/
 .video-div {
-	position: relative;
-	padding-top: 66.66%;
-	overflow: hidden;
-
-	iframe {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-	}
+  position: relative;
+  padding-top: 66.66%; 
+  overflow: hidden;
+  
+  iframe {
+    position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+  }
 }
