@@ -1,52 +1,56 @@
 @import 'styles/_colors';
 .event-list tr .accent {
-    color: $color-eng;
+  color: $color-eng;
 }
 
 .event {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .event-title {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .scroll {
-    height: auto;
-    max-height: 525px;
-    padding-right: 10px;
-    overflow-y: auto;
-    display: block;
-    padding-bottom: 30px;
+  height: auto;
+  max-height: 525px;
+  padding-right: 10px;
+  overflow-y: auto;
+  display: block;
+  padding-bottom: 30px;
 }
 
 .fade-in-bottom {
-    position: relative;
+  position: relative;
 }
 
 .fade-in-bottom:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    pointer-events: none;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
-    width: 100%;
-    height: 3em;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
+  width: 100%;
+  height: 3em;
 }
 
 #empty-event-list {
-    display: flex;
-    height: 400px;
-    align-items: center;
+  display: flex;
+  height: 400px;
+  align-items: center;
 }
 
 #more-events {
-    width: 80%;
+  width: 80%;
 }
 
 @media screen and (max-width: 991px) {
-    #empty-event-list {
-        justify-content: center;
-    }
+  #empty-event-list {
+    justify-content: center;
+  }
 }

@@ -1,17 +1,18 @@
 @import 'styles/_colors';
 .cal {
-    height: 600px;
+  height: 600px;
 }
 
 .cal-add-btn {
-    float: right;
-    background-color: $color-eng;
-    border-width: 0px;
-    margin-bottom: 3px;
+  float: right;
+  background-color: $color-eng;
+  border-width: 0px;
+  margin-bottom: 3px;
 }
 
 .cal-add-btn:hover {
-    background-color: $color-eng-light;
+  background-color: $color-eng-light;
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+}

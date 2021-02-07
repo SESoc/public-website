@@ -5,7 +5,8 @@
   float: right;
 }
 
-.girls-img, .computer-img {
+.girls-img,
+.computer-img {
   width: 100%;
   height: auto;
 }
@@ -26,13 +27,14 @@
   margin-bottom: 3px;
 }
 
-.cal-add-btn:hover, .slack-btn:hover {
+.cal-add-btn:hover,
+.slack-btn:hover {
   background-color: $color-eng-light;
 }
 
 .wise-accordian {
   & > :first-child {
-    border-width: 1px
+    border-width: 1px;
   }
 }
 
@@ -41,7 +43,7 @@
   margin: 0;
   padding: 0;
   border-width: 0 1px 1px;
-  border-color: #E8E8E8;
+  border-color: #e8e8e8;
   border-style: solid;
   border-radius: 0;
 }
@@ -61,7 +63,7 @@
 }
 
 .wise-card-header {
-  transition: background-color .15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
   background-color: white;
   border-radius: 0 !important;
   border: none;
@@ -69,7 +71,8 @@
   .btn-link {
     color: black;
     font-size: 18px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: none !important;
     }
   }
@@ -117,9 +120,9 @@
 
   iframe {
     position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 }

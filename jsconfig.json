@@ -8,8 +8,5 @@
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false
   },
-  "include": [
-    "src",
-    "jsconfig.json"
-  ]
+  "include": ["src", "jsconfig.json"]
 }
