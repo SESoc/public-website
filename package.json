@@ -8,7 +8,7 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "ci_format": "npx -p prettier@latest -p pretty-quick pretty-quick"
+    "ci_format": "npx prettier --loglevel error --check --ignore-path=.prettierignore"
   },
   "dependencies": {
     "ajv": "^6.10.0",
