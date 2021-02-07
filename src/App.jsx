@@ -12,8 +12,8 @@ import 'App.scss'
 
 class App extends Component {
   render() {
-    return (
-		      <Router>
+			    return (
+      <Router>
         <div>
           <NavigationBar />
           <Switch>
