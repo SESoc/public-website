@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "ci_format": "npx -p prettier@latest -p pretty-quick pretty-quick"
   },
   "dependencies": {
     "ajv": "^6.10.0",
@@ -24,19 +25,12 @@
   },
   "devDependencies": {
     "axios": "^0.21.1",
-    "husky": "^4.3.8",
-    "moment": "^2.26.0",
-    "pretty-quick": "^3.1.0"
+    "moment": "^2.26.0"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+  ]
 }
