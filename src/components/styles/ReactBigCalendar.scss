@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import "../../styles/colors";
-// Component colors
+@import 'styles/_colors';
+/* Component colors */
 $color-dates: $color-eng;
 $color-dates-invalid: $color-eng-light;
 $color-current-day: $color-eng-lightest;
@@ -138,14 +138,6 @@ button.rbc-input::-moz-focus-inner {
 }
 
 .rbc-toolbar button {
-    // color: #373a3c;
-    // display: inline-block;
-    // margin: 0;
-    // text-align: center;
-    // vertical-align: middle;
-    // background: none;
-    // background-image: none;
-    // border: 1px solid #ccc;
     padding: .375rem 1rem;
     margin-right: 5px;
     border-radius: 0px;
@@ -199,32 +191,6 @@ button.rbc-input::-moz-focus-inner {
 .rbc-btn-group {
     display: inline-block;
     white-space: nowrap;
-}
-
-.rbc-btn-group>button:first-child:not(:last-child) {
-    // border-top-right-radius: 0;
-    // border-bottom-right-radius: 0;
-}
-
-.rbc-btn-group>button:last-child:not(:first-child) {
-    // border-top-left-radius: 0;
-    // border-bottom-left-radius: 0;
-}
-
-.rbc-rtl .rbc-btn-group>button:first-child:not(:last-child) {
-    // border-radius: 0px;
-    // border-top-left-radius: 0;
-    // border-bottom-left-radius: 0;
-}
-
-.rbc-rtl .rbc-btn-group>button:last-child:not(:first-child) {
-    // border-radius: 0px;
-    // border-top-right-radius: 0;
-    // border-bottom-right-radius: 0;
-}
-
-.rbc-btn-group>button:not(:first-child):not(:last-child) {
-    // border-radius: 0;
 }
 
 .rbc-btn-group button+button {

@@ -1,13 +1,14 @@
-import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import "./App.scss";
-import Home from "./containers/Home.jsx";
-import Events from "./containers/Events.jsx";
-import About from "./containers/About.jsx";
-import GetInvolved from "./containers/GetInvolved.jsx";
-import Blog from "./containers/Blog.jsx";
-import Wise from "./containers/Wise.jsx";
-import NavigationBar from "./components/NavigationBar.jsx";
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Home from 'containers/Home'
+import Events from 'containers/Events'
+import About from 'containers/About'
+import GetInvolved from 'containers/GetInvolved'
+import Blog from 'containers/Blog'
+import Wise from 'containers/Wise'
+import NavigationBar from 'components/NavigationBar'
+import 'App.scss'
 
 class App extends Component {
   render() {
@@ -25,8 +26,8 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App

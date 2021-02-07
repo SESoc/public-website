@@ -24,7 +24,7 @@
     z-index: 1;
 }
 
-// Upper bound
+/* Set a fixed size for screen sizes with width greater than 1400px */
 @media screen and (min-width: 1400px) {
     #hero {
         height: 480px;
@@ -40,7 +40,7 @@
     }
 }
 
-// Tablet to desktop screen optimized
+/* Configure for tablet and desktop screen sizes */
 @media screen and (min-width: 576px) and (max-width: 1399px) {
     #hero {
         height: calc(200px + 20vw);
@@ -56,7 +56,7 @@
     }
 }
 
-// Mobile screen optimized
+/* Configure for mobile screen sizes */
 @media screen and (max-width: 576px) {
     #hero {
         height: 300px;

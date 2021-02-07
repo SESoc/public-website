@@ -1,12 +1,12 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
-import "./styles/Footer.scss";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import 'components/styles/Footer.scss'
 
 class Footer extends Component {
   render() {
     return (
       <div className={`footer theme-${this.props.color}`}>
-        Have any questions? You can reach us on the{" "}
+        Have any questions? You can reach us on the{' '}
         <a
           className="link"
           href="https://www.facebook.com/uwsesoc/"
@@ -15,7 +15,7 @@ class Footer extends Component {
         >
           <b>SE Society Facebook Page</b>
         </a>
-        , or by email{" "}
+        , or by email{' '}
         <a
           className="link"
           href="mailto:se-soc@uwaterloo.ca"
@@ -26,12 +26,12 @@ class Footer extends Component {
         </a>
         .
       </div>
-    );
+    )
   }
 }
 
 Footer.propTypes = {
   color: PropTypes.string.isRequired,
-};
+}
 
-export default Footer;
+export default Footer

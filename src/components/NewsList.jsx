@@ -1,13 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./styles/NewsList.css";
+import React from 'react'
+import PropTypes from 'prop-types'
+import 'components/styles/NewsList.scss'
 
-const NewsContent = props => {
-  const numEntries = props.numEntries
-    ? props.numEntries
-    : props.articles.length;
+const NewsContent = (props) => {
+  const numEntries = props.numEntries ? props.numEntries : props.articles.length
 
-  return props.articles.slice(0, numEntries).map(article => (
+  return props.articles.slice(0, numEntries).map((article) => (
     <tr>
       <th>
         <a href={article.link}>
@@ -16,15 +14,15 @@ const NewsContent = props => {
         </a>
       </th>
     </tr>
-  ));
-};
+  ))
+}
 
-const NewsList = props => (
+const NewsList = (props) => (
   <div className="news-list">
     <h1>news</h1>
     <NewsContent {...props} />
   </div>
-);
+)
 
 NewsList.propTypes = {
   articles: PropTypes.arrayOf({
@@ -33,6 +31,6 @@ NewsList.propTypes = {
     description: PropTypes.string.isRequired,
   }),
   numEntries: PropTypes.number,
-};
+}
 
-export default NewsList;
+export default NewsList

@@ -1,24 +1,24 @@
-import React, {Component} from "react";
-import EventList from "../components/EventList";
-import EventCalendar from "../components/EventCalendar";
-import Footer from "../components/Footer.jsx";
-import {Container, Row, Col, Button} from "react-bootstrap";
-import {getEvents, filterUpcomingEvents, CALENDARS} from "../modules/gcal";
-import "./../App.scss";
-import "./styles/Events.scss";
+import React, { Component } from 'react'
+import EventList from 'components/EventList'
+import EventCalendar from 'components/EventCalendar'
+import Footer from 'components/Footer'
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import { getEvents, filterUpcomingEvents, CALENDARS } from 'modules/gcal'
+import 'App.scss'
+import 'containers/styles/Events.scss'
 
 class Events extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       events: [],
-    };
+    }
   }
 
   componentDidMount() {
-    getEvents(CALENDARS.SESOC, events => {
-      this.setState({events});
-    });
+    getEvents(CALENDARS.SESOC, (events) => {
+      this.setState({ events })
+    })
   }
 
   render() {
@@ -50,10 +50,10 @@ class Events extends Component {
             </Row>
           </Container>
         </body>
-        <Footer color={"purple"} />
+        <Footer color={'purple'} />
       </div>
-    );
+    )
   }
 }
 
-export default Events;
+export default Events

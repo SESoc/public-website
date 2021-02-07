@@ -1,35 +1,35 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
-import url from "url";
-import "./styles/EventList.scss";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import url from 'url'
+import 'components/styles/EventList.scss'
 
 const moreEvents = url.resolve(
   process.env.PUBLIC_URL,
-  "/illustrations/more-events.png",
-);
+  '/illustrations/more-events.png',
+)
 
-const Event = props => (
+const Event = (props) => (
   <div className="event">
     <p className="event-title">
       <strong>{props.event.dateLabel}</strong>
       <br />
       <span className="accent">
         <a href={props.event.link} target="_blank" rel="noopener noreferrer">
-          {" "}
+          {' '}
           {props.event.title}
         </a>
       </span>
     </p>
     <div
       className="event-description"
-      dangerouslySetInnerHTML={{__html: props.event.description}}
+      dangerouslySetInnerHTML={{ __html: props.event.description }}
     />
   </div>
-);
+)
 
 Event.propTypes = {
   event: PropTypes.object.isRequired,
-};
+}
 
 class EventList extends Component {
   render() {
@@ -60,12 +60,12 @@ class EventList extends Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
 EventList.propTypes = {
   upcomingEvents: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+}
 
-export default EventList;
+export default EventList
