@@ -1,5 +1,6 @@
 # *.js
 *.md
 *.html
-*.json
 src/assets/*
+package-lock.json
+jsconfig.json
