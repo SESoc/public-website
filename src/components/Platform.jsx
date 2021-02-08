@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
-import React, {Component} from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 function Points(props) {
-  const listItems = props.points.map(point => (
+  const listItems = props.points.map((point) => (
     <li>
       <p className="post-meta">{point}</p>
     </li>
-  ));
+  ))
   return (
     <div>
       <h3>Goals:</h3>
       <ul>{listItems}</ul>
     </div>
-  );
+  )
 }
 
 function Picture(props) {
@@ -29,24 +29,24 @@ function Picture(props) {
       </div>
       <div className="pure-au-1 pure-u-md-1-3"></div>
     </div>
-  );
+  )
 }
 
 function Achievements(props) {
   if (props.achievements) {
-    const listItems = props.achievements.map(achievement => (
+    const listItems = props.achievements.map((achievement) => (
       <li>
         <p className="post-meta">{achievement}</p>
       </li>
-    ));
+    ))
     return (
       <div>
         <h3>Achievements:</h3>
         <ul>{listItems}</ul>
       </div>
-    );
+    )
   } else {
-    return <div></div>;
+    return <div></div>
   }
 }
 
@@ -55,7 +55,7 @@ class Platform extends Component {
     return (
       <div>
         <h1 className="content-subhead">
-          {"Candidates for " + this.props.platform.candidacy}
+          {'Candidates for ' + this.props.platform.candidacy}
         </h1>
 
         <section className="post">
@@ -75,7 +75,7 @@ class Platform extends Component {
           <Points points={this.props.platform.points} />
         </section>
       </div>
-    );
+    )
   }
 }
 
@@ -93,6 +93,6 @@ Platform.propTypes = {
     image: PropTypes.string.isRequired,
     achievements: PropTypes.arrayOf(PropTypes.string),
   }),
-};
+}
 
-export default Platform;
+export default Platform
