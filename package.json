@@ -8,7 +8,9 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "ci_format": "npx prettier --loglevel error --check --ignore-path=.prettierignore"
+    "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 4 ./package.json",
+    "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
+    "ci_format": "prettier-eslint --list-different $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json --list-different --tab-width 4 ./package.json"
   },
   "dependencies": {
     "ajv": "^6.10.0",
@@ -25,7 +27,9 @@
   },
   "devDependencies": {
     "axios": "^0.21.1",
-    "moment": "^2.26.0"
+    "eslint-config-prettier": "^7.2.0",
+    "moment": "^2.26.0",
+    "prettier": "2.2.1"
   },
   "browserslist": [
     ">0.2%",

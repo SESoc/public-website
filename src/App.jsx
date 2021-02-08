@@ -12,7 +12,7 @@ import 'App.scss'
 
 class App extends Component {
   render() {
-			    return (
+    return (
       <Router>
         <div>
           <NavigationBar />

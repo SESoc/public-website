@@ -13,14 +13,20 @@
         "files.trimTrailingWhitespace": true,
         "files.insertFinalNewline": true,
         "editor.tabSize": 2,
-        "[javascript]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.formatOnSave": true
-        },
-        "[javascriptreact]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.formatOnSave": true
-        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        // "[javascript]": {
+        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+        //     "editor.formatOnSave": true
+        // },
+        // "[javascriptreact]": {
+        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+        //     "editor.formatOnSave": true
+        // },
+        // "[json]": {
+        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+        //     "editor.formatOnSave": true
+        // },
         "files.exclude": {
             "css": true,
             "scss": true,

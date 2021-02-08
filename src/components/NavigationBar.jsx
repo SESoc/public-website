@@ -9,7 +9,7 @@ const logo = url.resolve(
   '/logos/se-logo-trimmed-transparent-bw.png',
 )
 
-const NavigationBar = (props) => {
+const NavigationBar = () => {
   let location = useLocation()
   let color = ''
   switch (location.pathname) {
