@@ -146,7 +146,7 @@ function PlatformsList(props) {
   return listItems
 }
 
-function PlatformSidebar(props) {
+function PlatformSidebar() {
   return (
     <div className="sidebar pure-u-1 pure-u-md-1-4">
       <div className="header">
@@ -157,7 +157,7 @@ function PlatformSidebar(props) {
   )
 }
 
-function PlatformFooter(props) {
+function PlatformFooter() {
   return (
     <div className="footer">
       <div className="pure-menu pure-menu-horizontal">
