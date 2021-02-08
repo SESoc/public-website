@@ -1,43 +1,43 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ],
-    "settings": {
-        "eslint.workingDirectories": [
-            {
-                "mode": "auto"
-            }
-        ],
-        "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true,
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        // "[javascript]": {
-        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-        //     "editor.formatOnSave": true
-        // },
-        // "[javascriptreact]": {
-        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-        //     "editor.formatOnSave": true
-        // },
-        // "[json]": {
-        //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-        //     "editor.formatOnSave": true
-        // },
-        "files.exclude": {
-            "css": true,
-            "scss": true,
-            "ejs": true,
-            "node_modules":true,
-            "**/.DS_Store": true,
-        },
-        "css.validate": false,
-        "files.autoSave": "onFocusChange",
-    },
-    "extensions": {
-        "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  "folders": [
+    {
+      "path": "."
     }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[js]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "files.exclude": {
+      "css": true,
+      "scss": true,
+      "ejs": true,
+      "node_modules": true,
+      "**/.DS_Store": true
+    },
+    "css.validate": false,
+    "files.autoSave": "onFocusChange"
+  },
+  "extensions": {
+    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  }
 }
