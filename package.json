@@ -10,7 +10,7 @@
     "test": "react-scripts test",
     "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 4 ./package.json",
     "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
-    "ci_format": "prettier-eslint --list-different $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json --list-different --tab-width 4 ./package.json"
+    "ci_format": "prettier-eslint --list-different  --log-level error $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json --list-different --tab-width 4 ./package.json"
   },
   "dependencies": {
     "ajv": "^6.10.0",
@@ -29,7 +29,8 @@
     "axios": "^0.21.1",
     "eslint-config-prettier": "^7.2.0",
     "moment": "^2.26.0",
-    "prettier": "2.2.1"
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0"
   },
   "browserslist": [
     ">0.2%",
