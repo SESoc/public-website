@@ -32,15 +32,15 @@ class About extends Component {
                 B-Soc represents the odd years (SE2021, SE2023, SE2025) and
                 A-Soc represents the even years (SE2022, SE2024). We’re a
                 friendly bunch, feel free to say hi if we ever bump into each
-                other on campus!
+                other online or on campus!
               </p>
               <ProfilePhotoGroup
                 soc={"B-Soc"}
                 execs={[
                   {
-                    name: "Roxane Fruytier",
-                    src: profileImage("roxane"),
-                    year: "2021",
+                    name: "Atif Mahmud",
+                    src: profileImage("atif"),
+                    year: "2023",
                     position: "President",
                   },
                   {
@@ -54,12 +54,6 @@ class About extends Component {
                     src: profileImage("mayank"),
                     year: "2023",
                     position: "VP Finance",
-                  },
-                  {
-                    name: "Jenny Wills",
-                    src: profileImage("jenny"),
-                    year: "2021",
-                    position: "VP Communications",
                   },
                 ]}
                 reps={[]}
