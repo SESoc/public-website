@@ -37,10 +37,10 @@ class About extends Component {
                 soc={'B-Soc'}
                 execs={[
                   {
-                    name: "Atif Mahmud",
-                    src: profileImage("atif"),
-                    year: "2023",
-                    position: "President",
+                    name: 'Atif Mahmud',
+                    src: profileImage('atif'),
+                    year: '2023',
+                    position: 'President',
                   },
                   {
                     name: 'Elisa Luan',
