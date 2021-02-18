@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
-import {Button} from "react-bootstrap";
-import "./styles/PromptActionButtons.scss";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Button } from 'react-bootstrap'
+import 'components/styles/PromptActionButtons.scss'
 
 // Prompt Text + Action Button
 // eg.    Have an event in mind?      [Suggest an Event]
-const Action = props => (
+const Action = (props) => (
   <>
     <p className="no-bottom-space"> {props.action.prompt} </p>
     <Button
@@ -17,11 +17,11 @@ const Action = props => (
       {props.action.buttonText}
     </Button>
   </>
-);
+)
 
 Action.propTypes = {
   action: PropTypes.object.isRequired,
-};
+}
 
 class PromptActionButtons extends Component {
   render() {
@@ -31,12 +31,12 @@ class PromptActionButtons extends Component {
           <Action action={action} key={`action-prompt-${index}`} />
         ))}
       </div>
-    );
+    )
   }
 }
 
 PromptActionButtons.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+}
 
-export default PromptActionButtons;
+export default PromptActionButtons

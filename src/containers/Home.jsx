@@ -1,27 +1,24 @@
-import React, {Component} from "react";
-import {Container, Jumbotron, Row, Col} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import url from "url";
-import PropTypes from "prop-types";
-import Footer from "../components/Footer.jsx";
-import {getEvents, filterUpcomingEvents} from "../modules/gcal";
-import {recentBlogPost} from "../content/BlogContent";
-import "./styles/Home.scss";
+import React, { Component } from 'react'
+import { Container, Jumbotron, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import url from 'url'
+import PropTypes from 'prop-types'
+import Footer from '../components/Footer'
+import { getEvents, filterUpcomingEvents } from '../modules/gcal'
+import { recentBlogPost } from 'content/BlogContent'
+import 'containers/styles/Home.scss'
 
-const heroImage = url.resolve(
-  process.env.PUBLIC_URL,
-  "/illustrations/hero.png",
-);
+const heroImage = url.resolve(process.env.PUBLIC_URL, '/illustrations/hero.png')
 
 const eventCal = url.resolve(
   process.env.PUBLIC_URL,
-  "/illustrations/calendar.png",
-);
+  '/illustrations/calendar.png',
+)
 
 const coffeeChat = url.resolve(
   process.env.PUBLIC_URL,
-  "/illustrations/coffee-chat.png",
-);
+  '/illustrations/coffee-chat.png',
+)
 
 const Hero = () => (
   <Jumbotron className="jumbotron-fluid" id="hero">
@@ -37,21 +34,23 @@ const Hero = () => (
       </Row>
     </Container>
   </Jumbotron>
-);
+)
 
-const Content = props => {
-  var upcomingEvent;
+const Content = (props) => {
+  var upcomingEvent
   if (props.events[0]) {
-    upcomingEvent = props.events[0];
+    upcomingEvent = props.events[0]
   }
 
-  const featureLink = recentBlogPost.links.find(({type}) => type === "default" || type === "spotify").link;
+  const featureLink = recentBlogPost.links.find(
+    ({ type }) => type === 'default' || type === 'spotify',
+  ).link
 
   return (
     <Container id="home-content">
       <Row className="mb-sm-3 mx-0 mx-sm-0">
         <Col
-          sm={{size: "auto", offset: 1}}
+          sm={{ size: 'auto', offset: 1 }}
           className="blurb-content order-sm-2"
         >
           {upcomingEvent ? (
@@ -97,7 +96,7 @@ const Content = props => {
           </div>
         </Col>
         <Col
-          sm={{size: "auto", offset: 1}}
+          sm={{ size: 'auto', offset: 1 }}
           className="blurb-image-container px-0 mb-5"
         >
           <img
@@ -108,25 +107,25 @@ const Content = props => {
         </Col>
       </Row>
     </Container>
-  );
-};
+  )
+}
 
 Content.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+}
 
 class Home extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       events: [],
-    };
+    }
   }
 
   componentDidMount() {
-    getEvents(events => {
-      this.setState({events});
-    });
+    getEvents((events) => {
+      this.setState({ events })
+    })
   }
 
   render() {
@@ -136,10 +135,10 @@ class Home extends Component {
           <Hero />
           <Content events={filterUpcomingEvents(this.state.events)} />
         </body>
-        <Footer color={"purple"} />
+        <Footer color={'purple'} />
       </div>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home

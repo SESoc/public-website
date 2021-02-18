@@ -1,14 +1,14 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
-import {Card, Col, Row} from "react-bootstrap";
-import "./styles/ProfilePhotoGroup.scss";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Card, Col, Row } from 'react-bootstrap'
+import 'components/styles/ProfilePhotoGroup.scss'
 
-const Image = props => (
+const Image = (props) => (
   <Col xs={6} sm={6} md={6} lg={3} className="ml-0 pl-0 pb-3">
-    <Card className="ml-0 card" style={{width: "95%"}}>
+    <Card className="ml-0 card" style={{ width: '95%' }}>
       <Card.Header
         className="card-header"
-        style={{backgroundColor: props.color}}
+        style={{ backgroundColor: props.color }}
       >
         <Card.Text className="card-text">
           <strong>{props.person.name}</strong>
@@ -21,26 +21,28 @@ const Image = props => (
       <Card.Img variant="bottom" className="card-img" src={props.person.src} />
     </Card>
   </Col>
-);
+)
 
 Image.propTypes = {
   color: PropTypes.string.isRequired,
   person: PropTypes.object.isRequired,
-};
+}
 
-const ImageRow = props => {
+const ImageRow = (props) => {
   const listItems = props.people
-    ? props.people.map(person => <Image person={person} color={props.color} />)
-    : null;
-  return listItems;
-};
+    ? props.people.map((person) => (
+        <Image person={person} color={props.color} />
+      ))
+    : null
+  return listItems
+}
 
 class ProfilePhotoGroup extends Component {
   render() {
-    const execs = this.props.execs;
-    const reps = this.props.reps;
-    const soc = this.props.soc;
-    const color = this.props.color;
+    const execs = this.props.execs
+    const reps = this.props.reps
+    const soc = this.props.soc
+    const color = this.props.color
     return (
       <div className="society-profiles">
         {reps && reps.length ? (
@@ -61,7 +63,7 @@ class ProfilePhotoGroup extends Component {
           </Row>
         ) : null}
       </div>
-    );
+    )
   }
 }
 
@@ -70,6 +72,6 @@ ProfilePhotoGroup.propTypes = {
   execs: PropTypes.arrayOf(PropTypes.object).isRequired,
   reps: PropTypes.arrayOf(PropTypes.object).isRequired,
   color: PropTypes.string.isRequired,
-};
+}
 
-export default ProfilePhotoGroup;
+export default ProfilePhotoGroup

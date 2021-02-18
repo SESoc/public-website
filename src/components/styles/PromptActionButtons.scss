@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@import 'styles/_colors';
 
 .action-grid {
   display: grid;
@@ -8,15 +8,15 @@
 }
 
 .no-bottom-space {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .way-btn {
-    float: right;
-    background-color: $color-math;
-    border-width: 0px;
+  float: right;
+  background-color: $color-math;
+  border-width: 0px;
 }
 
 .way-btn:hover {
-    background-color: $color-math-light;
+  background-color: $color-math-light;
 }

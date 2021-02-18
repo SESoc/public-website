@@ -1,12 +1,11 @@
-import React, {Component} from "react";
-import {Container} from "react-bootstrap";
-import ProfilePhotoGroup from "../components/ProfilePhotoGroup.jsx";
-import Footer from "../components/Footer.jsx";
-import "../assets/container/about.css";
-import url from "url";
+import React, { Component } from 'react'
+import { Container } from 'react-bootstrap'
+import ProfilePhotoGroup from 'components/ProfilePhotoGroup'
+import Footer from 'components/Footer'
+import url from 'url'
 
-const profileImage = name =>
-  url.resolve(process.env.PUBLIC_URL, `/profiles/${name}.jpg`);
+const profileImage = (name) =>
+  url.resolve(process.env.PUBLIC_URL, `/profiles/${name}.jpg`)
 
 class About extends Component {
   render() {
@@ -35,68 +34,68 @@ class About extends Component {
                 other online or on campus!
               </p>
               <ProfilePhotoGroup
-                soc={"B-Soc"}
+                soc={'B-Soc'}
                 execs={[
                   {
-                    name: "Atif Mahmud",
-                    src: profileImage("atif"),
-                    year: "2023",
-                    position: "President",
+                    name: 'Atif Mahmud',
+                    src: profileImage('atif'),
+                    year: '2023',
+                    position: 'President',
                   },
                   {
-                    name: "Elisa Luan",
-                    src: profileImage("elisa"),
-                    year: "2023",
-                    position: "VP Events",
+                    name: 'Elisa Luan',
+                    src: profileImage('elisa'),
+                    year: '2023',
+                    position: 'VP Events',
                   },
                   {
-                    name: "Mayank Kanoria",
-                    src: profileImage("mayank"),
-                    year: "2023",
-                    position: "VP Finance",
+                    name: 'Mayank Kanoria',
+                    src: profileImage('mayank'),
+                    year: '2023',
+                    position: 'VP Finance',
                   },
                 ]}
                 reps={[]}
-                color={"var(--color-math)"}
+                color={'var(--color-math)'}
               />
               <ProfilePhotoGroup
-                soc={"A-Soc"}
+                soc={'A-Soc'}
                 execs={[
                   {
-                    name: "Yingning Gui",
-                    src: profileImage("yingning"),
-                    year: "2022",
-                    position: "President",
+                    name: 'Yingning Gui',
+                    src: profileImage('yingning'),
+                    year: '2022',
+                    position: 'President',
                   },
                   {
-                    name: "Alexandra Girard",
-                    src: profileImage("alex"),
-                    year: "2022",
-                    position: "VP Events",
+                    name: 'Alexandra Girard',
+                    src: profileImage('alex'),
+                    year: '2022',
+                    position: 'VP Events',
                   },
                   {
-                    name: "Han Xiao",
-                    src: profileImage("han"),
-                    year: "2022",
-                    position: "VP Finance",
+                    name: 'Han Xiao',
+                    src: profileImage('han'),
+                    year: '2022',
+                    position: 'VP Finance',
                   },
                   {
-                    name: "Robbie Zhuang",
-                    src: profileImage("robbie"),
-                    year: "2022",
-                    position: "VP Communications",
+                    name: 'Robbie Zhuang',
+                    src: profileImage('robbie'),
+                    year: '2022',
+                    position: 'VP Communications',
                   },
                 ]}
                 reps={[]}
-                color={"var(--color-eng)"}
+                color={'var(--color-eng)'}
               />
             </Container>
           </Container>
         </body>
-        <Footer color={"pink"} />
+        <Footer color={'pink'} />
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

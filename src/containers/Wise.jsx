@@ -1,43 +1,45 @@
-import React, {Component, useState} from "react";
-import {Container, Row, Col, Button, Accordion, Card} from "react-bootstrap";
-import url from "url";
-import PropTypes from "prop-types";
-import Footer from "../components/Footer.jsx";
-import PromptActionButtons from "../components/PromptActionButtons.jsx";
-import EventCalendar from "../components/EventCalendar";
-import {getEvents, CALENDARS} from "../modules/gcal";
-import "./styles/Wise.scss";
+import React, { Component, useState } from 'react'
+import { Container, Row, Col, Button, Accordion, Card } from 'react-bootstrap'
+import url from 'url'
+import PropTypes from 'prop-types'
+import Footer from 'components/Footer'
+import PromptActionButtons from 'components/PromptActionButtons'
+import EventCalendar from 'components/EventCalendar'
+import { getEvents, CALENDARS } from 'modules/gcal'
+import 'containers/styles/Wise.scss'
 
-const SLACK_LINK = "https://join.slack.com/t/uw-wise/signup";
-const MAILING_LIST_LINK = "https://lists.uwaterloo.ca/mailman/listinfo/women-in-se";
-const FACEBOOK_LINK = "https://forms.gle/piWhPZ85zyRVCNa77";
-const FEEDBACK_FORM_LINK = "https://forms.gle/rvzrQ7X4kStmKDYh9";
-const CALENDAR_LINK = "https://calendar.google.com/calendar/b/7?cid=dXdhdGVybG9vd2lzZUBnbWFpbC5jb20";
+const SLACK_LINK = 'https://join.slack.com/t/uw-wise/signup'
+const MAILING_LIST_LINK =
+  'https://lists.uwaterloo.ca/mailman/listinfo/women-in-se'
+const FACEBOOK_LINK = 'https://forms.gle/piWhPZ85zyRVCNa77'
+const FEEDBACK_FORM_LINK = 'https://forms.gle/rvzrQ7X4kStmKDYh9'
+const CALENDAR_LINK =
+  'https://calendar.google.com/calendar/b/7?cid=dXdhdGVybG9vd2lzZUBnbWFpbC5jb20'
 
 const girlsImage = url.resolve(
   process.env.PUBLIC_URL,
-  "/illustrations/wise-girls.png",
-);
+  '/illustrations/wise-girls.png',
+)
 const computerImage = url.resolve(
   process.env.PUBLIC_URL,
-  "/illustrations/computer.png",
-);
-const wiseLogo = url.resolve(process.env.PUBLIC_URL, "/logos/wise-logo.png");
+  '/illustrations/computer.png',
+)
+const wiseLogo = url.resolve(process.env.PUBLIC_URL, '/logos/wise-logo.png')
 
 // TODO: use ExternalLink component on rest of site
-const ExternalLink = ({href, children, ...restProps}) => (
+const ExternalLink = ({ href, children, ...restProps }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" {...restProps}>
     {children}
   </a>
-);
+)
 ExternalLink.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-};
+}
 
 const FAQS = [
   {
-    question: "Who does WiSE support?",
+    question: 'Who does WiSE support?',
     answer: (
       <p>
         WiSE recognizes women, as well as those whose gender identity is neither
@@ -50,7 +52,7 @@ const FAQS = [
     ),
   },
   {
-    question: "What does “women-only” mean?",
+    question: 'What does “women-only” mean?',
     answer: (
       <p>
         Our women only events are open to cis and trans women, and those whose
@@ -61,19 +63,19 @@ const FAQS = [
     ),
   },
   {
-    question: "What events do you run each term?",
+    question: 'What events do you run each term?',
     answer: (
       <p>
         Events vary from term to term, but in the past we have run a brunch,
         various mentoring activities, several casual board game nights, and a
-        “How to get an awesome co-op” workshop. Check our our{" "}
+        “How to get an awesome co-op” workshop. Check our our{' '}
         <a href="#wise-events">WiSE events calendar</a> below for more
         information about our upcoming events!
       </p>
     ),
   },
   {
-    question: "Why do you hold women-only events?",
+    question: 'Why do you hold women-only events?',
     answer: (
       <div>
         <p>
@@ -84,9 +86,9 @@ const FAQS = [
           lessen this issue.
         </p>
         <p className="pt-3">
-          Following in the footsteps of{" "}
+          Following in the footsteps of{' '}
           <ExternalLink href="http://wics.uwaterloo.ca/">WiCS</ExternalLink>, we
-          hold women-only technical events to reduce the feeling of{" "}
+          hold women-only technical events to reduce the feeling of{' '}
           <ExternalLink href="http://geekfeminism.wikia.org/wiki/Letting_the_side_down">
             letting the side down
           </ExternalLink>
@@ -98,18 +100,18 @@ const FAQS = [
     ),
   },
   {
-    question: "Where can I give my feedback about WiSE?",
+    question: 'Where can I give my feedback about WiSE?',
     answer: (
       <p>
         We love to hear feedback! You can give your feedback on our slack, or
-        for an anonymous option - fill out our{" "}
+        for an anonymous option - fill out our{' '}
         <ExternalLink href={FEEDBACK_FORM_LINK}>feedback form</ExternalLink>.
       </p>
     ),
   },
   {
     question:
-      "Can you accommodate my food sensitivity at events where food is provided?",
+      'Can you accommodate my food sensitivity at events where food is provided?',
     answer: (
       <p>
         Yes! Please try to notify us at least a week in advance of the event.
@@ -117,7 +119,7 @@ const FAQS = [
     ),
   },
   {
-    question: "How can I get involved?",
+    question: 'How can I get involved?',
     answer: (
       <p>
         <ExternalLink href={SLACK_LINK}>Join our slack!</ExternalLink> There you
@@ -127,7 +129,7 @@ const FAQS = [
       </p>
     ),
   },
-];
+]
 
 const Name = () => (
   <Row className="pb-5">
@@ -142,7 +144,7 @@ const Name = () => (
       </h1>
     </Col>
   </Row>
-);
+)
 
 const WhoWeAre = () => (
   <Row>
@@ -176,22 +178,22 @@ const WhoWeAre = () => (
       <img alt="girls" className="girls-img pt-3 pt-md-0" src={girlsImage} />
     </Col>
   </Row>
-);
+)
 
-const Faqs = ({faqs}) => {
-  const defaultActiveKey = "0";
-  const [activeFaq, setActiveFaq] = useState(defaultActiveKey);
+const Faqs = ({ faqs }) => {
+  const defaultActiveKey = '0'
+  const [activeFaq, setActiveFaq] = useState(defaultActiveKey)
   return (
     <>
       <h2 className="pt-5 pb-2">FAQ</h2>
       <Accordion defaultActiveKey={defaultActiveKey} className="wise-accordian">
-        {faqs.map(({question, answer}, index) => {
-          const stringIndex = index.toString();
-          const isActiveFaq = activeFaq === stringIndex;
+        {faqs.map(({ question, answer }, index) => {
+          const stringIndex = index.toString()
+          const isActiveFaq = activeFaq === stringIndex
           return (
             <Card className="wise-card" key={`faq-${index}`}>
               <Card.Header
-                className={`wise-card-header ${isActiveFaq ? "active" : ""}`}
+                className={`wise-card-header ${isActiveFaq ? 'active' : ''}`}
               >
                 <Accordion.Toggle
                   as={Button}
@@ -213,21 +215,23 @@ const Faqs = ({faqs}) => {
                 <Card.Body>{answer}</Card.Body>
               </Accordion.Collapse>
             </Card>
-          );
+          )
         })}
       </Accordion>
     </>
-  );
-};
+  )
+}
 
 Faqs.propTypes = {
-  faqs: PropTypes.arrayOf(PropTypes.shape({
-    question: PropTypes.string.isRequired,
-    answer: PropTypes.node.isRequired,
-  })).isRequired,
-};
+  faqs: PropTypes.arrayOf(
+    PropTypes.shape({
+      question: PropTypes.string.isRequired,
+      answer: PropTypes.node.isRequired,
+    }),
+  ).isRequired,
+}
 
-const Events = ({events}) => (
+const Events = ({ events }) => (
   <div className="pb-5" id="wise-events">
     <h2 className="pt-5 pb-2">Events</h2>
     <div className="cal">
@@ -244,18 +248,18 @@ const Events = ({events}) => (
       </Button>
     </div>
   </div>
-);
+)
 
 Events.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+}
 
 const Resources = () => (
   <>
     <h2 className="pt-4 pb-2">Resources</h2>
     <p>
       For more information on events or scholarship opportunities please
-      checkout our{" "}
+      checkout our{' '}
       <a
         href="https://www.notion.so/WiSE-Resource-Hub-096fb9b198ad4cf68891847f25960a01"
         target="_blank"
@@ -267,7 +271,7 @@ const Resources = () => (
       .
     </p>
   </>
-);
+)
 
 const GetInvolved = () => (
   <div className="wise-get-involved">
@@ -276,31 +280,31 @@ const GetInvolved = () => (
       hidePromptsOnMobile={true}
       actions={[
         {
-          prompt: "Want to continue the conversation?",
-          buttonText: "Join Our Slack",
+          prompt: 'Want to continue the conversation?',
+          buttonText: 'Join Our Slack',
           link: SLACK_LINK,
         },
         {
-          prompt: "Interested in attending events?",
-          buttonText: "Join Our Facebook Group",
+          prompt: 'Interested in attending events?',
+          buttonText: 'Join Our Facebook Group',
           link: FACEBOOK_LINK,
         },
         {
-          prompt: "Stay updated?",
-          buttonText: "Join Our Mailing List",
+          prompt: 'Stay updated?',
+          buttonText: 'Join Our Mailing List',
           link: MAILING_LIST_LINK,
         },
         {
-          prompt: "Questions or concerns?",
-          buttonText: "Send Us An Email",
-          link: "mailto:uwaterloowise@gmail.com",
+          prompt: 'Questions or concerns?',
+          buttonText: 'Send Us An Email',
+          link: 'mailto:uwaterloowise@gmail.com',
         },
       ]}
     />
   </div>
-);
+)
 
-const ImageSection = ({children}) => (
+const ImageSection = ({ children }) => (
   <Row className="pt-5">
     <Col md={12} lg={8} className="pr-md-5">
       {children}
@@ -317,7 +321,7 @@ const ImageSection = ({children}) => (
       />
     </Col>
   </Row>
-);
+)
 
 const Videos = () => (
   <>
@@ -334,19 +338,19 @@ const Videos = () => (
       />
     </div>
   </>
-);
+)
 
-ImageSection.propTypes = {children: PropTypes.node.isRequired};
+ImageSection.propTypes = { children: PropTypes.node.isRequired }
 
 class Wise extends Component {
   state = {
     events: [],
-  };
+  }
 
   componentDidMount() {
-    getEvents(CALENDARS.WISE, events => {
-      this.setState({events});
-    });
+    getEvents(CALENDARS.WISE, (events) => {
+      this.setState({ events })
+    })
   }
 
   render() {
@@ -365,10 +369,10 @@ class Wise extends Component {
             </ImageSection>
           </Container>
         </body>
-        <Footer color={"pink"} />
+        <Footer color={'pink'} />
       </div>
-    );
+    )
   }
 }
 
-export default Wise;
+export default Wise

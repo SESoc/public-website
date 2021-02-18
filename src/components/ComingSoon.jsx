@@ -1,7 +1,7 @@
-import React, {Component} from "react";
-import url from "url";
+import React, { Component } from 'react'
+import url from 'url'
 
-const logo = url.resolve(process.env.PUBLIC_URL, "/logos/se-logo-trimmed.png");
+const logo = url.resolve(process.env.PUBLIC_URL, '/logos/se-logo-trimmed.png')
 
 class ComingSoon extends Component {
   render() {
@@ -12,8 +12,8 @@ class ComingSoon extends Component {
           <p>Coming soon.</p>
         </header>
       </div>
-    );
+    )
   }
 }
 
-export default ComingSoon;
+export default ComingSoon

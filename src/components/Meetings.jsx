@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
-import {Row, Col, Button} from "react-bootstrap";
-import "./styles/Meetings.scss";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Row, Col, Button } from 'react-bootstrap'
+import 'components/styles/Meetings.scss'
 
-const Meeting = props => (
+const Meeting = (props) => (
   <Row className="mb-0 mt-3">
     <Col md={3} className="mb-1">
       <p className={`no-bottom-space bold colour-${props.meeting.type}`}>
@@ -28,17 +28,17 @@ const Meeting = props => (
       </Col>
     )}
   </Row>
-);
+)
 
 Meeting.propTypes = {
   meeting: PropTypes.object.isRequired,
-};
+}
 
 class Meetings extends Component {
   render() {
     return (
       <div>
-        {this.props.meetings.map(meeting => (
+        {this.props.meetings.map((meeting) => (
           <Meeting meeting={meeting} />
         ))}
         <Row className="archive-row">
@@ -60,13 +60,13 @@ class Meetings extends Component {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
 Meetings.propTypes = {
   meetings: PropTypes.arrayOf(PropTypes.object).isRequired,
   archiveLink: PropTypes.string.isRequired,
-};
+}
 
-export default Meetings;
+export default Meetings

@@ -1,0 +1,6 @@
+# Add all file/file extensions to be ignored by prettier here
+*.md
+*.html
+src/assets/*
+package-lock.json
+jsconfig.json

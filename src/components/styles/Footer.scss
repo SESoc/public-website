@@ -1,25 +1,26 @@
-@import "../../styles/colors";
+@import 'styles/_colors';
+
 .footer {
-    padding: 20px;
-    text-align: center;
-    color: white;
+  padding: 20px;
+  text-align: center;
+  color: white;
 }
 
 .link {
-    color: white;
+  color: white;
 }
 
 .theme {
-    &-purple {
-        background-color: $color-eng;
-        a:hover {
-            color: $color-math-light;
-        }
+  &-purple {
+    background-color: $color-eng;
+    a:hover {
+      color: $color-math-light;
     }
-    &-pink {
-        background-color: $color-math;
-        a:hover {
-            color: $color-eng;
-        }
+  }
+  &-pink {
+    background-color: $color-math;
+    a:hover {
+      color: $color-eng;
     }
+  }
 }

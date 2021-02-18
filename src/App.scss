@@ -1,108 +1,106 @@
-@import "styles/colors";
+@import 'styles/colors';
 
 :root {
-    --color-eng: #{$color-eng};
-    --color-math: #{$color-math};
+  --color-eng: #{$color-eng};
+  --color-math: #{$color-math};
 }
 
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
-    color: #61dafb;
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 /* Navbar styling */
 
 a {
-    margin-top: 0em;
-    color: $color-eng;
+  margin-top: 0em;
+  color: $color-eng;
 }
 
 .primary-nav {
-    float: right;
-    margin-left: auto;
-    margin-right: 0;
-    text-align: right;
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
 }
 
 /* Site-wide styling */
 
 h1 {
-    color: $color-primary;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+  color: $color-primary;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 p {
-    color: $color-primary;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+  color: $color-primary;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    margin-top: 0px;
-    width: 100%;
-    overflow: hidden;
+  margin-top: 0px;
+  width: 100%;
+  overflow: hidden;
 }
-
 
 /*
     `footer-to-bottom` wraps the body and footer for each page.
-    It spaces the two containers out so that the footer is pushed 
-    to the bottom of the view if the body contents do not fill up 
-    the whole view. Otherwise, the footer will rest below the 
+    It spaces the two containers out so that the footer is pushed
+    to the bottom of the view if the body contents do not fill up
+    the whole view. Otherwise, the footer will rest below the
     body content.
 */
 
 .footer-to-bottom {
-    display: flex;
-    min-height: calc(100vh - 60.59px); // Total view height - navbar height
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  min-height: calc(100vh - 60.59px); /* Total view height - navbar height */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a:hover {
-    color: $color-math-light;
+  color: $color-math-light;
 }

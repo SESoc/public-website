@@ -1,44 +1,42 @@
 {
-    "private": true,
-    "name": "public-website",
-    "homepage": "https://sesoc.uwaterloo.ca/",
-    "version": "0.1.0",
-    "scripts": {
-        "build": "react-scripts build",
-        "ci_format": "prettier-eslint --list-different $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json --list-different --tab-width 4 ./package.json",
-        "eject": "react-scripts eject",
-        "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 4 ./package.json",
-        "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
-        "start": "react-scripts start",
-        "test": "react-scripts test"
-    },
-    "dependencies": {
-        "ajv": "^6.10.0",
-        "bootstrap": "^4.5.0",
-        "lodash": "^4.17.19",
-        "node-sass": "^4.14.1",
-        "react": "next",
-        "react-big-calendar": "^0.24.6",
-        "react-bootstrap": "^1.0.0-beta.9",
-        "react-dom": "next",
-        "react-router-dom": "^5.2.0",
-        "react-scripts": "^2.0.5",
-        "url": "^0.11.0"
-    },
-    "devDependencies": {
-        "axios": "^0.21.1",
-        "moment": "^2.26.0",
-        "prettier-eslint": "^9.0.1",
-        "prettier-eslint-cli": "^5.0.0",
-        "prettier-package-json": "^2.1.3"
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
-    ],
-    "eslintConfig": {
-        "extends": "react-app"
-    }
+  "private": true,
+  "name": "public-website",
+  "homepage": "https://sesoc.uwaterloo.ca/",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "react-scripts build",
+    "ci_format": "prettier-eslint --list-different  --log-level error $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" && eslint \"**/*.js\" \"**/*.jsx\" && prettier-package-json --list-different --tab-width 2 ./package.json",
+    "eject": "react-scripts eject",
+    "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix && prettier-package-json --write --tab-width 2 ./package.json",
+    "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "bootstrap": "^4.5.0",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.14.1",
+    "react": "next",
+    "react-big-calendar": "^0.24.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-dom": "next",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "eslint-config-prettier": "^7.2.0",
+    "moment": "^2.26.0",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-package-json": "2.1.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

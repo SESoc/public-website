@@ -1,28 +1,28 @@
-import React from "react";
-import url from "url";
-import {Container, Nav, Navbar} from "react-bootstrap";
-import {Link, NavLink, useLocation} from "react-router-dom";
-import "./styles/NavigationBar.scss";
+import React from 'react'
+import url from 'url'
+import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import 'components/styles/NavigationBar.scss'
 
 const logo = url.resolve(
   process.env.PUBLIC_URL,
-  "/logos/se-logo-trimmed-transparent-bw.png",
-);
+  '/logos/se-logo-trimmed-transparent-bw.png',
+)
 
-const NavigationBar = props => {
-  let location = useLocation();
-  let color = "";
+const NavigationBar = () => {
+  let location = useLocation()
+  let color = ''
   switch (location.pathname) {
-  case "/":
-    color = "#F0EDF1";
-    break;
-  default:
-    color = "transparent";
-    break;
+    case '/':
+      color = '#F0EDF1'
+      break
+    default:
+      color = 'transparent'
+      break
   }
 
   return (
-    <Navbar expand="sm" collapseOnSelect style={{backgroundColor: color}}>
+    <Navbar expand="sm" collapseOnSelect style={{ backgroundColor: color }}>
       <Container className="mx-3 mx-sm-auto">
         <Navbar.Brand as={Link} to="/">
           <img
@@ -99,10 +99,10 @@ const NavigationBar = props => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-};
+  )
+}
 
 // Props from withRouter HOC
-NavigationBar.propTypes = {};
+NavigationBar.propTypes = {}
 
-export default NavigationBar;
+export default NavigationBar
