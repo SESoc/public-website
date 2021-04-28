@@ -87,10 +87,10 @@ const Content = (props) => {
       <Row>
         <Col sm={7} className="mx-3 mx-sm-0 blurb-content">
           <div>
-            <h3>Curious about life in SE? Check out our latest feature: </h3>
+            <h3>Want to stay connected with the SE community? Join our Discord: </h3>
             <p>
-              <a href={featureLink} target="_blank" rel="noopener noreferrer">
-                {recentBlogPost.title}
+              <a href="https://discord.gg/M8X3PMUT">
+                Click this invite link
               </a>
             </p>
           </div>
