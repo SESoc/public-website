@@ -5,7 +5,6 @@ import url from 'url'
 import PropTypes from 'prop-types'
 import Footer from '../components/Footer'
 import { getEvents, filterUpcomingEvents } from '../modules/gcal'
-import { recentBlogPost } from 'content/BlogContent'
 import 'containers/styles/Home.scss'
 
 const heroImage = url.resolve(process.env.PUBLIC_URL, '/illustrations/hero.png')
@@ -41,10 +40,6 @@ const Content = (props) => {
   if (props.events[0]) {
     upcomingEvent = props.events[0]
   }
-
-  const featureLink = recentBlogPost.links.find(
-    ({ type }) => type === 'default' || type === 'spotify',
-  ).link
 
   return (
     <Container id="home-content">
@@ -87,11 +82,13 @@ const Content = (props) => {
       <Row>
         <Col sm={7} className="mx-3 mx-sm-0 blurb-content">
           <div>
-            <h3>Curious about life in SE? Check out our latest feature: </h3>
+            <h3>Want to stay connected?</h3>
             <p>
-              <a href={featureLink} target="_blank" rel="noopener noreferrer">
-                {recentBlogPost.title}
+              Join our{' '}
+              <a href="https://discord.gg/gnthpmjHUD">
+                UW Software Engineering Discord
               </a>
+              .
             </p>
           </div>
         </Col>
