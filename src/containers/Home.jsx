@@ -84,9 +84,11 @@ const Content = (props) => {
           <div>
             <h3>Want to stay connected?</h3>
             <p>
-              <a href="https://discord.gg/M8X3PMUT">
-                Join our UW Software Engineering Discord
+              Join our{' '}
+              <a href="https://discord.gg/gnthpmjHUD">
+                UW Software Engineering Discord
               </a>
+              .
             </p>
           </div>
         </Col>
