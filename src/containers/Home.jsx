@@ -3,8 +3,8 @@ import { Container, Jumbotron, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import url from 'url'
 import PropTypes from 'prop-types'
-import Footer from '../components/Footer'
-import { getEvents, filterUpcomingEvents } from '../modules/gcal'
+import Footer from 'components/Footer'
+import { getEvents, filterUpcomingEvents } from 'modules/gcal'
 import 'containers/styles/Home.scss'
 
 const heroImage = url.resolve(process.env.PUBLIC_URL, '/illustrations/hero.png')
