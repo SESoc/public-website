@@ -19,8 +19,8 @@ export async function getEvents(calendarType) {
   const { CALENDAR_ID, API_KEY } = calendarType
   const url = buildUrl(CALENDAR_ID, API_KEY)
 
-  const response = await Axios.get(url)
   const events = []
+  const response = await Axios.get(url)
   response.data.items.forEach((event) => {
     events.push({
       start: event.start.date || event.start.dateTime,
@@ -38,6 +38,7 @@ export async function getEvents(calendarType) {
       d2 = new Date(e2.start)
     return d1 - d2
   })
+
   return events
 }
 
