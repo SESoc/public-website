@@ -15,38 +15,30 @@ export const CALENDARS = {
 const buildUrl = (CALENDAR_ID, API_KEY) =>
   `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
 
-export function getEvents(calendarType, callback) {
+export async function getEvents(calendarType) {
   const { CALENDAR_ID, API_KEY } = calendarType
   const url = buildUrl(CALENDAR_ID, API_KEY)
 
-  Axios.get(url).then(
-    (response) => {
-      const events = []
-      response.data.items.forEach((event) => {
-        events.push({
-          start: event.start.date || event.start.dateTime,
-          end: event.end.date || event.end.dateTime,
-          dateLabel: Moment(event.start.date || event.start.dateTime).format(
-            'MMMM Do, YYYY',
-          ),
-          title: event.summary,
-          description: event.description,
-          link: event.htmlLink,
-        })
-      })
-      callback(
-        events.sort((e1, e2) => {
-          var d1 = new Date(e1.start),
-            d2 = new Date(e2.start)
-          return d1 - d2
-        }),
-      )
-    },
-    (error) => {
-      // eslint-disable-next-line no-console
-      console.log(error)
-    },
-  )
+  const response = await Axios.get(url)
+  const events = []
+  response.data.items.forEach((event) => {
+    events.push({
+      start: event.start.date || event.start.dateTime,
+      end: event.end.date || event.end.dateTime,
+      dateLabel: Moment(event.start.date || event.start.dateTime).format(
+        'MMMM Do, YYYY',
+      ),
+      title: event.summary,
+      description: event.description,
+      link: event.htmlLink,
+    })
+  })
+  events.sort((e1, e2) => {
+    var d1 = new Date(e1.start),
+      d2 = new Date(e2.start)
+    return d1 - d2
+  })
+  return events
 }
 
 export function filterUpcomingEvents(events) {
