@@ -231,7 +231,7 @@ Faqs.propTypes = {
   ).isRequired,
 }
 
-const Events = ({ events }) => (
+const WiseEvents = ({ events }) => (
   <div className="pb-5" id="wise-events">
     <h2 className="pt-5 pb-2">Events</h2>
     <div className="cal">
@@ -250,7 +250,7 @@ const Events = ({ events }) => (
   </div>
 )
 
-Events.propTypes = {
+WiseEvents.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
@@ -360,7 +360,7 @@ const Wise = () => {
           <WhoWeAre />
           <Faqs faqs={FAQS} />
           <Videos />
-          <Events events={events} />
+          <WiseEvents events={events} />
           <ImageSection>
             <Resources />
             <GetInvolved />
