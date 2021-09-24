@@ -1,6 +1,4 @@
-#!/bin/bash
-git pull
-npm install
-npm run build
-cp -r build/* ../www
-cp .htaccess ../www
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
