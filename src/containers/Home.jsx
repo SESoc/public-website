@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Jumbotron, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import url from 'url'
 import PropTypes from 'prop-types'
 import Footer from '../components/Footer'
-import { getEvents, filterUpcomingEvents } from '../modules/gcal'
+import { getEvents, CALENDARS, filterUpcomingEvents } from '../modules/gcal'
 import 'containers/styles/Home.scss'
 
 const heroImage = url.resolve(process.env.PUBLIC_URL, '/illustrations/hero.png')
@@ -111,31 +111,25 @@ Content.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-class Home extends Component {
-  constructor() {
-    super()
-    this.state = {
-      events: [],
+const Home = () => {
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    async function getAllEvents() {
+      setEvents(await getEvents(CALENDARS.SESOC))
     }
-  }
+    getAllEvents()
+  }, [])
 
-  componentDidMount() {
-    getEvents((events) => {
-      this.setState({ events })
-    })
-  }
-
-  render() {
-    return (
-      <div className="footer-to-bottom">
-        <body>
-          <Hero />
-          <Content events={filterUpcomingEvents(this.state.events)} />
-        </body>
-        <Footer color={'purple'} />
-      </div>
-    )
-  }
+  return (
+    <div className="footer-to-bottom">
+      <body>
+        <Hero />
+        <Content events={filterUpcomingEvents(events)} />
+      </body>
+      <Footer color={'purple'} />
+    </div>
+  )
 }
 
 export default Home

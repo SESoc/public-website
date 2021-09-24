@@ -20,7 +20,7 @@ module.exports = {
     ],
   },
   rules: {
-    "no-console": "error",
+    "no-console": "warn",
     "no-param-reassign": "error",
     "react/jsx-key": ["off"],
   },

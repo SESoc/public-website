@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button, Accordion, Card } from 'react-bootstrap'
 import url from 'url'
 import PropTypes from 'prop-types'
@@ -231,7 +231,7 @@ Faqs.propTypes = {
   ).isRequired,
 }
 
-const Events = ({ events }) => (
+const WiseEvents = ({ events }) => (
   <div className="pb-5" id="wise-events">
     <h2 className="pt-5 pb-2">Events</h2>
     <div className="cal">
@@ -250,7 +250,7 @@ const Events = ({ events }) => (
   </div>
 )
 
-Events.propTypes = {
+WiseEvents.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
@@ -342,37 +342,34 @@ const Videos = () => (
 
 ImageSection.propTypes = { children: PropTypes.node.isRequired }
 
-class Wise extends Component {
-  state = {
-    events: [],
-  }
+const Wise = () => {
+  const [events, setEvents] = useState([])
 
-  componentDidMount() {
-    getEvents(CALENDARS.WISE, (events) => {
-      this.setState({ events })
-    })
-  }
+  useEffect(() => {
+    async function getAllEvents() {
+      setEvents(await getEvents(CALENDARS.WISE))
+    }
+    getAllEvents()
+  }, [])
 
-  render() {
-    return (
-      <div className="footer-to-bottom">
-        <body>
-          <Container className="my-5 pb-4 flex-wrapper">
-            <Name />
-            <WhoWeAre />
-            <Faqs faqs={FAQS} />
-            <Videos />
-            <Events events={this.state.events} />
-            <ImageSection>
-              <Resources />
-              <GetInvolved />
-            </ImageSection>
-          </Container>
-        </body>
-        <Footer color={'pink'} />
-      </div>
-    )
-  }
+  return (
+    <div className="footer-to-bottom">
+      <body>
+        <Container className="my-5 pb-4 flex-wrapper">
+          <Name />
+          <WhoWeAre />
+          <Faqs faqs={FAQS} />
+          <Videos />
+          <WiseEvents events={events} />
+          <ImageSection>
+            <Resources />
+            <GetInvolved />
+          </ImageSection>
+        </Container>
+      </body>
+      <Footer color={'pink'} />
+    </div>
+  )
 }
 
 export default Wise
