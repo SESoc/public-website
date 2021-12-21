@@ -28,11 +28,36 @@ class About extends Component {
             <Container className="mt-4 pl-0">
               <h1>Meet The Team</h1>
               <p>
-                B-Soc represents the odd years (SE2021, SE2023, SE2025) and
-                A-Soc represents the even years (SE2022, SE2024). We’re a
+                A-Soc represents the even years (SE2022, SE2024, SE2026) and
+                B-Soc represents the odd years (SE2023, SE2025). We’re a
                 friendly bunch, feel free to say hi if we ever bump into each
                 other online or on campus!
               </p>
+              <ProfilePhotoGroup
+                soc={'A-Soc'}
+                execs={[
+                  {
+                    name: 'Aaron Abraham',
+                    src: profileImage('aaron'),
+                    year: '2024',
+                    position: 'President',
+                  },
+                  {
+                    name: 'Yash Arora',
+                    src: profileImage('yash'),
+                    year: '2024',
+                    position: 'VP Communications',
+                  },
+                  {
+                    name: 'Danny Wu',
+                    src: profileImage('danny'),
+                    year: '2024',
+                    position: 'VP Events',
+                  },
+                ]}
+                reps={[]}
+                color={'var(--color-math)'}
+              />
               <ProfilePhotoGroup
                 soc={'B-Soc'}
                 execs={[
@@ -53,37 +78,6 @@ class About extends Component {
                     src: profileImage('mayank'),
                     year: '2023',
                     position: 'VP Finance',
-                  },
-                ]}
-                reps={[]}
-                color={'var(--color-math)'}
-              />
-              <ProfilePhotoGroup
-                soc={'A-Soc'}
-                execs={[
-                  {
-                    name: 'Yingning Gui',
-                    src: profileImage('yingning'),
-                    year: '2022',
-                    position: 'President',
-                  },
-                  {
-                    name: 'Alexandra Girard',
-                    src: profileImage('alex'),
-                    year: '2022',
-                    position: 'VP Events',
-                  },
-                  {
-                    name: 'Han Xiao',
-                    src: profileImage('han'),
-                    year: '2022',
-                    position: 'VP Finance',
-                  },
-                  {
-                    name: 'Robbie Zhuang',
-                    src: profileImage('robbie'),
-                    year: '2022',
-                    position: 'VP Communications',
                   },
                 ]}
                 reps={[]}
