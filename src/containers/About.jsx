@@ -49,6 +49,12 @@ class About extends Component {
                     position: 'VP Communications',
                   },
                   {
+                    name: 'Molly Yu',
+                    src: profileImage('molly'),
+                    year: '2024',
+                    position: 'VP Finance',
+                  },
+                  {
                     name: 'Danny Wu',
                     src: profileImage('danny'),
                     year: '2024',
